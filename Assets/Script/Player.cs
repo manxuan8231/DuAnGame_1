@@ -80,11 +80,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("isAttack1");
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(gun.position, Attackrange1, enemyLayer);
-            foreach(Collider2D enermy in hitEnemies)
-            {
-
-            }
+           
+          
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
