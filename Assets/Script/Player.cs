@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float _moveJump;//vận tốc nhảy
     [SerializeField] private float _moveJumpSkill;//vận tốc skill đặc biệt
     [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
-    [SerializeField] private float Attackrange1;//pham vi range
-    [SerializeField] private float Attackrange2;//pham vi range
-    [SerializeField] private float Attackrange3;//pham vi range
 
     float speedX;//Horizontal(A,B)
 
