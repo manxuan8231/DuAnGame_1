@@ -2,20 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;//Vận tốc di chuyển 
+   
     [SerializeField] private float _moveJump;//vận tốc nhảy
     [SerializeField] private float _moveJumpSkill;//vận tốc skill đặc biệt
     [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
+    [SerializeField] private Slider _healthSlider;//slider file
+    private int health;//khai báo hp
 
     float speedX;//Horizontal(A,B)
 
     private bool Right;//mặc định mặt bên phải
     private bool okJump;//true false được phép nhảy
+   
 
-    public float dashTime;//thgian lướt
+    public float dashTime;//thoi gian lướt
     private float _dashTime;
     bool isDashing = false;
 
@@ -29,9 +34,13 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //Hp người chs
+        health = 50;
+        _healthSlider.maxValue = health;
+
     }
 
-   
+
     void Update()
     {
         Move();
@@ -145,6 +154,28 @@ public class Player : MonoBehaviour
         {
             okJump= true;
         }
+            
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            
+            //nếu đụng enemy thì mất 10Hp
+            health -= 10;
+            _healthSlider.value = health;
+            if (health >= 10)
+            {
+                //animation Hurt
+                animator.SetTrigger("isHurt");
+            }
+            if (health <= 0)
+            {
+                //het mau thi chet
+                Destroy(gameObject,0.8f);
+               
+                //animation death
+                animator.SetTrigger("isDeath");
+            }
+        
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -152,6 +183,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             okJump= false;
+           
         }
+       
     }
 }
