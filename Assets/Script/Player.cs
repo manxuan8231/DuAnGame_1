@@ -13,7 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
     [SerializeField] private Slider _healthSlider;//slider file
     private int health;//khai báo hp
-
+    [SerializeField] private Slider _manaSlider;//slider mana
+    private int mana;//mana
+    private bool okMana=true;
     float speedX;//Horizontal(A,B)
 
     private bool Right;//mặc định mặt bên phải
@@ -26,8 +28,7 @@ public class Player : MonoBehaviour
 
     public GameObject bullet;//khai báo viên đạn
     public Transform gun;//viên đạn tại vị trí súng
-
-    public LayerMask enemyLayer;
+   
     Rigidbody2D rb;
     Animator animator;
     void Start()
@@ -35,11 +36,12 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         //Hp người chs
-        health = 50;
+        health = 100;
         _healthSlider.maxValue = health;
-
+        //mana nguoi chs
+        mana = 100;
+        _manaSlider.maxValue = mana;
     }
-
 
     void Update()
     {
@@ -85,33 +87,51 @@ public class Player : MonoBehaviour
     }
     private void Animator()
     {
-        //hiệu ứng tấn công
-        if (Input.GetKeyDown(KeyCode.E))
+        if (mana > 0 && okMana)
         {
-            animator.SetTrigger("isAttack1");
-           
-          
+            //hiệu ứng tấn công
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                animator.SetTrigger("isAttack1");
+                mana -= 10;
+                _manaSlider.value = mana;
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                animator.SetTrigger("isAttack2");
+                mana -= 10;
+                _manaSlider.value = mana;
+            }
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                animator.SetTrigger("isAttack3");
+                mana -= 10;
+                _manaSlider.value = mana;
+            }
+            if (Input.GetKeyDown(KeyCode.R) && okJump)
+            {
+                animator.SetTrigger("isAttackSpecia");
+                mana -= 30;
+                _manaSlider.value = mana;
+                rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                animator.SetTrigger("isShuriken");
+                mana -= 1;
+                _manaSlider.value = mana;
+            }
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+
+                animator.SetTrigger("isDash");
+                mana -= 5;
+                _manaSlider.value = mana;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        else
         {
-            animator.SetTrigger("isAttack2");
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            animator.SetTrigger("isAttack3");
-        }
-        if (Input.GetKeyDown(KeyCode.R)&&okJump)
-        {
-            animator.SetTrigger("isAttackSpecia");
-            rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            animator.SetTrigger("isShuriken");
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            animator.SetTrigger("isDash");
+            okMana = false;
         }
     }
 
@@ -176,6 +196,22 @@ public class Player : MonoBehaviour
             }
         
         }
+        if (other.gameObject.CompareTag("Hp"))
+        {
+            //Đụng bình hp tăng 10hp
+            health += 10;
+            _healthSlider.value = health;
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Mana"))
+        {
+            //đụng bình mana tăng 50
+            mana += 50;
+            _manaSlider.value = mana;
+            Destroy(other.gameObject);
+        }
+        
+       
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -185,6 +221,6 @@ public class Player : MonoBehaviour
             okJump= false;
            
         }
-       
+        
     }
 }
