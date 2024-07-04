@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Hp
+  - Mana
   layers:
   - Default
   - TransparentFX
