@@ -7,37 +7,42 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;//Vận tốc di chuyển 
-   
+
     [SerializeField] private float _moveJump;//vận tốc nhảy
     [SerializeField] private float _moveJumpSkill;//vận tốc skill đặc biệt
     [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
+
     [SerializeField] private Slider _healthSlider;//slider file
     private int health;//khai báo hp
+    public int currentHealth; // Số máu hiện tại
+    public float healRate = 1.0f; // Tốc độ hồi máu, ở đây là mỗi 1 giây hồi 1 máu
+    private float healTimer;
+
+
     [SerializeField] private Slider _manaSlider;//slider mana
     private int mana;//mana
-    private bool okMana=true;
+
     float speedX;//Horizontal(A,B)
 
     private bool Right;//mặc định mặt bên phải
     private bool okJump;//true false được phép nhảy
-   
 
-    public float dashTime;//thoi gian lướt
-    private float _dashTime;
-    bool isDashing = false;
 
     public GameObject bullet;//khai báo viên đạn
     public Transform gun;//viên đạn tại vị trí súng
-   
+
     Rigidbody2D rb;
     Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
         //Hp người chs
-        health = 100;
+        currentHealth = health = 100;
         _healthSlider.maxValue = health;
+        healTimer = healRate;
+
         //mana nguoi chs
         mana = 100;
         _manaSlider.maxValue = mana;
@@ -47,93 +52,100 @@ public class Player : MonoBehaviour
     {
         Move();
         Flip();
-        Animator();
-        Fire();
+        if (mana > 0)//nếu mana lớn hơn 0 thì mới cho 
+        {
+            AnimatorAttack();
+            Fire();
+        }
+        TimeHp();
     }
+    private void TimeHp()
+    {
+        if(currentHealth < health)
+        {
+            healTimer -= Time.deltaTime;//làm giảm bộ đếm thời gian này dần dần cho đến khi đạt 0
+            if (healTimer <= 0)
+            {
+                Heal(1);//cộng 1 hp
+                _healthSlider.value = currentHealth;
+                healTimer = healRate;// sau 1 giây sẽ hồi lại máu
+            }
 
-   private void Move()
-   {
+        }
+    }
+    private void Heal(int amount)
+    {
+        //hp mặc định cộng 1 hp
+        currentHealth += amount;
+        //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
+        if (currentHealth > health)
+        {
+            currentHealth = health;           
+        }
+    }
+    private void Move()
+    {
         //di chuyển
         speedX = Input.GetAxis("Horizontal");
         Vector3 x = new Vector3(speedX, 0, 0);
-        transform.Translate(x*_moveSpeed*Time.deltaTime);
+        transform.Translate(x * _moveSpeed * Time.deltaTime);
         //Hiệu ứng di chuyển       
         animator.SetFloat("isRun", Mathf.Abs(speedX));
 
         //nhảy
-        if (Input.GetKeyDown(KeyCode.Space)&&okJump)
+        if (Input.GetKeyDown(KeyCode.Space) && okJump)
         {
             //hiệu ứng nhảy
             animator.SetTrigger("isJump");
-            rb.AddForce(Vector2.up*_moveJump,ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * _moveJump, ForceMode2D.Impulse);
         }
-        //lướt
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _dashTime <= 0 && isDashing == false)
-        {
-            animator.SetTrigger("isDash");
-            _moveSpeed += _dashBoost;
-            _dashTime = dashTime;
-            isDashing = true;
-        }
-        if (_dashTime <= 0 && isDashing == true)
-        {
-            _moveSpeed -= _dashBoost;
-            isDashing = false;
-        }
-        else
-        {
-            _dashTime -= Time.deltaTime;
-        }
+        
     }
-    private void Animator()
+    private void AnimatorAttack()
     {
-        if (mana > 0 && okMana)
-        {
-            //hiệu ứng tấn công
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                animator.SetTrigger("isAttack1");
-                mana -= 10;
-                _manaSlider.value = mana;
-            }
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                animator.SetTrigger("isAttack2");
-                mana -= 10;
-                _manaSlider.value = mana;
-            }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                animator.SetTrigger("isAttack3");
-                mana -= 10;
-                _manaSlider.value = mana;
-            }
-            if (Input.GetKeyDown(KeyCode.R) && okJump)
-            {
-                animator.SetTrigger("isAttackSpecia");
-                mana -= 30;
-                _manaSlider.value = mana;
-                rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
-            }
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                animator.SetTrigger("isShuriken");
-                mana -= 1;
-                _manaSlider.value = mana;
-            }
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
 
-                animator.SetTrigger("isDash");
-                mana -= 5;
-                _manaSlider.value = mana;
-            }
-        }
-        else
+        //hiệu ứng tấn công
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            okMana = false;
+            animator.SetTrigger("isAttack1");
+            mana -= 10;
+            _manaSlider.value = mana;
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            animator.SetTrigger("isAttack2");
+            mana -= 10;
+            _manaSlider.value = mana;
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            animator.SetTrigger("isAttack3");
+            mana -= 10;
+            _manaSlider.value = mana;
+        }
+        if (Input.GetKeyDown(KeyCode.R) && okJump)
+        {
+            animator.SetTrigger("isAttackSpecia");
+            mana -= 30;
+            _manaSlider.value = mana;
+            rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            animator.SetTrigger("isShuriken");
+            mana -= 1;
+            _manaSlider.value = mana;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+
+            animator.SetTrigger("isDash");
+            mana -= 5;
+            _manaSlider.value = mana;
         }
     }
+
+    
 
     private void Fire()
     {
@@ -179,14 +191,14 @@ public class Player : MonoBehaviour
         {
             
             //nếu đụng enemy thì mất 10Hp
-            health -= 10;
-            _healthSlider.value = health;
-            if (health >= 10)
+            currentHealth -= 10;
+            _healthSlider.value = currentHealth;
+            if (currentHealth >= 10)
             {
                 //animation Hurt
                 animator.SetTrigger("isHurt");
             }
-            if (health <= 0)
+            if (currentHealth <= 0)
             {
                 //het mau thi chet
                 Destroy(gameObject,0.8f);
@@ -198,10 +210,15 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Hp"))
         {
-            //Đụng bình hp tăng 10hp
-            health += 10;
-            _healthSlider.value = health;
-            Destroy(other.gameObject);
+            //Đụng bình hp tăng 10Hp và slider tăng theo
+            currentHealth += 10;
+            _healthSlider.value = currentHealth;
+            Destroy(other.gameObject);//bình hp biến mất
+            //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
+            if(currentHealth > health)
+            {
+                currentHealth = health;
+            }
         }
         if (other.gameObject.CompareTag("Mana"))
         {
