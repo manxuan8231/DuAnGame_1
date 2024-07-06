@@ -13,14 +13,17 @@ public class Player : MonoBehaviour
     [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
 
     [SerializeField] private Slider _healthSlider;//slider file
-    private int health;//khai báo hp
+    private int maxHealth;//khai báo hp
     public int currentHealth; // Số máu hiện tại
-    public float healRate = 1.0f; // Tốc độ hồi máu, ở đây là mỗi 1 giây hồi 1 máu
+    private float healRate = 1f; // thgian hồi hp
     private float healTimer;
 
 
     [SerializeField] private Slider _manaSlider;//slider mana
-    private int mana;//mana
+    private int maxMana;//mana
+    public int currentMana;//mana hien tai
+    private float manaTimer;
+    private float manaRate = 1f;
 
     float speedX;//Horizontal(A,B)
 
@@ -39,29 +42,33 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //Hp người chs
-        currentHealth = health = 100;
-        _healthSlider.maxValue = health;
+        currentHealth = maxHealth = 100;
+        _healthSlider.maxValue = maxHealth;
         healTimer = healRate;
 
         //mana nguoi chs
-        mana = 100;
-        _manaSlider.maxValue = mana;
+        currentMana= maxMana = 100;
+        _manaSlider.maxValue = maxMana;
+        manaTimer= manaRate;
     }
 
     void Update()
     {
         Move();
         Flip();
-        if (mana > 0)//nếu mana lớn hơn 0 thì mới cho 
+        if (currentMana > 0)
         {
             AnimatorAttack();
             Fire();
+            Dash();
         }
         TimeHp();
+        TimeMana();
+        
     }
     private void TimeHp()
     {
-        if(currentHealth < health)
+        if(currentHealth < maxHealth)
         {
             healTimer -= Time.deltaTime;//làm giảm bộ đếm thời gian này dần dần cho đến khi đạt 0
             if (healTimer <= 0)
@@ -78,9 +85,32 @@ public class Player : MonoBehaviour
         //hp mặc định cộng 1 hp
         currentHealth += amount;
         //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
-        if (currentHealth > health)
+        if (currentHealth > maxHealth)
         {
-            currentHealth = health;           
+            currentHealth = maxHealth;           
+        }
+    }
+
+    private void TimeMana()
+    {
+        if(currentMana < maxMana)
+        {
+            manaTimer -= Time.deltaTime;
+            if(manaTimer <= 0)
+            {
+                Mana(2);
+                manaTimer = manaRate;
+                _manaSlider.value = currentMana;
+            }
+        }
+    }
+    private void Mana(int amount)
+    {
+        currentMana += amount;
+        if(currentMana > maxMana)
+        {
+            currentMana = maxMana;
+            _manaSlider.value = currentMana;
         }
     }
     private void Move()
@@ -101,6 +131,23 @@ public class Player : MonoBehaviour
         }
         
     }
+    private void Dash()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            if (!Right)
+            {
+                transform.Translate(Vector3.right*_dashBoost*Time.deltaTime);
+            }
+            if (Right)
+            {
+                transform.Translate(Vector3.left * _dashBoost * Time.deltaTime);
+            }
+            animator.SetTrigger("isDash");
+            currentMana -= 10;
+            _manaSlider.value =currentMana;
+        }
+    }
     private void AnimatorAttack()
     {
 
@@ -108,41 +155,35 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("isAttack1");
-            mana -= 10;
-            _manaSlider.value = mana;
+           currentMana -= 10;
+            _manaSlider.value = currentMana;
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             animator.SetTrigger("isAttack2");
-            mana -= 10;
-            _manaSlider.value = mana;
+            currentMana -= 10;
+            _manaSlider.value = currentMana;
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
             animator.SetTrigger("isAttack3");
-            mana -= 10;
-            _manaSlider.value = mana;
+            currentMana -= 10;
+            _manaSlider.value = currentMana;
         }
         if (Input.GetKeyDown(KeyCode.R) && okJump)
         {
             animator.SetTrigger("isAttackSpecia");
-            mana -= 30;
-            _manaSlider.value = mana;
+            currentMana -= 30;
+            _manaSlider.value = currentMana;
             rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
             animator.SetTrigger("isShuriken");
-            mana -= 1;
-            _manaSlider.value = mana;
+            currentMana -= 5;
+            _manaSlider.value = currentMana;
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-
-            animator.SetTrigger("isDash");
-            mana -= 5;
-            _manaSlider.value = mana;
-        }
+       
     }
 
     
@@ -215,28 +256,25 @@ public class Player : MonoBehaviour
             _healthSlider.value = currentHealth;
             Destroy(other.gameObject);//bình hp biến mất
             //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
-            if(currentHealth > health)
+            if(currentHealth > maxHealth)
             {
-                currentHealth = health;
+                currentHealth = maxHealth;
             }
         }
         if (other.gameObject.CompareTag("Mana"))
         {
             //đụng bình mana tăng 50
-            mana += 50;
-            _manaSlider.value = mana;
+            currentMana += 50;
+            _manaSlider.value = currentMana;
             Destroy(other.gameObject);
-        }
-        
-       
+        }    
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         //không chạm đất thì không được nhảy
         if (other.gameObject.CompareTag("Ground"))
         {
-            okJump= false;
-           
+            okJump= false;         
         }
         
     }
