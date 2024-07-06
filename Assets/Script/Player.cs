@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         healTimer = healRate;
 
         //mana nguoi chs
-        currentMana= maxMana = 100;
+        currentMana= maxMana = 200;
         _manaSlider.maxValue = maxMana;
         manaTimer= manaRate;
     }
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             manaTimer -= Time.deltaTime;
             if(manaTimer <= 0)
             {
-                Mana(2);
+                Mana(10);
                 manaTimer = manaRate;
                 _manaSlider.value = currentMana;
             }

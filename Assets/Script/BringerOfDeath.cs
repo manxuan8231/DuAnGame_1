@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class BringerOfDeath : MonoBehaviour
@@ -8,8 +9,12 @@ public class BringerOfDeath : MonoBehaviour
     [SerializeField] private float _moveHurt = 10f;//vận tốc bị văng khi dính damage
     [SerializeField] private float _moveSpeed = 1f;//vận tốc di chuyển
     [SerializeField] private float rightBoundary;//cho tọa đô
-    [SerializeField] private float leftBoundary;//cho tọa đô
+    [SerializeField] private float leftBoundary;
+
     private bool Right;
+
+    private bool player;
+    public Transform Player;
 
     public Slider healthSlider;
     private int health;
@@ -26,8 +31,19 @@ public class BringerOfDeath : MonoBehaviour
     
     void Update()
     {
-        diChuyenNgang();
-        hienTai();
+
+        
+        if (!player)
+        {
+           
+            diChuyenNgang();
+            hienTai();
+        }
+        else
+        {           
+            followPlayer();
+
+        }       
     }
     private void diChuyenNgang()
     {      
@@ -60,13 +76,26 @@ public class BringerOfDeath : MonoBehaviour
         }
         transform.localScale = currentScale;
     }
-
+    private void followPlayer()//thấy player thì chạy theo
+    {
+        if (player)
+        {
+            Vector2 moveDirection = (Player.position - transform.position).normalized;
+            rb.velocity = moveDirection * 10f;// Tốc độ di chuyển
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;//dừng khi không nhìn thấy player
+        }
+        
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Shuriken"))
         {
             health -= 5;
             healthSlider.value = health;
+            //đang xoay mặt bên trái khi trúng shuriken thì văng qua phải 
             if (Right)
             {
                 rb.AddForce(Vector2.up * _moveSpeed, ForceMode2D.Impulse);
@@ -81,5 +110,17 @@ public class BringerOfDeath : MonoBehaviour
             animator.SetTrigger("isHurt");
             Destroy(other.gameObject);//shuriken biến mất
         }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            player = false;
+        }
+        
     }
 }
