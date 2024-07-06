@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Hp
   - Mana
+  - Boss
+  - Shuriken
   layers:
   - Default
   - TransparentFX
