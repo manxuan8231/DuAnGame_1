@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -17,13 +19,16 @@ public class Player : MonoBehaviour
     public int currentHealth; // Số máu hiện tại
     private float healRate = 1f; // thgian hồi hp
     private float healTimer;
-
+    public TextMeshProUGUI _textHeal;
+   
 
     [SerializeField] private Slider _manaSlider;//slider mana
     private int maxMana;//mana
     public int currentMana;//mana hien tai
     private float manaTimer;
     private float manaRate = 1f;
+    public TextMeshProUGUI _textMana;
+    
 
     float speedX;//Horizontal(A,B)
 
@@ -45,11 +50,13 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth = 100;
         _healthSlider.maxValue = maxHealth;
         healTimer = healRate;
+        _textHeal.text = currentHealth.ToString();
 
         //mana nguoi chs
         currentMana= maxMana = 200;
         _manaSlider.maxValue = maxMana;
         manaTimer= manaRate;
+        _textMana.text = currentMana.ToString();
     }
 
     void Update()
@@ -76,6 +83,7 @@ public class Player : MonoBehaviour
                 Heal(1);//cộng 1 hp
                 _healthSlider.value = currentHealth;
                 healTimer = healRate;// sau 1 giây sẽ hồi lại máu
+                _textHeal.text = currentHealth.ToString();
             }
 
         }
@@ -101,6 +109,7 @@ public class Player : MonoBehaviour
                 Mana(10);
                 manaTimer = manaRate;
                 _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
             }
         }
     }
@@ -111,6 +120,7 @@ public class Player : MonoBehaviour
         {
             currentMana = maxMana;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
         }
     }
     private void Move()
@@ -146,6 +156,7 @@ public class Player : MonoBehaviour
             animator.SetTrigger("isDash");
             currentMana -= 10;
             _manaSlider.value =currentMana;
+            _textMana.text = currentMana.ToString();
         }
     }
     private void AnimatorAttack()
@@ -157,24 +168,29 @@ public class Player : MonoBehaviour
             animator.SetTrigger("isAttack1");
            currentMana -= 10;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
+            
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             animator.SetTrigger("isAttack2");
             currentMana -= 10;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
             animator.SetTrigger("isAttack3");
             currentMana -= 10;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
         }
         if (Input.GetKeyDown(KeyCode.R) && okJump)
         {
             animator.SetTrigger("isAttackSpecia");
             currentMana -= 30;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
             rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
         }
         if (Input.GetKeyDown(KeyCode.F))
@@ -182,6 +198,7 @@ public class Player : MonoBehaviour
             animator.SetTrigger("isShuriken");
             currentMana -= 5;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
         }
        
     }
@@ -234,6 +251,7 @@ public class Player : MonoBehaviour
             //nếu đụng enemy thì mất 10Hp
             currentHealth -= 10;
             _healthSlider.value = currentHealth;
+            _textHeal.text=currentHealth.ToString();
             if (currentHealth >= 10)
             {
                 //animation Hurt
@@ -254,6 +272,7 @@ public class Player : MonoBehaviour
             //Đụng bình hp tăng 10Hp và slider tăng theo
             currentHealth += 10;
             _healthSlider.value = currentHealth;
+            _textHeal.text=currentHealth.ToString();
             Destroy(other.gameObject);//bình hp biến mất
             //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
             if(currentHealth > maxHealth)
@@ -266,6 +285,7 @@ public class Player : MonoBehaviour
             //đụng bình mana tăng 50
             currentMana += 50;
             _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
             Destroy(other.gameObject);
         }    
     }
