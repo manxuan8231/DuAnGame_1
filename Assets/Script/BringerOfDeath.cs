@@ -8,8 +8,7 @@ public class BringerOfDeath : MonoBehaviour
 {
     [SerializeField] private float _moveHurt = 10f;//vận tốc bị văng khi dính damage
     [SerializeField] private float _moveSpeed = 1f;//vận tốc di chuyển
-    [SerializeField] private float rightBoundary;//cho tọa đô
-    [SerializeField] private float leftBoundary;
+    
 
     private bool Right;
 
@@ -30,64 +29,36 @@ public class BringerOfDeath : MonoBehaviour
 
     
     void Update()
-    {
-
-        
-        if (!player)
-        {
-           
-            diChuyenNgang();
-            hienTai();
-        }
-        else
-        {           
-            followPlayer();
-
-        }       
+    {                                
+            followPlayer();             
     }
-    private void diChuyenNgang()
-    {      
-        var direction = Vector3.right; 
-        if ((Right == false))
-        {
-            direction = Vector3.left;
-        }
-       
-        transform.Translate(direction * _moveSpeed * Time.deltaTime);
-        
-    }
-    private void hienTai()
-    {
-        //currentPosition: vi tri hien tai
-        var currentPosition = transform.localPosition;
-        if (currentPosition.x > rightBoundary)
-        {
-            Right = false;
-        }
-        else if (currentPosition.x < leftBoundary)
-        {
-            Right = true;
-        }
-        //scale hiện tai
-        var currentScale = transform.localScale;
-        if (Right == true && currentScale.x > 0 || Right == false && currentScale.x < 0)
-        {
-            currentScale.x *= -1;
-        }
-        transform.localScale = currentScale;
-    }
+   
     private void followPlayer()//thấy player thì chạy theo
     {
         if (player)
         {
             Vector2 moveDirection = (Player.position - transform.position).normalized;
-            rb.velocity = moveDirection * 10f;// Tốc độ di chuyển
+            rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
+            animator.SetFloat("isRun",Mathf.Abs(moveDirection.x));
+            if (moveDirection.x != 0)
+            {
+                if (moveDirection.x < 0)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                }
+                if (moveDirection.x > 0)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
+            }
         }
         else
         {
-            rb.velocity = Vector2.zero;//dừng khi không nhìn thấy player
+            rb.velocity = Vector2.zero;//dừng khi không nhìn thấy player          
         }
         
+      
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
