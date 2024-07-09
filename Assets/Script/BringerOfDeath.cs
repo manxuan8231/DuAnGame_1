@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BringerOfDeath : MonoBehaviour
 {
-    [SerializeField] private float _moveHurt = 10f;//vận tốc bị văng khi dính damage
+    
     [SerializeField] private float _moveSpeed = 1f;//vận tốc di chuyển
     
 
