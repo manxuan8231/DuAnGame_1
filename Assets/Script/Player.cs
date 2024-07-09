@@ -249,7 +249,7 @@ public class Player : MonoBehaviour
         {
             
             //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 10;
+            currentHealth -= 1;
             _healthSlider.value = currentHealth;
             _textHeal.text=currentHealth.ToString();
             if (currentHealth >= 10)
