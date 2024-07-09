@@ -10,6 +10,7 @@ TagManager:
   - Mana
   - Boss
   - Shuriken
+  - AttackBoss
   layers:
   - Default
   - TransparentFX

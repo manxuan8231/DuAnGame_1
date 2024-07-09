@@ -245,7 +245,7 @@ public class Player : MonoBehaviour
             okJump= true;
         }
             
-        if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("AttackBoss"))
         {
             
             //nếu đụng enemy thì mất 10Hp
