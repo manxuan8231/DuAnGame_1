@@ -66,20 +66,10 @@ public class BringerOfDeath : MonoBehaviour
         {
             health -= 5;
             healthSlider.value = health;
-            //đang xoay mặt bên trái khi trúng shuriken thì văng qua phải 
-            if (Right)
-            {
-                rb.AddForce(Vector2.up * _moveSpeed, ForceMode2D.Impulse);
-                transform.Translate(Vector3.left * _moveHurt * Time.deltaTime);
-            }
-            if (!Right)
-            {
-                rb.AddForce(Vector2.up * _moveSpeed, ForceMode2D.Impulse);
-                transform.Translate(Vector3.right*_moveHurt * Time.deltaTime);
-            }
+            
 
             animator.SetTrigger("isHurt");
-            Destroy(other.gameObject);//shuriken biến mất
+            Destroy(other.gameObject,0.1f);//shuriken biến mất
         }
         if (other.gameObject.CompareTag("Player"))
         {
