@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 464683021}
   - component: {fileID: 464683020}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas(Slide)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,6 +1309,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1175269880}
+  - {fileID: 1281915245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864806339
@@ -1417,6 +1418,7 @@ Transform:
   m_Children:
   - {fileID: 1689527239}
   - {fileID: 1526874197}
+  - {fileID: 1232297281}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932843966
@@ -26077,12 +26079,11 @@ Transform:
   m_GameObject: {fileID: 1175269879}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.19, y: -0.59, z: 1606.2208}
+  m_LocalPosition: {x: 19.15, y: -0.54, z: 1606.2208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 464683019}
-  - {fileID: 1281915245}
   m_Father: {fileID: 854010749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1175269881
@@ -26133,7 +26134,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4493985, y: -0.7184322}
+  m_Offset: {x: 1.4438884, y: -0.7184322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26144,7 +26145,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7096338, y: 2.2112823}
+  m_Size: {x: 1.7207541, y: 2.2112823}
   m_EdgeRadius: 0
 --- !u!50 &1175269883
 Rigidbody2D:
@@ -26278,7 +26279,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.2195358, y: -0.73510325}
+  m_Offset: {x: 0.5364189, y: -0.7291324}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -26289,7 +26290,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.591248, y: 2.2497938}
+  m_Size: {x: 8.079338, y: 2.2617354}
   m_EdgeRadius: 0
 --- !u!1 &1232297277
 GameObject:
@@ -26304,7 +26305,7 @@ GameObject:
   - component: {fileID: 1232297279}
   - component: {fileID: 1232297278}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas(Text)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26387,7 +26388,7 @@ RectTransform:
   m_Children:
   - {fileID: 1448554658}
   - {fileID: 704196959}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 913471083}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26467,8 +26468,8 @@ GameObject:
   - component: {fileID: 1281915245}
   - component: {fileID: 1281915246}
   m_Layer: 0
-  m_Name: Attack(Death)
-  m_TagString: AttackBoss
+  m_Name: Attack(Boss)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26481,12 +26482,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281915244}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.05, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.34, y: -0.63999987, z: 1606.2208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1175269880}
+  m_Father: {fileID: 854010749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1281915246
 BoxCollider2D:
@@ -26520,7 +26521,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.55573845, y: -0.63328195}
+  m_Offset: {x: -1.4898567, y: -0.63328195}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -26531,7 +26532,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.111477, y: 2.266564}
+  m_Size: {x: 2.4805222, y: 2.266564}
   m_EdgeRadius: 0
 --- !u!1 &1448554657
 GameObject:
@@ -26843,7 +26844,7 @@ GameObject:
   - component: {fileID: 1526874199}
   - component: {fileID: 1526874198}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas(Slide)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27705,4 +27706,3 @@ SceneRoots:
   - {fileID: 913471083}
   - {fileID: 854010749}
   - {fileID: 1811818321}
-  - {fileID: 1232297281}
