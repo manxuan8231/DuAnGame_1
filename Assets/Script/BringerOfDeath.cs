@@ -6,17 +6,16 @@ using UnityEngine.UI;
 
 public class BringerOfDeath : MonoBehaviour
 {
-    
-    [SerializeField] private float _moveSpeed = 1f;//vận tốc di chuyển
-    
-
-    private bool Right;
-
+      
     private bool player;
-    public Transform Player;
+    public Transform Player;//follow player
 
-    public Slider healthSlider;
+    public Slider healthSlider;//slider hp boss
     private int health;
+
+    public GameObject attackSkill;//skill
+    public Transform attack;//vị trí tấn công
+
     Animator animator;
     Rigidbody2D rb;
     void Start()
@@ -56,9 +55,6 @@ public class BringerOfDeath : MonoBehaviour
         {
             rb.velocity = Vector2.zero;//dừng khi không nhìn thấy player          
         }
-        
-      
-
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -67,13 +63,16 @@ public class BringerOfDeath : MonoBehaviour
             health -= 5;
             healthSlider.value = health;
             
-
             animator.SetTrigger("isHurt");
             Destroy(other.gameObject,0.1f);//shuriken biến mất
         }
         if (other.gameObject.CompareTag("Player"))
         {
             player = true;
+            //animation tấn công
+            animator.SetTrigger("isAttack");
+            var oneSkill= Instantiate(attackSkill,attack.position, Quaternion.identity);
+
         }
     }
     private void OnTriggerExit2D(Collider2D other)
