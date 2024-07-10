@@ -376,7 +376,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5513313
+  orthographic size: 4.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -872,7 +872,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1689527239}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 2.5513313
+    OrthographicSize: 4.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -25510,6 +25510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdc3349b31bfd34a9b76a1b8d88ebf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRange: 10
   Player: {fileID: 1689527239}
   healthSlider: {fileID: 268826047}
   attackSkill: {fileID: 8308220307374378446, guid: 8b48d95ac1afa55469070a03eb65efb0, type: 3}
@@ -25546,7 +25547,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4226189, y: -1.7038622}
+  m_Offset: {x: 1.4012451, y: -0.6921582}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25557,7 +25558,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1394196, y: 0.24042225}
+  m_Size: {x: 1.182167, y: 2.2638302}
   m_EdgeRadius: 0
 --- !u!50 &1175269883
 Rigidbody2D:
@@ -25691,7 +25692,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.6430302, y: -0.7291324}
+  m_Offset: {x: -0.41106224, y: -0.7193582}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25702,7 +25703,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.699787, y: 2.2617354}
+  m_Size: {x: 2.4289436, y: 2.2812839}
   m_EdgeRadius: 0
 --- !u!1001 &1269474837
 PrefabInstance:
@@ -25978,8 +25979,8 @@ Transform:
   m_GameObject: {fileID: 1720858039}
   serializedVersion: 2
   m_LocalRotation: {x: 0.017449792, y: 0.017449792, z: -0.000304588, w: 0.9996954}
-  m_LocalPosition: {x: -0.0004, y: 0.0047, z: 10}
-  m_LocalScale: {x: 0.4733097, y: 0.47187638, z: 1}
+  m_LocalPosition: {x: -0.0162, y: 0.033, z: 10.0015}
+  m_LocalScale: {x: 0.84096485, y: 0.830334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721303914}

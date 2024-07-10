@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
         }
         TimeHp();
         TimeMana();
-        
+        Death();
     }
     private void TimeHp()
     {
@@ -203,9 +203,23 @@ public class Player : MonoBehaviour
        
     }
 
-    
+    private void Death()//hết máu thì dừng game
+    {
+        if (currentHealth <= 0)
+        {
+           
+            healTimer -= Time.deltaTime;
+            if (healTimer <= 0)
+            {
+                
+                Time.timeScale = 0f;
+                healTimer = 3f;
+            }
 
-    private void Fire()
+        }
+    }
+
+    private void Fire()//bắn shuriken
     {
         //nếu nhấn f thì bắn 
         if (Input.GetKeyDown(KeyCode.F))
@@ -221,11 +235,11 @@ public class Player : MonoBehaviour
             }
             oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -50 : 50, 0);
 
-            Destroy(oneBullet, 2f);
+            Destroy(oneBullet, 1.5f);
         }
         
     }
-    private void Flip()
+    private void Flip()//Xoay mặt
     {
         //xoay mặt
         if (Right && speedX > 0 || !Right && speedX < 0)
@@ -237,7 +251,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)//xử lý va chạm box
     {
         //chạm đất thì dc phép nhảy
         if (other.gameObject.CompareTag("Ground"))
@@ -249,23 +263,23 @@ public class Player : MonoBehaviour
         {
             
             //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 1;
+            currentHealth -= 5;
             _healthSlider.value = currentHealth;
             _textHeal.text=currentHealth.ToString();
+            
             if (currentHealth >= 10)
             {
                 //animation Hurt
                 animator.SetTrigger("isHurt");
             }
-            if (currentHealth <= 0)
+           if(currentHealth < 0)
             {
-                //het mau thi chet
-                Destroy(gameObject,0.8f);
-               
                 //animation death
                 animator.SetTrigger("isDeath");
+
             }
-        
+
+
         }
         if (other.gameObject.CompareTag("Hp"))
         {
@@ -291,7 +305,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        //không chạm đất thì không được nhảy
+       
         if (other.gameObject.CompareTag("Ground"))
         {
             okJump= false;         
