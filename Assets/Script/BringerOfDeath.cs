@@ -7,14 +7,21 @@ using UnityEngine.UI;
 public class BringerOfDeath : MonoBehaviour
 {
       
-    private bool player;
+   
+    public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
     public Transform Player;//follow player
+    private bool player;
 
     public Slider healthSlider;//slider hp boss
     private int health;
 
     public GameObject attackSkill;//skill
     public Transform attack;//vị trí tấn công
+
+    private float TimeAttackRate=2f;
+    private float timeAttack;
+
+    private bool right;
 
     Animator animator;
     Rigidbody2D rb;
@@ -24,56 +31,73 @@ public class BringerOfDeath : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         health=1000;
         healthSlider.maxValue = health;
+        timeAttack = TimeAttackRate;
+        
     }
 
     
     void Update()
     {                                
-            followPlayer();             
+            followPlayer();
+            TimeAttack();
     }
-   
-    private void followPlayer()//thấy player thì chạy theo
+   void TimeAttack()
     {
         if (player)
         {
-            Vector2 moveDirection = (Player.position - transform.position).normalized;
-            rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
-            animator.SetFloat("isRun",Mathf.Abs(moveDirection.x));
-            if (moveDirection.x != 0)
+            timeAttack -= Time.deltaTime;
+            if (timeAttack <= 0)
             {
-                if (moveDirection.x < 0)
-                {
-                    transform.localScale = new Vector3(1, 1, 1);
-                }
-                if (moveDirection.x > 0)
-                {
-                    transform.localScale = new Vector3(-1, 1, 1);
-                }
+                //animation tấn công
+                animator.SetTrigger("isAttack");
+                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                Destroy(oneSkill, 0.1f);
+                timeAttack = TimeAttackRate;
             }
         }
-        else
+    }
+    private void followPlayer()//thấy player thì chạy theo
+    {
+        // Tính khoảng cách giữa quái vật và người chơi
+        float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
+        // Nếu khoảng cách nhỏ hơn phạm vi phát hiện, quái vật sẽ đuổi theo người chơi
+        if (distanceToPlayer < detectionRange)
         {
-            rb.velocity = Vector2.zero;//dừng khi không nhìn thấy player          
+            Vector2 moveDirection = (Player.position - transform.position).normalized;
+            rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
+            if (moveDirection.x != 0)
+            {
+                animator.SetFloat("isRun", Mathf.Abs(moveDirection.x));
+            }
+            //xoay mặt
+            if (right && moveDirection.x < 0 || !right && moveDirection.x > 0)
+            {
+                right = !right;
+                Vector3 kichThuoc = transform.localScale;
+                kichThuoc.x = kichThuoc.x * -1;
+                transform.localScale = kichThuoc;
+                animator.SetTrigger("isTele");
+            }
+
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Shuriken"))
         {
+            
             health -= 5;
             healthSlider.value = health;
             
             animator.SetTrigger("isHurt");
-            Destroy(other.gameObject,0.1f);//shuriken biến mất
+            Destroy(other.gameObject);//shuriken biến mất
         }
         if (other.gameObject.CompareTag("Player"))
         {
-            player = true;
-            //animation tấn công
-            animator.SetTrigger("isAttack");
-            var oneSkill= Instantiate(attackSkill,attack.position, Quaternion.identity);
-
+            player = true;           
         }
+
     }
     private void OnTriggerExit2D(Collider2D other)
     {
