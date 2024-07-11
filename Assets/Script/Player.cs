@@ -123,6 +123,7 @@ public class Player : MonoBehaviour
             _textMana.text = currentMana.ToString();
         }
     }
+
     private void Move()
     {
         //di chuyển
@@ -213,7 +214,7 @@ public class Player : MonoBehaviour
             {
                 
                 Time.timeScale = 0f;
-                healTimer = 3f;
+                healTimer = 3.5f;
             }
 
         }

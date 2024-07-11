@@ -65,7 +65,10 @@ public class BringerOfDeath : MonoBehaviour
         {
             Vector2 moveDirection = (Player.position - transform.position).normalized;
             rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
-            animator.SetFloat("isRun", Mathf.Abs(moveDirection.x));
+            if (moveDirection.x != 0)
+            {
+                animator.SetFloat("isRun", Mathf.Abs(moveDirection.x));
+            }
             //xoay mặt
             if (right && moveDirection.x < 0 || !right && moveDirection.x > 0)
             {
@@ -88,7 +91,7 @@ public class BringerOfDeath : MonoBehaviour
             healthSlider.value = health;
             
             animator.SetTrigger("isHurt");
-            Destroy(other.gameObject,0.1f);//shuriken biến mất
+            Destroy(other.gameObject);//shuriken biến mất
         }
         if (other.gameObject.CompareTag("Player"))
         {
