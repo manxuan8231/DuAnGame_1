@@ -11,6 +11,10 @@ TagManager:
   - Boss
   - Shuriken
   - AttackBoss
+  - Attack1
+  - Attack2
+  - Attack3
+  - SpecialAttack
   layers:
   - Default
   - TransparentFX

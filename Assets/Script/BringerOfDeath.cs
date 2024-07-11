@@ -22,6 +22,7 @@ public class BringerOfDeath : MonoBehaviour
     private float timeAttack;
 
     private bool right;
+   
 
     Animator animator;
     Rigidbody2D rb;
@@ -34,12 +35,13 @@ public class BringerOfDeath : MonoBehaviour
         timeAttack = TimeAttackRate;
         
     }
-
-    
+   
     void Update()
-    {                                
-            followPlayer();
-            TimeAttack();
+    {
+        followPlayer();
+       TimeAttack();//độ trể khi thấy player sau 3f tấn công
+           
+
     }
    void TimeAttack()
     {
@@ -56,6 +58,8 @@ public class BringerOfDeath : MonoBehaviour
             }
         }
     }
+
+    
     private void followPlayer()//thấy player thì chạy theo
     {
         // Tính khoảng cách giữa quái vật và người chơi
@@ -84,7 +88,7 @@ public class BringerOfDeath : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Shuriken"))
+        if (other.gameObject.CompareTag("Shuriken"))//nếu chạm shuriken thì mất máu
         {
             
             health -= 5;
@@ -97,7 +101,40 @@ public class BringerOfDeath : MonoBehaviour
         {
             player = true;           
         }
+        if (other.gameObject.CompareTag("Attack1"))
+        {
+            health -= 10;
+            healthSlider.value = health;
 
+            animator.SetTrigger("isHurt");
+        }
+        if (other.gameObject.CompareTag("Attack2"))
+        {
+            health -= 20;
+            healthSlider.value = health;
+
+            animator.SetTrigger("isHurt");
+        }
+        if (other.gameObject.CompareTag("Attack3"))
+        {
+            health -= 30;
+            healthSlider.value = health;
+
+            animator.SetTrigger("isHurt");
+        }
+        if (other.gameObject.CompareTag("SpecialAttack"))
+        {
+
+            health -= 40;
+            healthSlider.value = health;
+            animator.SetTrigger("isHurt");
+
+        }
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -105,6 +142,6 @@ public class BringerOfDeath : MonoBehaviour
         {
             player = false;
         }
-        
+       
     }
 }

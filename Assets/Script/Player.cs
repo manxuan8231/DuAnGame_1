@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;//Vận tốc di chuyển 
-
     [SerializeField] private float _moveJump;//vận tốc nhảy
     [SerializeField] private float _moveJumpSkill;//vận tốc skill đặc biệt
     [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
@@ -34,10 +33,18 @@ public class Player : MonoBehaviour
 
     private bool Right;//mặc định mặt bên phải
     private bool okJump;//true false được phép nhảy
+    
 
-
-    public GameObject bullet;//khai báo viên đạn
-    public Transform gun;//viên đạn tại vị trí súng
+    //vị trí bắn
+    public Transform Gun;
+    public Transform Special;
+    //bắn ra
+    public GameObject ShurikenBullet;
+    public GameObject Attack1bullet;
+    public GameObject Attack2bullet;
+    public GameObject Attack3bullet;
+    public GameObject SpecialBullet;
+    
 
     Rigidbody2D rb;
     Animator animator;
@@ -57,6 +64,8 @@ public class Player : MonoBehaviour
         _manaSlider.maxValue = maxMana;
         manaTimer= manaRate;
         _textMana.text = currentMana.ToString();
+
+      
     }
 
     void Update()
@@ -65,14 +74,17 @@ public class Player : MonoBehaviour
         Flip();
         if (currentMana > 0)
         {
-            AnimatorAttack();
+            PlayerAttack();
             Fire();
             Dash();
         }
         TimeHp();
         TimeMana();
         Death();
+        CurrentHealAndMana();
+        
     }
+    
     private void TimeHp()
     {
         if(currentHealth < maxHealth)
@@ -91,12 +103,7 @@ public class Player : MonoBehaviour
     private void Heal(int amount)
     {
         //hp mặc định cộng 1 hp
-        currentHealth += amount;
-        //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;           
-        }
+        currentHealth += amount;     
     }
 
     private void TimeMana()
@@ -119,7 +126,22 @@ public class Player : MonoBehaviour
         if(currentMana > maxMana)
         {
             currentMana = maxMana;
-            _manaSlider.value = currentMana;
+            
+        }
+    }
+
+    private void CurrentHealAndMana()
+    {
+        //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+            _textHeal.text = currentHealth.ToString();
+        }
+        //nếu mana hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành mana đã cho
+        if (currentMana > maxMana)
+        {
+            currentMana = maxMana;
             _textMana.text = currentMana.ToString();
         }
     }
@@ -160,17 +182,22 @@ public class Player : MonoBehaviour
             _textMana.text = currentMana.ToString();
         }
     }
-    private void AnimatorAttack()
+
+    private void PlayerAttack()
     {
 
-        //hiệu ứng tấn công
+        //tấn công
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //xử lý slide and text
             animator.SetTrigger("isAttack1");
-           currentMana -= 10;
+            currentMana -= 10;
             _manaSlider.value = currentMana;
             _textMana.text = currentMana.ToString();
-            
+
+            //xử lý skill
+            var oneAttackk1 = Instantiate(Attack1bullet, Gun.position, Quaternion.identity);
+            Destroy(oneAttackk1, 0.1f);//hủy skill 
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
@@ -178,6 +205,10 @@ public class Player : MonoBehaviour
             currentMana -= 10;
             _manaSlider.value = currentMana;
             _textMana.text = currentMana.ToString();
+
+            //xử lý skill
+            var oneAttackk1 = Instantiate(Attack2bullet, Gun.position, Quaternion.identity);
+            Destroy(oneAttackk1, 0.1f);//hủy skill 
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -185,15 +216,12 @@ public class Player : MonoBehaviour
             currentMana -= 10;
             _manaSlider.value = currentMana;
             _textMana.text = currentMana.ToString();
+
+            //xử lý skill
+            var oneAttackk1 = Instantiate(Attack3bullet, Gun.position, Quaternion.identity);
+            Destroy(oneAttackk1, 0.1f);//hủy skill 
         }
-        if (Input.GetKeyDown(KeyCode.R) && okJump)
-        {
-            animator.SetTrigger("isAttackSpecia");
-            currentMana -= 30;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
-            rb.AddForce(Vector2.up * _moveJumpSkill, ForceMode2D.Impulse);
-        }
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             animator.SetTrigger("isShuriken");
@@ -201,9 +229,19 @@ public class Player : MonoBehaviour
             _manaSlider.value = currentMana;
             _textMana.text = currentMana.ToString();
         }
-       
-    }
+        // Thực hiện hành động của player
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            animator.SetTrigger("isAttackSpecia");
+            currentMana -= 30;
+            _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
 
+            //xử lý skill
+            var oneAttackk1 = Instantiate(SpecialBullet, Special.position, Quaternion.identity);
+            Destroy(oneAttackk1, 0.1f);//hủy skill 
+        }
+    }
     private void Death()//hết máu thì dừng game
     {
         if (currentHealth <= 0)
@@ -214,7 +252,7 @@ public class Player : MonoBehaviour
             {
                 
                 Time.timeScale = 0f;
-                healTimer = 3.5f;
+                healTimer = 3f;
             }
 
         }
@@ -226,7 +264,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             //tạo ra viên đạn tại vị trí súng
-            var oneBullet = Instantiate(bullet, gun.position, Quaternion.identity);
+            var oneBullet = Instantiate(ShurikenBullet, Gun.position, Quaternion.identity);
 
             //cho đạn bay theo huong nhân vật
             var velocity = new Vector2(50f, 0);
@@ -289,11 +327,7 @@ public class Player : MonoBehaviour
             _healthSlider.value = currentHealth;
             _textHeal.text=currentHealth.ToString();
             Destroy(other.gameObject);//bình hp biến mất
-            //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
-            if(currentHealth > maxHealth)
-            {
-                currentHealth = maxHealth;
-            }
+            
         }
         if (other.gameObject.CompareTag("Mana"))
         {
