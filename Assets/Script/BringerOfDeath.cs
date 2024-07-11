@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class BringerOfDeath : MonoBehaviour
 {
-      
-   
+
+
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
     public Transform Player;//follow player
     private bool player;
@@ -18,11 +18,11 @@ public class BringerOfDeath : MonoBehaviour
     public GameObject attackSkill;//skill
     public Transform attack;//vị trí tấn công
 
-    private float TimeAttackRate=2f;
+    private float TimeAttackRate = 2f;
     private float timeAttack;
 
     private bool right;
-   
+
 
     Animator animator;
     Rigidbody2D rb;
@@ -30,20 +30,20 @@ public class BringerOfDeath : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        health=1000;
+        health = 1000;
         healthSlider.maxValue = health;
         timeAttack = TimeAttackRate;
-        
+
     }
-   
+
     void Update()
     {
         followPlayer();
-       TimeAttack();//độ trể khi thấy player sau 3f tấn công
-           
+        TimeAttack();//độ trể khi thấy player sau 3f tấn công
+
 
     }
-   void TimeAttack()
+    void TimeAttack()
     {
         if (player)
         {
@@ -59,7 +59,7 @@ public class BringerOfDeath : MonoBehaviour
         }
     }
 
-    
+
     private void followPlayer()//thấy player thì chạy theo
     {
         // Tính khoảng cách giữa quái vật và người chơi
@@ -69,10 +69,10 @@ public class BringerOfDeath : MonoBehaviour
         {
             Vector2 moveDirection = (Player.position - transform.position).normalized;
             rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
-            if (moveDirection.x != 0)
-            {
-                animator.SetFloat("isRun", Mathf.Abs(moveDirection.x));
-            }
+
+            animator.SetFloat("isRun", Mathf.Abs(moveDirection.x));
+
+
             //xoay mặt
             if (right && moveDirection.x < 0 || !right && moveDirection.x > 0)
             {
@@ -82,10 +82,10 @@ public class BringerOfDeath : MonoBehaviour
                 transform.localScale = kichThuoc;
                 animator.SetTrigger("isTele");
             }
-
-            
         }
-    }
+
+
+    } 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Shuriken"))//nếu chạm shuriken thì mất máu

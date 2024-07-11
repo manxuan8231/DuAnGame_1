@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     public int currentMana;//mana hien tai
     private float manaTimer;
     private float manaRate = 1f;
+    private float deathTime;
+    private float deathRate = 2f;
     public TextMeshProUGUI _textMana;
     
 
@@ -65,7 +67,7 @@ public class Player : MonoBehaviour
         manaTimer= manaRate;
         _textMana.text = currentMana.ToString();
 
-      
+      deathTime= deathRate;
     }
 
     void Update()
@@ -166,20 +168,23 @@ public class Player : MonoBehaviour
     }
     private void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (currentMana >= 10)
         {
-            if (!Right)
+            if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                transform.Translate(Vector3.right*_dashBoost*Time.deltaTime);
+                if (!Right)
+                {
+                    transform.Translate(Vector3.right * _dashBoost * Time.deltaTime);
+                }
+                if (Right)
+                {
+                    transform.Translate(Vector3.left * _dashBoost * Time.deltaTime);
+                }
+                animator.SetTrigger("isDash");
+                currentMana -= 10;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
             }
-            if (Right)
-            {
-                transform.Translate(Vector3.left * _dashBoost * Time.deltaTime);
-            }
-            animator.SetTrigger("isDash");
-            currentMana -= 10;
-            _manaSlider.value =currentMana;
-            _textMana.text = currentMana.ToString();
         }
     }
 
@@ -187,75 +192,74 @@ public class Player : MonoBehaviour
     {
 
         //tấn công
-        if (Input.GetKeyDown(KeyCode.E))
+        if (currentMana >= 10)
         {
-            //xử lý slide and text
-            animator.SetTrigger("isAttack1");
-            currentMana -= 10;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //xử lý slide and text
+                animator.SetTrigger("isAttack1");
+                currentMana -= 10;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
 
-            //xử lý skill
-            var oneAttackk1 = Instantiate(Attack1bullet, Gun.position, Quaternion.identity);
-            Destroy(oneAttackk1, 0.1f);//hủy skill 
+                //xử lý skill
+                var oneAttackk1 = Instantiate(Attack1bullet, Gun.position, Quaternion.identity);
+                Destroy(oneAttackk1, 0.1f);//hủy skill 
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                animator.SetTrigger("isAttack2");
+                currentMana -= 10;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
+
+                //xử lý skill
+                var oneAttackk1 = Instantiate(Attack2bullet, Gun.position, Quaternion.identity);
+                Destroy(oneAttackk1, 0.1f);//hủy skill 
+            }
+
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                animator.SetTrigger("isAttack3");
+                currentMana -= 10;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
+
+                //xử lý skill
+                var oneAttackk1 = Instantiate(Attack3bullet, Gun.position, Quaternion.identity);
+                Destroy(oneAttackk1, 0.1f);//hủy skill 
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (currentMana >= 10)
         {
-            animator.SetTrigger("isAttack2");
-            currentMana -= 10;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
-
-            //xử lý skill
-            var oneAttackk1 = Instantiate(Attack2bullet, Gun.position, Quaternion.identity);
-            Destroy(oneAttackk1, 0.1f);//hủy skill 
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            animator.SetTrigger("isAttack3");
-            currentMana -= 10;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
-
-            //xử lý skill
-            var oneAttackk1 = Instantiate(Attack3bullet, Gun.position, Quaternion.identity);
-            Destroy(oneAttackk1, 0.1f);//hủy skill 
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                animator.SetTrigger("isShuriken");
+                currentMana -= 5;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (currentMana >= 30)
         {
-            animator.SetTrigger("isShuriken");
-            currentMana -= 5;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
-        }
-        // Thực hiện hành động của player
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            animator.SetTrigger("isAttackSpecia");
-            currentMana -= 30;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                animator.SetTrigger("isAttackSpecia");
+                currentMana -= 30;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
 
-            //xử lý skill
-            var oneAttackk1 = Instantiate(SpecialBullet, Special.position, Quaternion.identity);
-            Destroy(oneAttackk1, 0.1f);//hủy skill 
+                //xử lý skill
+                var oneAttackk1 = Instantiate(SpecialBullet, Special.position, Quaternion.identity);
+                Destroy(oneAttackk1, 0.1f);//hủy skill 
+            }
         }
     }
     private void Death()//hết máu thì dừng game
     {
-        if (currentHealth <= 0)
-        {
-           
-            healTimer -= Time.deltaTime;
-            if (healTimer <= 0)
-            {
-                
-                Time.timeScale = 0f;
-                healTimer = 3f;
-            }
-
-        }
+        
     }
 
     private void Fire()//bắn shuriken
@@ -302,7 +306,7 @@ public class Player : MonoBehaviour
         {
             
             //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 5;
+            currentHealth -= 10;
             _healthSlider.value = currentHealth;
             _textHeal.text=currentHealth.ToString();
             
@@ -311,11 +315,12 @@ public class Player : MonoBehaviour
                 //animation Hurt
                 animator.SetTrigger("isHurt");
             }
-           if(currentHealth < 0)
+           if(currentHealth <= 0)
             {
                 //animation death
                 animator.SetTrigger("isDeath");
 
+                Destroy(gameObject, 1f);
             }
 
 
