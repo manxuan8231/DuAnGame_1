@@ -26,10 +26,11 @@ public class Player : MonoBehaviour
     public int currentMana;//mana hien tai
     private float manaTimer;
     private float manaRate = 1f;
-    private float deathTime;
-    private float deathRate = 2f;
+    
     public TextMeshProUGUI _textMana;
     
+    public TextMeshProUGUI _textScore;//điểm số
+    private float score=0;
 
     float speedX;//Horizontal(A,B)
 
@@ -67,7 +68,7 @@ public class Player : MonoBehaviour
         manaTimer= manaRate;
         _textMana.text = currentMana.ToString();
 
-      deathTime= deathRate;
+        _textScore.text = score.ToString();
     }
 
     void Update()
@@ -81,10 +82,9 @@ public class Player : MonoBehaviour
             Dash();
         }
         TimeHp();
-        TimeMana();
-        Death();
-        CurrentHealAndMana();
-        
+        TimeMana();    
+        CurrentHealAndMana();//trả hp và mana theo mặc định đã cho sẵn
+       
     }
     
     private void TimeHp()
@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
     private void CurrentHealAndMana()
     {
         //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
-        if (currentHealth > maxHealth)
+        if (currentHealth > maxHealth && currentHealth<maxHealth)
         {
             currentHealth = maxHealth;
             _textHeal.text = currentHealth.ToString();
@@ -257,10 +257,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-    private void Death()//hết máu thì dừng game
-    {
-        
-    }
 
     private void Fire()//bắn shuriken
     {
@@ -317,6 +313,7 @@ public class Player : MonoBehaviour
             }
            if(currentHealth <= 0)
             {
+               
                 //animation death
                 animator.SetTrigger("isDeath");
 
@@ -324,6 +321,12 @@ public class Player : MonoBehaviour
             }
 
 
+        }
+        if (other.gameObject.CompareTag("Item")|| other.gameObject.CompareTag("Hp")|| other.gameObject.CompareTag("Mana"))
+        {
+            score += 20;
+            _textScore.text = score.ToString();
+            Destroy(other.gameObject);
         }
         if (other.gameObject.CompareTag("Hp"))
         {

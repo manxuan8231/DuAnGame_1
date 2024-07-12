@@ -23522,7 +23522,6 @@ GameObject:
   - component: {fileID: 1175269884}
   - component: {fileID: 1175269883}
   - component: {fileID: 1175269887}
-  - component: {fileID: 1175269886}
   - component: {fileID: 1175269881}
   m_Layer: 0
   m_Name: Bringer-of-Death(Boss)
@@ -23560,6 +23559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccdc3349b31bfd34a9b76a1b8d88ebf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRangeAttack: 2.5
   detectionRange: 10
   Player: {fileID: 1689527239}
   healthSlider: {fileID: 268826047}
@@ -23665,51 +23665,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1175269886
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175269879}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.39437294, y: -0.6694753}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.6, y: 3.72}
-    newSize: {x: 1.4, y: 0.93}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.395565, y: 2.250999}
-  m_EdgeRadius: 0
 --- !u!70 &1175269887
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -23770,7 +23725,7 @@ Transform:
   m_GameObject: {fileID: 1281915244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.04, y: -0.84, z: 0}
+  m_LocalPosition: {x: -0.85, y: -0.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
