@@ -10,6 +10,7 @@ public class BringerOfDeath : MonoBehaviour
 
     public float detectionRangeAttack = 2.5f;  // Phạm vi phát hiện người chơi
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
+    private float stopRange;
     public Transform Player;//follow player
    
 
@@ -44,8 +45,6 @@ public class BringerOfDeath : MonoBehaviour
     {
         followPlayer();
         TimeAttack();//độ trể khi thấy player sau 3f tấn công
-       
-
     }
   
     void TimeAttack()
@@ -73,22 +72,28 @@ public class BringerOfDeath : MonoBehaviour
         // Nếu khoảng cách nhỏ hơn phạm vi phát hiện, quái vật sẽ đuổi theo người chơi
         if (distanceToPlayer < detectionRange)
         {
-            Vector2 moveDirection = (Player.position - transform.position).normalized;
-            rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
+            
+                Vector2 moveDirection = (Player.position - transform.position).normalized;
+                rb.velocity = moveDirection * 1.5f;// Tốc độ di chuyển
 
-            animator.SetFloat("isRun", Mathf.Abs(moveDirection.x));
+                animator.SetBool("isRun",true);
 
 
-            //xoay mặt
-            if (right && moveDirection.x < 0 || !right && moveDirection.x > 0)
-            {
-                right = !right;
-                Vector3 kichThuoc = transform.localScale;
-                kichThuoc.x = kichThuoc.x * -1;
-                transform.localScale = kichThuoc;
-                animator.SetTrigger("isTele");
-            }
-        }       
+                //xoay mặt
+                if (right && moveDirection.x < 0 || !right && moveDirection.x > 0)
+                {
+                    right = !right;
+                    Vector3 kichThuoc = transform.localScale;
+                    kichThuoc.x = kichThuoc.x * -1;
+                    transform.localScale = kichThuoc;
+                    animator.SetTrigger("isTele");
+                }
+            
+        }   
+        else
+        {
+                animator.SetBool("isRun", false);
+        }     
     } 
     private void OnTriggerEnter2D(Collider2D other)
     {
