@@ -16,6 +16,8 @@ TagManager:
   - Attack3
   - SpecialAttack
   - Item
+  - Skill1(Boss2)
+  - Skill2(Boss2)
   layers:
   - Default
   - TransparentFX

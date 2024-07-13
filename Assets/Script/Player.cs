@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
         TimeHp();
         TimeMana();    
         CurrentHealAndMana();//trả hp và mana theo mặc định đã cho sẵn
-       
+        
     }
     
     private void TimeHp()
@@ -278,6 +278,22 @@ public class Player : MonoBehaviour
         }
         
     }
+    private void Death()
+    {
+        if (currentHealth >= 10)
+        {
+            //animation Hurt
+            animator.SetTrigger("isHurt");
+        }
+        if (currentHealth <= 0)
+        {
+
+            //animation death
+            animator.SetTrigger("isDeath");
+
+            Destroy(gameObject, 1f);
+        }
+    }
     private void Flip()//Xoay mặt
     {
         //xoay mặt
@@ -297,7 +313,7 @@ public class Player : MonoBehaviour
         {
             okJump= true;
         }
-            
+            //chạm skill mất hp
         if (other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("AttackBoss"))
         {
             
@@ -305,22 +321,26 @@ public class Player : MonoBehaviour
             currentHealth -= 10;
             _healthSlider.value = currentHealth;
             _textHeal.text=currentHealth.ToString();
-            
-            if (currentHealth >= 10)
-            {
-                //animation Hurt
-                animator.SetTrigger("isHurt");
-            }
-           if(currentHealth <= 0)
-            {
-               
-                //animation death
-                animator.SetTrigger("isDeath");
+           
+        }
+        //chạm skill 1 của boss 2
+        if (other.gameObject.CompareTag("Skill1(Boss2)"))
+        {
+            //nếu đụng enemy thì mất 10Hp
+            currentHealth -= 10;
+            _healthSlider.value = currentHealth;
+            _textHeal.text = currentHealth.ToString();
 
-                Destroy(gameObject, 1f);
-            }
-
-
+            Death();
+        }
+        //chạm skill 2 của boss 2
+        if (other.gameObject.CompareTag("Skill2(Boss2)"))
+        {
+            //nếu đụng enemy thì mất 10Hp
+            currentHealth -= 15;
+            _healthSlider.value = currentHealth;
+            _textHeal.text = currentHealth.ToString();
+            Death();
         }
         if (other.gameObject.CompareTag("Item")|| other.gameObject.CompareTag("Hp")|| other.gameObject.CompareTag("Mana"))
         {
