@@ -18,6 +18,7 @@ TagManager:
   - Item
   - Skill1(Boss2)
   - Skill2(Boss2)
+  - FireBall
   layers:
   - Default
   - TransparentFX

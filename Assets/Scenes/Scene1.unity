@@ -198,6 +198,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46057547}
   m_CullTransparentMesh: 1
+--- !u!1 &72680055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 72680056}
+  m_Layer: 0
+  m_Name: FireTmp(Boss2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72680056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72680055}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.45, y: 0.59, z: -0.51867676}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 664127859}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86691296
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,9 +418,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1000
+  m_MaxValue: 500
   m_WholeNumbers: 0
-  m_Value: 1000
+  m_Value: 500
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1032,6 +1063,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 86691297}
+  - {fileID: 72680056}
   - {fileID: 1194487049}
   m_Father: {fileID: 854010749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1194,9 +1226,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRangeAttack: 2.5
   detectionRange: 7
+  detectionFireRange: 15
   stopRange: 2
   Player: {fileID: 1689527239}
+  fireInterval: 6
   attackInterval: 2
+  fire: {fileID: 72680056}
+  fireBall: {fileID: 2208713616189785642, guid: 1a0b002fb1ce18d419af1f810353cfa4, type: 3}
   attack: {fileID: 86691297}
   attackSkill: {fileID: 6815819758714390688, guid: 75cea86d8744c11478aea4d25c382252, type: 3}
   attackSkill2: {fileID: 1003070665129299059, guid: 89210fa98674c5049b88c4b4c0835eef, type: 3}
@@ -24302,9 +24338,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1000
+  m_MaxValue: 700
   m_WholeNumbers: 0
-  m_Value: 1000
+  m_Value: 700
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

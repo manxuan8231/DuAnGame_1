@@ -327,7 +327,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Skill1(Boss2)"))
         {
             //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 10;
+            currentHealth -= 5;
             _healthSlider.value = currentHealth;
             _textHeal.text = currentHealth.ToString();
 
@@ -335,6 +335,14 @@ public class Player : MonoBehaviour
         }
         //chạm skill 2 của boss 2
         if (other.gameObject.CompareTag("Skill2(Boss2)"))
+        {
+            //nếu đụng enemy thì mất 10Hp
+            currentHealth -= 7;
+            _healthSlider.value = currentHealth;
+            _textHeal.text = currentHealth.ToString();
+            Death();
+        }
+        if (other.gameObject.CompareTag("FireBall"))
         {
             //nếu đụng enemy thì mất 10Hp
             currentHealth -= 15;
