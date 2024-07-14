@@ -16,8 +16,19 @@ public class EvilWizardBoss2 : MonoBehaviour
     public float attackInterval = 2f;// Thời gian giữa các đợt tấn công
     private float nextAttackTime;
 
-    public Transform fire;//vị trí tấn công
+    //vị trí tấn công
+    public Transform fire;
+    public Transform fire2;
+    public Transform fire3;
+    public Transform fire4;
+    public Transform fire5;
+    //fire ball
     public GameObject fireBall;
+    public GameObject fireBall2;
+    public GameObject fireBall3;
+    public GameObject fireBall4;
+    public GameObject fireBall5;
+
 
     public Transform attack;//vị trí tấn công
     public GameObject attackSkill;//skill 1  
@@ -67,17 +78,20 @@ public class EvilWizardBoss2 : MonoBehaviour
             }
             if (attackType == 2)
             {              
-                var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);
-                Rigidbody2D Rb = fireTmp.GetComponent<Rigidbody2D>();
-                Vector3 playerPos = FindObjectOfType<Player>().transform.position;
-                Vector3 direction = playerPos - transform.position;
-                Rb.AddForce(direction.normalized * 3f, ForceMode2D.Impulse);
+                var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);               
                 Destroy(fireTmp, 5f);
+                var fireTmp2 = Instantiate(fireBall2, fire2.position, Quaternion.identity);
+                Destroy(fireTmp2, 5f);
+                var fireTmp3 = Instantiate(fireBall3, fire3.position, Quaternion.identity);
+                Destroy(fireTmp3, 5f);
+                var fireTmp4 = Instantiate(fireBall4, fire4.position, Quaternion.identity);
+                Destroy(fireTmp4, 5f);
+                var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
+                Destroy(fireTmp5, 5f);
             }
         }
     }
    
-
     private void followPlayer()//thấy player thì chạy theo
     {
         // Tính khoảng cách giữa quái vật và người chơi
@@ -102,7 +116,6 @@ public class EvilWizardBoss2 : MonoBehaviour
         else
         {         
             animator.SetBool("isRun", false);
-
         }
     }
     private void Flip()//xoay mat
