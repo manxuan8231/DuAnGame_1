@@ -35,7 +35,7 @@ public class BringerOfDeath : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        health = 1000;
+        health = 500;
         healthSlider.maxValue = health;
         timeAttack = TimeAttackRate;
         

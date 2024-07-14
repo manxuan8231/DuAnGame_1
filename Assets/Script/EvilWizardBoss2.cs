@@ -8,18 +8,23 @@ public class EvilWizardBoss2 : MonoBehaviour
 {
     public float detectionRangeAttack = 3f;  // Phạm vi phát hiện người chơi attack
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi follow
+
     public float stopRange;
     public Transform Player;//follow player
 
+    public float fireInterval = 6f;// Thời gian giữa các đợt tấn công
     public float attackInterval = 2f;// Thời gian giữa các đợt tấn công
     private float nextAttackTime;
+
+    public Transform fire;//vị trí tấn công
+    public GameObject fireBall;
 
     public Transform attack;//vị trí tấn công
     public GameObject attackSkill;//skill 1  
     public GameObject attackSkill2;//skill 2
 
     public Slider healthSlider;//slider hp
-    private float health = 1000;
+    private float health = 700;
 
     private bool right;
     Vector2 moveDirection;
@@ -36,31 +41,43 @@ public class EvilWizardBoss2 : MonoBehaviour
     void Update()
     {
         followPlayer();
-        TimeAttack();
+        Attack();
+        
     }
-    void TimeAttack()
+    void Attack()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
         if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + attackInterval;
-            int attackType = Random.Range(0, 2);  // Random số nguyên từ 0 tới 1 (0 hoặc 1)
+            int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
 
             if (attackType == 0)
             {
                 animator.SetTrigger("isAttack");
                 var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
                 Destroy(oneSkill, 0.1f);
-            }
-            else
+            }          
+            if (attackType == 1) 
             {
                 animator.SetTrigger("isAttack2");
                 var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
                 Destroy(oneSkill, 0.1f);
             }
+            if (attackType == 2)
+            {              
+                var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);
+                Rigidbody2D Rb = fireTmp.GetComponent<Rigidbody2D>();
+                Vector3 playerPos = FindObjectOfType<Player>().transform.position;
+                Vector3 direction = playerPos - transform.position;
+                Rb.AddForce(direction.normalized * 3f, ForceMode2D.Impulse);
+                Destroy(fireTmp, 5f);
+            }
         }
     }
+   
+
     private void followPlayer()//thấy player thì chạy theo
     {
         // Tính khoảng cách giữa quái vật và người chơi
@@ -145,14 +162,7 @@ public class EvilWizardBoss2 : MonoBehaviour
             health -= 40;
             healthSlider.value = health;
             animator.SetTrigger("isTakeHit");
-            if (right)
-            {
-                transform.Translate(Vector2.left * 20f * Time.deltaTime);
-            }
-            else
-            {
-                transform.Translate(Vector2.right * 20f * Time.deltaTime);
-            }
+           
         }
         if (health <= 0)
         {
