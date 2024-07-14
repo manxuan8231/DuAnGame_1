@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,10 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void Options()
+    {
+
+    } 
    public void thoatramenu()
     {
         SceneManager.LoadScene(0);
@@ -14,6 +19,13 @@ public class Menu : MonoBehaviour
     public void Thoat()
     {
       Application.Quit();
+    }
+
+    public void OpenLevel(int levelID)
+    {
+        string levelName = "Level" + levelID;
+        SceneManager.LoadScene(levelName);
+
     }
 
 }
