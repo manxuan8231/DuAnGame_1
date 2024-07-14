@@ -152,22 +152,22 @@ public class EvilWizardBoss2 : MonoBehaviour
         {
             health -= 10;
             healthSlider.value = health;
+            animator.SetTrigger("isHurt");
 
-           
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
             health -= 20;
             healthSlider.value = health;
+            animator.SetTrigger("isHurt");
 
-           
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
             health -= 30;
             healthSlider.value = health;
+            animator.SetTrigger("isHurt");
 
-           
         }
         if (other.gameObject.CompareTag("SpecialAttack"))
         {

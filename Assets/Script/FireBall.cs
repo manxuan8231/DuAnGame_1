@@ -10,14 +10,14 @@ public class FireBall : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")|| other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Player")|| other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Boss"))
         {
             animator.SetTrigger("isBreak");
             Destroy(gameObject, 0.5f);
