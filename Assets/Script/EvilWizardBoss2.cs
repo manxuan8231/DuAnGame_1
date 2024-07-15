@@ -8,18 +8,34 @@ public class EvilWizardBoss2 : MonoBehaviour
 {
     public float detectionRangeAttack = 3f;  // Phạm vi phát hiện người chơi attack
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi follow
+
     public float stopRange;
     public Transform Player;//follow player
 
+    public float fireInterval = 6f;// Thời gian giữa các đợt tấn công
     public float attackInterval = 2f;// Thời gian giữa các đợt tấn công
     private float nextAttackTime;
+
+    //vị trí tấn công
+    public Transform fire;
+    public Transform fire2;
+    public Transform fire3;
+    public Transform fire4;
+    public Transform fire5;
+    //fire ball
+    public GameObject fireBall;
+    public GameObject fireBall2;
+    public GameObject fireBall3;
+    public GameObject fireBall4;
+    public GameObject fireBall5;
+
 
     public Transform attack;//vị trí tấn công
     public GameObject attackSkill;//skill 1  
     public GameObject attackSkill2;//skill 2
 
     public Slider healthSlider;//slider hp
-    private float health = 1000;
+    private float health = 700;
 
     private bool right;
     Vector2 moveDirection;
@@ -36,31 +52,46 @@ public class EvilWizardBoss2 : MonoBehaviour
     void Update()
     {
         followPlayer();
-        TimeAttack();
+        Attack();
+        
     }
-    void TimeAttack()
+    void Attack()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
         if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + attackInterval;
-            int attackType = Random.Range(0, 2);  // Random số nguyên từ 0 tới 1 (0 hoặc 1)
+            int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
 
             if (attackType == 0)
             {
                 animator.SetTrigger("isAttack");
                 var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
                 Destroy(oneSkill, 0.1f);
-            }
-            else
+            }          
+            if (attackType == 1) 
             {
                 animator.SetTrigger("isAttack2");
                 var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
                 Destroy(oneSkill, 0.1f);
             }
+            if (attackType == 2)
+            {              
+                var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);               
+                Destroy(fireTmp, 5f);
+                var fireTmp2 = Instantiate(fireBall2, fire2.position, Quaternion.identity);
+                Destroy(fireTmp2, 5f);
+                var fireTmp3 = Instantiate(fireBall3, fire3.position, Quaternion.identity);
+                Destroy(fireTmp3, 5f);
+                var fireTmp4 = Instantiate(fireBall4, fire4.position, Quaternion.identity);
+                Destroy(fireTmp4, 5f);
+                var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
+                Destroy(fireTmp5, 5f);
+            }
         }
     }
+   
     private void followPlayer()//thấy player thì chạy theo
     {
         // Tính khoảng cách giữa quái vật và người chơi
@@ -85,7 +116,6 @@ public class EvilWizardBoss2 : MonoBehaviour
         else
         {         
             animator.SetBool("isRun", false);
-
         }
     }
     private void Flip()//xoay mat
@@ -122,22 +152,22 @@ public class EvilWizardBoss2 : MonoBehaviour
         {
             health -= 10;
             healthSlider.value = health;
+            animator.SetTrigger("isHurt");
 
-           
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
             health -= 20;
             healthSlider.value = health;
+            animator.SetTrigger("isHurt");
 
-           
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
             health -= 30;
             healthSlider.value = health;
+            animator.SetTrigger("isHurt");
 
-           
         }
         if (other.gameObject.CompareTag("SpecialAttack"))
         {
@@ -145,14 +175,7 @@ public class EvilWizardBoss2 : MonoBehaviour
             health -= 40;
             healthSlider.value = health;
             animator.SetTrigger("isTakeHit");
-            if (right)
-            {
-                transform.Translate(Vector2.left * 20f * Time.deltaTime);
-            }
-            else
-            {
-                transform.Translate(Vector2.right * 20f * Time.deltaTime);
-            }
+           
         }
         if (health <= 0)
         {

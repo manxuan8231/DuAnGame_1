@@ -161,7 +161,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && okJump)
         {
             //hiệu ứng nhảy
-            animator.SetTrigger("isJump");
+            animator.SetBool("isJump", true);
             rb.AddForce(Vector2.up * _moveJump, ForceMode2D.Impulse);
         }
         
@@ -312,6 +312,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             okJump= true;
+            animator.SetBool("isJump", false);
         }
             //chạm skill mất hp
         if (other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("AttackBoss"))
@@ -327,7 +328,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Skill1(Boss2)"))
         {
             //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 10;
+            currentHealth -= 5;
             _healthSlider.value = currentHealth;
             _textHeal.text = currentHealth.ToString();
 
@@ -336,8 +337,16 @@ public class Player : MonoBehaviour
         //chạm skill 2 của boss 2
         if (other.gameObject.CompareTag("Skill2(Boss2)"))
         {
-            //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 15;
+            //nếu đụng enemy thì mất 5Hp
+            currentHealth -= 5;
+            _healthSlider.value = currentHealth;
+            _textHeal.text = currentHealth.ToString();
+            Death();
+        }
+        if (other.gameObject.CompareTag("FireBall"))
+        {
+            //nếu đụng enemy thì mất 5Hp
+            currentHealth -= 5;
             _healthSlider.value = currentHealth;
             _textHeal.text = currentHealth.ToString();
             Death();
