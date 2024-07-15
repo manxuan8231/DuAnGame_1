@@ -19,6 +19,7 @@ TagManager:
   - Skill1(Boss2)
   - Skill2(Boss2)
   - FireBall
+  - Hitbox
   layers:
   - Default
   - TransparentFX
