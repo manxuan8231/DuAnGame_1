@@ -262,7 +262,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.019883156, y: -0.002840519}
@@ -321,15 +321,15 @@ MonoBehaviour:
   target: {fileID: 1689527239}
   follw: 7
   giukhoangcach: 2
-  khaccach: 1
-  fly: -2
+  khaccach: 3
+  fly: -5
   rightBoundary: 30.57
   leftBoundary: 26.375
   _isMovingRight: 0
   FlyUp: -1.5
   FlyDown: -1.4
   startTimeBtwShort: 2
-  projectile: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
+  projectile: {fileID: 7854514417352635790, guid: c4e3d87d81b694e4bbf80cd9522ce9e3, type: 3}
   Gun: {fileID: 1863358745}
 --- !u!95 &297338750
 Animator:
@@ -392,7 +392,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -39687285, guid: d407fb5e45cb5b945a206b04b20aaa8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -413,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 297338746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.18, y: -2.77, z: 0}
+  m_LocalPosition: {x: 29.25, y: -3.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -521,12 +521,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385333610}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.64, y: -3.11, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.238827, y: 0.6547854, z: 1606.2208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 854010749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &385333614
 Rigidbody2D:
@@ -831,6 +831,38 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &558072213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558072214}
+  m_Layer: 0
+  m_Name: Bause
+  m_TagString: Boss
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &558072214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558072213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.304522, y: -1.9677777, z: -0.022035688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1208469755}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609148364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,6 +1339,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1175269880}
+  - {fileID: 385333613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933890156
@@ -24088,6 +24121,11 @@ CapsuleCollider2D:
   m_Offset: {x: 1.4195518, y: -0.6971756}
   m_Size: {x: 1.6521378, y: 2.3577116}
   m_Direction: 0
+--- !u!224 &1208469755 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1344209964377610865, guid: 1b38e9c1e012d644aaa4233450ec04ba, type: 3}
+  m_PrefabInstance: {fileID: 2687698634757511226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1281915244
 GameObject:
   m_ObjectHideFlags: 0
@@ -24474,7 +24512,7 @@ Transform:
   m_GameObject: {fileID: 1863358744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22431946, y: -0.039641142, z: 0.1108533}
+  m_LocalPosition: {x: 0.051, y: -0.023, z: 0.1108533}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24608,7 +24646,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 558072214}
     m_Modifications:
     - target: {fileID: 1344209964377610865, guid: 1b38e9c1e012d644aaa4233450ec04ba, type: 3}
       propertyPath: m_Pivot.x
@@ -24929,10 +24967,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 558072214}
   - {fileID: 2029648118}
   - {fileID: 5030200897921377652}
   - {fileID: 854010749}
   - {fileID: 1811818321}
-  - {fileID: 385333613}
-  - {fileID: 2687698634757511226}
   - {fileID: 297338752}
