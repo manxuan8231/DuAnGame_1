@@ -10,7 +10,7 @@ public class Enermyfly : MonoBehaviour
     [SerializeField] private float giukhoangcach;
     [SerializeField] private float khaccach;
 
-
+    public float fly;
     private bool _flip;
     public float rightBoundary;
     public float leftBoundary;
@@ -32,6 +32,19 @@ public class Enermyfly : MonoBehaviour
     {
         move();
     }
+    void placeply()
+    {
+        var currem = transform.position;
+        var flyup = Vector2.up;
+        var flydown = Vector2.down;
+        if(currem.y < fly )
+        {
+            transform.Translate(flyup * Time.deltaTime * speed);
+        }else if(currem.y > fly)
+        {
+            transform.Translate(flydown * Time.deltaTime * speed);
+        }
+    }
     public void move()
     {
         if (Vector2.Distance(transform.position, target.position) < khaccach)
@@ -41,7 +54,8 @@ public class Enermyfly : MonoBehaviour
         }
         else
         {
-            spawn();
+            spawn(); 
+            placeply();
         }
     }
     private void spawn()
