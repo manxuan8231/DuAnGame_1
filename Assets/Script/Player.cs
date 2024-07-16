@@ -174,11 +174,11 @@ public class Player : MonoBehaviour
             {
                 if (!Right)
                 {
-                    transform.Translate(Vector3.right * _dashBoost * Time.deltaTime);
+                    rb.AddForce(Vector2.right * _dashBoost,ForceMode2D.Impulse);
                 }
                 if (Right)
                 {
-                    transform.Translate(Vector3.left * _dashBoost * Time.deltaTime);
+                    rb.AddForce(Vector2.left * _dashBoost, ForceMode2D.Impulse);
                 }
                 animator.SetTrigger("isDash");
                 currentMana -= 10;
