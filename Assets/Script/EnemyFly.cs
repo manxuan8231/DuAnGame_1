@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyFly : MonoBehaviour
 {
+    private float health;
+    private Animator animator;
     public float speed;
     [SerializeField] private Transform target;
     [SerializeField] private float follw;
@@ -26,7 +28,8 @@ public class EnemyFly : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("HitBox").transform;
-
+        health = 50;
+        animator = GetComponent<Animator>();
     }
 
 
@@ -138,6 +141,19 @@ public class EnemyFly : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Shuriken") || other.gameObject.CompareTag("SpecialAttack"))
+        {
+            health -= 10;
+            animator.SetTrigger("isTakeHit");
+            if(health < 0)
+            {
+                animator.SetTrigger("isDeath");
+                Destroy(gameObject,1f);
+            }
+        }
     }
 }
     
