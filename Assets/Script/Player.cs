@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _moveSpeed;//Vận tốc di chuyển 
     [SerializeField] private float _moveJump;//vận tốc nhảy
     [SerializeField] private float _moveJumpSkill;//vận tốc skill đặc biệt
-    [SerializeField] private float _dashBoost = 5f;//vận tốc lướt
+    
 
     [SerializeField] private Slider _healthSlider;//slider file
     private int maxHealth;//khai báo hp
@@ -19,7 +19,13 @@ public class Player : MonoBehaviour
     private float healRate = 1f; // thgian hồi hp
     private float healTimer;
     public TextMeshProUGUI _textHeal;
-   
+
+    public float dashSpeed = 5f;
+    public float dashTime = 0.2f;
+    private float dashCooldown = 1f;
+    private float lastDash = -1f;
+    private bool isDashing = false;
+    private float dashDirection = 1f; // 1 for right, -1 for left
 
     [SerializeField] private Slider _manaSlider;//slider mana
     private int maxMana;//mana
@@ -168,26 +174,36 @@ public class Player : MonoBehaviour
     }
     private void Dash()
     {
-        if (currentMana >= 10)
+        if (Input.GetKey(KeyCode.LeftShift) && Time.time >= lastDash + dashCooldown)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                if (!Right)
-                {
-                    rb.AddForce(Vector2.right * _dashBoost,ForceMode2D.Impulse);
-                }
-                if (Right)
-                {
-                    rb.AddForce(Vector2.left * _dashBoost, ForceMode2D.Impulse);
-                }
-                animator.SetTrigger("isDash");
-                currentMana -= 10;
-                _manaSlider.value = currentMana;
-                _textMana.text = currentMana.ToString();
-            }
+            StartDash();
+            animator.SetTrigger("isDash");
+            currentMana -= 20;
+            _manaSlider.value = currentMana;
+            _textMana.text = currentMana.ToString();
         }
+
+        if (isDashing)
+        {
+            rb.velocity = new Vector2(dashDirection * dashSpeed, rb.velocity.y);
+        }
+                
+           
+    }
+    private void StartDash()
+    {
+        lastDash = Time.time;
+        isDashing = true;
+        dashDirection = transform.localScale.x > 0 ? 1f : -1f; // Kiểm tra hướng của nhân vật
+
+        Invoke("StopDash", dashTime);
     }
 
+    private void StopDash()
+    {
+        isDashing = false;
+        rb.velocity = Vector2.zero;
+    }
     private void PlayerAttack()
     {
 
