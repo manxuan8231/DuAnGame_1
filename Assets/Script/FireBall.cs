@@ -13,7 +13,7 @@ public class FireBall : MonoBehaviour
     
     void Update()
     {
-        
+        Destroy(gameObject, 6f); 
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,6 +22,7 @@ public class FireBall : MonoBehaviour
             animator.SetTrigger("isBreak");
             Destroy(gameObject, 0.5f);
         }
+      
     }
    
 }

@@ -238,7 +238,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.C))
             {
                 animator.SetTrigger("isAttack3");
-                currentMana -= 10;
+                currentMana -= 20;
                 _manaSlider.value = currentMana;
                 _textMana.text = currentMana.ToString();
 
@@ -362,7 +362,15 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("FireBall"))
         {
             //nếu đụng enemy thì mất 5Hp
-            currentHealth -= 5;
+            currentHealth -= 10;
+            _healthSlider.value = currentHealth;
+            _textHeal.text = currentHealth.ToString();
+            Death();
+        }
+        if (other.gameObject.CompareTag("Skill1(Boss3)"))
+        {
+            //nếu đụng enemy thì mất Hp
+            currentHealth -= 10;
             _healthSlider.value = currentHealth;
             _textHeal.text = currentHealth.ToString();
             Death();
