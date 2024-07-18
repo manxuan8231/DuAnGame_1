@@ -10,7 +10,7 @@ public class BringerOfDeath : MonoBehaviour
 
     public float detectionRangeAttack = 2.5f;  // Phạm vi phát hiện người chơi
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
-    private float stopRange;
+    
     public Transform Player;//follow player
    
 
