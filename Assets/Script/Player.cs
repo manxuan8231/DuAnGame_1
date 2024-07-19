@@ -241,7 +241,7 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.C))
             {
                 animator.SetTrigger("isAttack3");
-                currentMana -= 20;
+                currentMana -= 10;
                 _manaSlider.value = currentMana;
                 _textMana.text = currentMana.ToString();
 

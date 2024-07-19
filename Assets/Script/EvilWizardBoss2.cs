@@ -46,6 +46,7 @@ public class EvilWizardBoss2 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         healthSlider.maxValue = health;
+        
     }
 
   
@@ -91,7 +92,15 @@ public class EvilWizardBoss2 : MonoBehaviour
             }
         }
     }
-   
+   void death()
+    {
+        if (health <= 0)
+        {
+            animator.SetTrigger("isDeath");
+            Destroy(gameObject, 2f);
+            
+        }
+    }
     private void followPlayer()//thấy player thì chạy theo
     {
         // Tính khoảng cách giữa quái vật và người chơi
@@ -135,52 +144,55 @@ public class EvilWizardBoss2 : MonoBehaviour
         //chạm shuriken
         if (other.gameObject.CompareTag("Shuriken"))
         {
-            health -= 5;
-            healthSlider.value = health;
-            animator.SetTrigger("isTakeHit");
-            if (right)
+            if (health > 0)
             {
-                transform.Translate(Vector2.left * 20f * Time.deltaTime);
+                health -= 5;
+                healthSlider.value = health;
+                animator.SetTrigger("isTakeHit");
             }
-            else
-            {
-                transform.Translate(Vector2.right * 20f * Time.deltaTime);
-            }
-            Destroy(other.gameObject);//shuriken biến mất
+            
+            death();
         }
         if (other.gameObject.CompareTag("Attack1"))
         {
-            health -= 10;
-            healthSlider.value = health;
-            animator.SetTrigger("isHurt");
-
+            if (health > 0)
+            {
+                health -= 10;
+                healthSlider.value = health;
+                animator.SetTrigger("isHurt");
+            }
+            death();
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
-            health -= 20;
-            healthSlider.value = health;
-            animator.SetTrigger("isHurt");
-
+            if (health > 0)
+            {
+                health -= 20;
+                healthSlider.value = health;
+                animator.SetTrigger("isHurt");
+            }
+            death();
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
-            health -= 30;
-            healthSlider.value = health;
-            animator.SetTrigger("isHurt");
-
+            if (health > 0)
+            {
+                health -= 30;
+                healthSlider.value = health;
+                animator.SetTrigger("isHurt");
+            }
+            death();
         }
         if (other.gameObject.CompareTag("SpecialAttack"))
         {
-
-            health -= 40;
-            healthSlider.value = health;
-            animator.SetTrigger("isTakeHit");
-           
+            if (health > 0)
+            {
+                health -= 40;
+                healthSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+            }
+            death();
         }
-        if (health <= 0)
-        {
-            Destroy(gameObject, 1f);
-            animator.SetTrigger("isDeath");
-        }
+        
     }
 }
