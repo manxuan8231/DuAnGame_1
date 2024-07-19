@@ -97,7 +97,7 @@ public class DemonFire3 : MonoBehaviour
                 {
                     velocity.x = 50;
                 }
-                oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -5 : 5, 0);
+                oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
 
                 var oneBullet2 = Instantiate(fireBall2, fireTransform2.position, Quaternion.identity);
                 //cho đạn bay theo huong nhân vật
@@ -106,7 +106,7 @@ public class DemonFire3 : MonoBehaviour
                 {
                     velocity2.x = 50;
                 }
-                oneBullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -5 : 5, 0);
+                oneBullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
 
                 var oneBullet3 = Instantiate(fireBall3, fireTransform3.position, Quaternion.identity);
                 //cho đạn bay theo huong nhân vật
@@ -115,7 +115,7 @@ public class DemonFire3 : MonoBehaviour
                 {
                     velocity3.x = 50;
                 }
-                oneBullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -5 : 5, 0);
+                oneBullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
 
                 var oneBullet4 = Instantiate(fireBall4, fireTransform4.position, Quaternion.identity);
                 //cho đạn bay theo huong nhân vật
@@ -124,7 +124,7 @@ public class DemonFire3 : MonoBehaviour
                 {
                     velocity4.x = 50;
                 }
-                oneBullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -6 : 6, 0);
+                oneBullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
                 
 
             }

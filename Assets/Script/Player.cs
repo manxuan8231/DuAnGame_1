@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
         TimeMana();    
         CurrentHealAndMana();//trả hp và mana theo mặc định đã cho sẵn
         TakingHeal();
+       
     }
     
     private void TimeHp()
@@ -336,9 +337,12 @@ public class Player : MonoBehaviour
                 currentHealth -= damageAmount;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString();
-                animator.SetTrigger("isFireHurt");
-                Debug.Log("Đang mất máu: " + (1 * Time.deltaTime));
+                if (currentHealth > 0)
+                {
+                    animator.SetTrigger("isFireHurt");
+                }
                 intervalTimer = 0f;
+               Death();
             }
             if (damageTimer >= damageDuration)
             {
@@ -346,7 +350,7 @@ public class Player : MonoBehaviour
                 damageTimer = 0f;        // Reset bộ đếm thời gian
                 intervalTimer = 0f;      // Reset bộ đếm thời gian cho khoảng cách giữa mỗi lần giảm máu
             }
-                    
+           
         }
     }
 
