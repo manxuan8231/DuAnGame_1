@@ -37,6 +37,7 @@ public class EvilWizardBoss2 : MonoBehaviour
     public Slider healthSlider;//slider hp
     private float health = 700;
 
+    private bool stopAttack = true;
     private bool right;
     Vector2 moveDirection;
     Animator animator;
@@ -52,43 +53,46 @@ public class EvilWizardBoss2 : MonoBehaviour
   
     void Update()
     {
-        followPlayer();
-        Attack();
         
+            followPlayer();
+            Attack();
+   
     }
     void Attack()
     {
+        if(stopAttack) { 
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
-        if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
-        {
-            nextAttackTime = Time.time + attackInterval;
-            int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
+            if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
+            {
+                nextAttackTime = Time.time + attackInterval;
+                int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
 
-            if (attackType == 0)
-            {
-                animator.SetTrigger("isAttack");
-                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
-                Destroy(oneSkill, 0.1f);
-            }          
-            if (attackType == 1) 
-            {
-                animator.SetTrigger("isAttack2");
-                var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
-                Destroy(oneSkill, 0.1f);
-            }
-            if (attackType == 2)
-            {              
-                var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);               
-                Destroy(fireTmp, 5f);
-                var fireTmp2 = Instantiate(fireBall2, fire2.position, Quaternion.identity);
-                Destroy(fireTmp2, 5f);
-                var fireTmp3 = Instantiate(fireBall3, fire3.position, Quaternion.identity);
-                Destroy(fireTmp3, 5f);
-                var fireTmp4 = Instantiate(fireBall4, fire4.position, Quaternion.identity);
-                Destroy(fireTmp4, 5f);
-                var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
-                Destroy(fireTmp5, 5f);
+                if (attackType == 0)
+                {
+                    animator.SetTrigger("isAttack");
+                    var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                    Destroy(oneSkill, 0.1f);
+                }
+                if (attackType == 1)
+                {
+                    animator.SetTrigger("isAttack2");
+                    var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
+                    Destroy(oneSkill, 0.1f);
+                }
+                if (attackType == 2)
+                {
+                    var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);
+                    Destroy(fireTmp, 5f);
+                    var fireTmp2 = Instantiate(fireBall2, fire2.position, Quaternion.identity);
+                    Destroy(fireTmp2, 5f);
+                    var fireTmp3 = Instantiate(fireBall3, fire3.position, Quaternion.identity);
+                    Destroy(fireTmp3, 5f);
+                    var fireTmp4 = Instantiate(fireBall4, fire4.position, Quaternion.identity);
+                    Destroy(fireTmp4, 5f);
+                    var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
+                    Destroy(fireTmp5, 5f);
+                }
             }
         }
     }
@@ -152,6 +156,11 @@ public class EvilWizardBoss2 : MonoBehaviour
             }
             
             death();
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("Attack1"))
         {
@@ -162,6 +171,11 @@ public class EvilWizardBoss2 : MonoBehaviour
                 animator.SetTrigger("isHurt");
             }
             death();
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
@@ -172,6 +186,11 @@ public class EvilWizardBoss2 : MonoBehaviour
                 animator.SetTrigger("isHurt");
             }
             death();
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
@@ -182,6 +201,11 @@ public class EvilWizardBoss2 : MonoBehaviour
                 animator.SetTrigger("isHurt");
             }
             death();
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("SpecialAttack"))
         {
@@ -192,7 +216,11 @@ public class EvilWizardBoss2 : MonoBehaviour
                 animator.SetTrigger("isTakeHit");
             }
             death();
+            stopAttack = false;
         }
-        
+        else
+        {
+            stopAttack = true;
+        }
     }
 }
