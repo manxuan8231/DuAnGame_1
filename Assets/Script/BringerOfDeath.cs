@@ -27,7 +27,7 @@ public class BringerOfDeath : MonoBehaviour
     private float timeAttack;
 
     private bool right;
-
+    private bool stopAttack = true;
 
     Animator animator;
     Rigidbody2D rb;
@@ -43,12 +43,16 @@ public class BringerOfDeath : MonoBehaviour
 
     void Update()
     {
-        followPlayer();
-        TimeAttack();//độ trể khi thấy player sau 3f tấn công
+        if (stopAttack)
+        {
+            followPlayer();
+            TimeAttack();//độ trể khi thấy player sau 3f tấn công
+        }
     }
   
     void TimeAttack()
     {
+
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
         if (distanceToPlayer < detectionRangeAttack)
         {
@@ -105,14 +109,24 @@ public class BringerOfDeath : MonoBehaviour
            
             animator.SetTrigger("isHurt");
             Destroy(other.gameObject);//shuriken biến mất
+            stopAttack=false;
         }
-        
+        else
+        {
+            stopAttack = true;
+        }
+
         if (other.gameObject.CompareTag("Attack1"))
         {
             health -= 10;
             healthSlider.value = health;
            
             animator.SetTrigger("isHurt");
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
@@ -120,6 +134,11 @@ public class BringerOfDeath : MonoBehaviour
             healthSlider.value = health;
            
             animator.SetTrigger("isHurt");
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
@@ -127,6 +146,11 @@ public class BringerOfDeath : MonoBehaviour
             healthSlider.value = health;
             
             animator.SetTrigger("isHurt");
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("SpecialAttack"))
         {
@@ -134,7 +158,11 @@ public class BringerOfDeath : MonoBehaviour
             health -= 40;
             healthSlider.value = health;
             animator.SetTrigger("isHurt");
-           
+            stopAttack = false;
+        }
+        else
+        {
+            stopAttack = true;
         }
 
         if (health <= 0)
