@@ -9,6 +9,6 @@ public class Levels : MonoBehaviour
     {
         string levelName = "Level" + levelID;
         SceneManager.LoadScene(levelID);
-        Time.timeScale = 1;
+
     }
 }
