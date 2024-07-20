@@ -183,20 +183,22 @@ public class Player : MonoBehaviour
     }
     private void Dash()
     {
-        if (Input.GetKey(KeyCode.LeftShift) && Time.time >= lastDash + dashCooldown)
+        if (currentHealth > 0)
         {
-            StartDash();
-            animator.SetTrigger("isDash");
-            currentMana -= 20;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
-        }
+            if (Input.GetKey(KeyCode.LeftShift) && Time.time >= lastDash + dashCooldown)
+            {
+                StartDash();
+                animator.SetTrigger("isDash");
+                currentMana -= 20;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
+            }
 
-        if (isDashing)
-        {
-            rb.velocity = new Vector2(dashDirection * dashSpeed, rb.velocity.y);
+            if (isDashing)
+            {
+                rb.velocity = new Vector2(dashDirection * dashSpeed, rb.velocity.y);
+            }
         }
-                
            
     }
     private void StartDash()
@@ -311,7 +313,7 @@ public class Player : MonoBehaviour
             //animation death
             animator.SetTrigger("isDeath");
 
-            Destroy(gameObject, 1f);
+            
         }
     }
     private void Flip()//Xoay mặt
@@ -356,83 +358,86 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)//xử lý va chạm box
     {
-        //chạm đất thì dc phép nhảy
-        if (other.gameObject.CompareTag("Ground"))
+        if (currentHealth >= 0)
         {
-            okJump= true;
-            animator.SetBool("isJump", false);
-        }
+            //chạm đất thì dc phép nhảy
+            if (other.gameObject.CompareTag("Ground"))
+            {
+                okJump = true;
+                animator.SetBool("isJump", false);
+            }
             //chạm skill mất hp
-        if (other.gameObject.CompareTag("Enemy")|| other.gameObject.CompareTag("AttackBoss"))
-        {
-            
-            //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 10;
-            _healthSlider.value = currentHealth;
-            _textHeal.text=currentHealth.ToString();
-           
-        }
-        //chạm skill 1 của boss 2
-        if (other.gameObject.CompareTag("Skill1(Boss2)"))
-        {
-            //nếu đụng enemy thì mất 10Hp
-            currentHealth -= 5;
-            _healthSlider.value = currentHealth;
-            _textHeal.text = currentHealth.ToString();
+            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("AttackBoss"))
+            {
 
-            Death();
+                //nếu đụng enemy thì mất 10Hp
+                currentHealth -= 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+
+            }
+            //chạm skill 1 của boss 2
+            if (other.gameObject.CompareTag("Skill1(Boss2)"))
+            {
+                //nếu đụng enemy thì mất 10Hp
+                currentHealth -= 5;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+
+                Death();
+            }
+            //chạm skill 2 của boss 2
+            if (other.gameObject.CompareTag("Skill2(Boss2)"))
+            {
+                //nếu đụng enemy thì mất 5Hp
+                currentHealth -= 5;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+                Death();
+            }
+            if (other.gameObject.CompareTag("FireBall1"))
+            {
+                currentHealth -= 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+
+                isTakingDamage = true;
+                damageTimer = 0f;  // Reset bộ đếm thời gian
+                intervalTimer = 0f; // Reset bộ đếm thời gian cho khoảng cách giữa mỗi lần giảm máu
+                Death();
+            }
+            if (other.gameObject.CompareTag("Skill1(Boss3)"))
+            {
+                //nếu đụng enemy thì mất Hp
+                currentHealth -= 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+                Death();
+            }
+            if (other.gameObject.CompareTag("Item") || other.gameObject.CompareTag("Hp") || other.gameObject.CompareTag("Mana"))
+            {
+                score += 20;
+                _textScore.text = score.ToString();
+                Destroy(other.gameObject);
+            }
+            if (other.gameObject.CompareTag("Hp"))
+            {
+                //Đụng bình hp tăng 10Hp và slider tăng theo
+                currentHealth += 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+                Destroy(other.gameObject);//bình hp biến mất
+
+            }
+            if (other.gameObject.CompareTag("Mana"))
+            {
+                //đụng bình mana tăng 50
+                currentMana += 50;
+                _manaSlider.value = currentMana;
+                _textMana.text = currentMana.ToString();
+                Destroy(other.gameObject);
+            }
         }
-        //chạm skill 2 của boss 2
-        if (other.gameObject.CompareTag("Skill2(Boss2)"))
-        {
-            //nếu đụng enemy thì mất 5Hp
-            currentHealth -= 5;
-            _healthSlider.value = currentHealth;
-            _textHeal.text = currentHealth.ToString();
-            Death();
-        }
-        if (other.gameObject.CompareTag("FireBall1"))
-        {
-            currentHealth -= 10;
-            _healthSlider.value = currentHealth;
-            _textHeal.text = currentHealth.ToString() ;
-           
-            isTakingDamage = true;
-            damageTimer = 0f;  // Reset bộ đếm thời gian
-            intervalTimer = 0f; // Reset bộ đếm thời gian cho khoảng cách giữa mỗi lần giảm máu
-            Death();
-        }
-        if (other.gameObject.CompareTag("Skill1(Boss3)"))
-        {
-            //nếu đụng enemy thì mất Hp
-            currentHealth -= 10;
-            _healthSlider.value = currentHealth;
-            _textHeal.text = currentHealth.ToString();
-            Death();
-        }
-        if (other.gameObject.CompareTag("Item")|| other.gameObject.CompareTag("Hp")|| other.gameObject.CompareTag("Mana"))
-        {
-            score += 20;
-            _textScore.text = score.ToString();
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.CompareTag("Hp"))
-        {
-            //Đụng bình hp tăng 10Hp và slider tăng theo
-            currentHealth += 10;
-            _healthSlider.value = currentHealth;
-            _textHeal.text=currentHealth.ToString();
-            Destroy(other.gameObject);//bình hp biến mất
-            
-        }
-        if (other.gameObject.CompareTag("Mana"))
-        {
-            //đụng bình mana tăng 50
-            currentMana += 50;
-            _manaSlider.value = currentMana;
-            _textMana.text = currentMana.ToString();
-            Destroy(other.gameObject);
-        }    
     }
     private void OnTriggerExit2D(Collider2D other)
     {
