@@ -85,19 +85,20 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Move();
-        Flip();
-        if (currentMana > 0)
-        {
-            PlayerAttack();
-            Fire();
-            Dash();
-        }
-        TimeHp();
-        TimeMana();    
-        CurrentHealAndMana();//trả hp và mana theo mặc định đã cho sẵn
-        TakingHeal();
-       
+        
+            Move();
+            Flip();
+            if (currentMana > 0)
+            {
+                PlayerAttack();
+                Fire();
+                Dash();
+            }
+            TimeHp();
+            TimeMana();
+            CurrentHealAndMana();//trả hp và mana theo mặc định đã cho sẵn
+            TakingHeal();
+        
     }
     
     private void TimeHp()
@@ -385,7 +386,7 @@ public class Player : MonoBehaviour
                 currentHealth -= 10;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString();
-
+                Death();
             }
             //chạm skill 1 của boss 2
             if (other.gameObject.CompareTag("Skill1(Boss2)"))

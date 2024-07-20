@@ -15,10 +15,10 @@ public class DemonFire3 : MonoBehaviour
     private float nextAttackTime = 0f;
     private float attackEndTime;
     private bool isAttacking = false;
-
+    private bool stopAttack = true;
     //xử lí hp
     public Slider healSlider;
-    private float health = 800;
+    private float health;
     //skill 1
     public GameObject attackSkill;
     public Transform attack;
@@ -41,15 +41,18 @@ public class DemonFire3 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = 800;
         healSlider.maxValue = health;
     }
 
   
     void Update()
     {
-        FollowPlayer();
-        Attack();
-        Flip();
+      
+            FollowPlayer();
+            Attack();
+            Flip();
+            
     }
     void FollowPlayer()
     {
@@ -76,67 +79,69 @@ public class DemonFire3 : MonoBehaviour
     }
     void Attack()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        if (distance <= deterctionAttack && Time.time >= nextAttackTime && !isAttacking)
+        if (stopAttack)
         {
-            nextAttackTime = Time.time + attackCooldown;
-            int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
-            if (attackType == 0)
+            float distance = Vector3.Distance(transform.position, player.position);
+            if (distance <= deterctionAttack && Time.time >= nextAttackTime && !isAttacking)
             {
-                
-                attackEndTime = Time.time + attackDuration;
-                isAttacking = true;
-                animator.SetTrigger("isAttack");
+                nextAttackTime = Time.time + attackCooldown;
+                int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
+                if (attackType == 0)
+                {
+
+                    attackEndTime = Time.time + attackDuration;
+                    isAttacking = true;
+                    animator.SetTrigger("isAttack");
+                }
+                if (attackType == 1)
+                {
+                    var oneBullet = Instantiate(fireBall, fireTransform.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity.x = 50;
+                    }
+                    oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+                    var oneBullet2 = Instantiate(fireBall2, fireTransform2.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity2 = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity2.x = 50;
+                    }
+                    oneBullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+                    var oneBullet3 = Instantiate(fireBall3, fireTransform3.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity3 = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity3.x = 50;
+                    }
+                    oneBullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+                    var oneBullet4 = Instantiate(fireBall4, fireTransform4.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity4 = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity4.x = 50;
+                    }
+                    oneBullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+
+                }
             }
-            if (attackType == 1)
+            if (isAttacking && Time.time >= attackEndTime)
             {
-                var oneBullet = Instantiate(fireBall, fireTransform.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity.x = 50;
-                }
-                oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
 
-                var oneBullet2 = Instantiate(fireBall2, fireTransform2.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity2 = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity2.x = 50;
-                }
-                oneBullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
-
-                var oneBullet3 = Instantiate(fireBall3, fireTransform3.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity3 = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity3.x = 50;
-                }
-                oneBullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
-
-                var oneBullet4 = Instantiate(fireBall4, fireTransform4.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity4 = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity4.x = 50;
-                }
-                oneBullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
-                
-
+                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                Destroy(oneSkill, 0.5f);
+                isAttacking = false;
             }
         }
-        if (isAttacking && Time.time >= attackEndTime)
-        {
-           
-            var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
-            Destroy(oneSkill, 0.5f);
-            isAttacking= false;
-        }
-
     }
    
     void Flip()
@@ -161,48 +166,75 @@ public class DemonFire3 : MonoBehaviour
             animator.SetTrigger("isTakeHit");
             if (right)
             {
-                transform.Translate(Vector2.left * 20f * Time.deltaTime);
+                transform.Translate(Vector2.left * 6f * Time.deltaTime);
             }
             else
             {
-                transform.Translate(Vector2.right * 20f * Time.deltaTime);
+                transform.Translate(Vector2.right * 6f * Time.deltaTime);
             }
+           
             Destroy(other.gameObject);//shuriken biến mất
+            stopAttack = false;
+
+        }
+        else
+        {
+            stopAttack = true;
         }
         if (other.gameObject.CompareTag("Attack1"))
         {
             health -= 10;
             healSlider.value = health;
             animator.SetTrigger("isHurt");
+            stopAttack = false;
 
         }
+        else
+        {
+            stopAttack = true;
+        }
+
         if (other.gameObject.CompareTag("Attack2"))
         {
             health -= 20;
             healSlider.value = health;
             animator.SetTrigger("isHurt");
+            stopAttack = false;
 
         }
+        else
+        {
+            stopAttack = true;
+        }
+
         if (other.gameObject.CompareTag("Attack3"))
         {
             health -= 35;
             healSlider.value = health;
             animator.SetTrigger("isHurt");
+            stopAttack = false;
 
         }
+        else
+        {
+            stopAttack = true;
+        }
+
         if (other.gameObject.CompareTag("SpecialAttack"))
         {
 
             health -= 40;
             healSlider.value = health;
             animator.SetTrigger("isTakeHit");
+            stopAttack = false;
 
         }
-        if (health <= 0)
+        else
         {
-            Destroy(gameObject, 1f);
-            animator.SetTrigger("isDeath");
+            stopAttack = true;
         }
+
+
     }
     private void OnTriggerExit2D(Collider2D other)
     {
