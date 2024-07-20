@@ -18,6 +18,7 @@ public class Levels : MonoBehaviour
         {
             buttons[i].interactable = true;
         }
+        Time.timeScale = 1;
     }
     public void OpenLevel(int levelID)
     {
