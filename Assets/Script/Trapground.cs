@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Trapground : MonoBehaviour
 {
-    public Transform bay;
+    public float x , y,z;
     public GameObject pipePrefab; 
     public List<GameObject> pipes;
     public float timeToCreatePipes;
@@ -25,8 +25,10 @@ public class Trapground : MonoBehaviour
     }
     private void CreateRandomPipes()
     {
+
+        
         var randomY = Random.Range(-3f, 3f);
-        var pipe = Instantiate(pipePrefab,bay.transform.position, Quaternion.identity);
+        var pipe = Instantiate(pipePrefab,new Vector3(x, randomY , 0), Quaternion.identity);
         Destroy(pipe, 10);
         MovePipes(pipe);
     }
