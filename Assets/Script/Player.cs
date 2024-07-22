@@ -41,8 +41,11 @@ public class Player : MonoBehaviour
 
     private bool Right;//mặc định mặt bên phải
     private bool okJump;//true false được phép nhảy
-    
 
+    //cooldown shuriken
+    private float lastShurikenTime = -1f;
+    //cooldown skill
+    private float lastSkillTime;
     //vị trí bắn
     public Transform Gun;
     public Transform Special;
@@ -219,13 +222,14 @@ public class Player : MonoBehaviour
     }
     private void PlayerAttack()
     {
-        if (currentHealth >= 0)
+        if (currentHealth >= 0 && Time.time >= lastSkillTime + 1f)
         {
             //tấn công
             if (currentMana >= 10)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    lastSkillTime = Time.time;
                     //xử lý slide and text
                     animator.SetTrigger("isAttack1");
 
@@ -236,8 +240,8 @@ public class Player : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
+                    lastSkillTime = Time.time;
                     animator.SetTrigger("isAttack2");
-
                     //xử lý skill
                     var oneAttackk1 = Instantiate(Attack2bullet, Gun.position, Quaternion.identity);
                     Destroy(oneAttackk1, 0.1f);//hủy skill 
@@ -245,6 +249,7 @@ public class Player : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.C))
                 {
+                    lastSkillTime = Time.time;
                     animator.SetTrigger("isAttack3");
                     currentMana -= 10;
                     _manaSlider.value = currentMana;
@@ -259,6 +264,7 @@ public class Player : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    lastSkillTime = Time.time;
                     animator.SetTrigger("isShuriken");
                     currentMana -= 5;
                     _manaSlider.value = currentMana;
@@ -270,6 +276,7 @@ public class Player : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    lastSkillTime = Time.time;
                     animator.SetTrigger("isAttackSpecia");
                     currentMana -= 30;
                     _manaSlider.value = currentMana;
@@ -285,11 +292,12 @@ public class Player : MonoBehaviour
 
     private void Fire()//bắn shuriken
     {
-        if (currentHealth >= 0)
+        if (currentHealth >= 0 && Time.time >= lastShurikenTime + 1f)
         {
             //nếu nhấn f thì bắn 
             if (Input.GetKeyDown(KeyCode.F))
             {
+                lastShurikenTime = Time.time;
                 //tạo ra viên đạn tại vị trí súng
                 var oneBullet = Instantiate(ShurikenBullet, Gun.position, Quaternion.identity);
 
@@ -424,6 +432,13 @@ public class Player : MonoBehaviour
                 currentHealth -= 10;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString();
+                Death();
+            }
+            if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
+            {
+                currentHealth -= 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text= currentHealth.ToString();
                 Death();
             }
             if (other.gameObject.CompareTag("Item") || other.gameObject.CompareTag("Hp") || other.gameObject.CompareTag("Mana"))

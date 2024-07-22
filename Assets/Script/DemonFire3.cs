@@ -15,7 +15,7 @@ public class DemonFire3 : MonoBehaviour
     private float nextAttackTime = 0f;
     private float attackEndTime;
     private bool isAttacking = false;
-    private bool stopAttack = true;
+    private bool stopAttack = true; 
     //xử lí hp
     public Slider healSlider;
     private float health;
@@ -85,10 +85,9 @@ public class DemonFire3 : MonoBehaviour
             if (distance <= deterctionAttack && Time.time >= nextAttackTime && !isAttacking)
             {
                 nextAttackTime = Time.time + attackCooldown;
-                int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
+                int attackType = Random.Range(0, 2);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
                 if (attackType == 0)
                 {
-
                     attackEndTime = Time.time + attackDuration;
                     isAttacking = true;
                     animator.SetTrigger("isAttack");
@@ -233,7 +232,11 @@ public class DemonFire3 : MonoBehaviour
         {
             stopAttack = true;
         }
-
+        if(health <= 0)
+        {
+            Destroy(gameObject,1.8f);
+            animator.SetTrigger("isDeath");
+        }
 
     }
     private void OnTriggerExit2D(Collider2D other)

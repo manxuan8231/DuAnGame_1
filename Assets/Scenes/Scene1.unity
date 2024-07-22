@@ -198,6 +198,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45104542}
   m_CullTransparentMesh: 1
+--- !u!1 &114232707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114232708}
+  m_Layer: 0
+  m_Name: Attack1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &114232708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114232707}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.453186, y: 2.3411882, z: -0.020585582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1414886124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &191623657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 191623658}
+  m_Layer: 0
+  m_Name: Skill2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &191623658
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191623657}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.29681396, y: -2.5511882, z: -0.033858385}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1868444514}
+  m_Father: {fileID: 1834902579}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &202770638
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 385333610}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50.89, y: -2.76, z: 0}
+  m_LocalPosition: {x: 59.74, y: 4.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -553,7 +616,7 @@ MonoBehaviour:
   detectionRange: 8
   deterctionAttack: 6
   player: {fileID: 1689527239}
-  attackCooldown: 2
+  attackCooldown: 4
   attackDuration: 0.5
   healSlider: {fileID: 843427314}
   attackSkill: {fileID: 1446628022724028588, guid: 2efa683aa28a4984cb9f9f556a7a23c6, type: 3}
@@ -835,7 +898,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.829994, y: -2.56, z: -10}
+  m_LocalPosition: {x: 24.54, y: -1.79, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1466,8 +1529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.42, y: 1.06}
-  m_SizeDelta: {x: 1.7125, y: 0.275}
+  m_AnchoredPosition: {x: -0.3913, y: 1.06}
+  m_SizeDelta: {x: 3.2072, y: 0.275}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739842833
 MonoBehaviour:
@@ -24687,6 +24750,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1232945759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1414886123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414886124}
+  m_Layer: 0
+  m_Name: Skill1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414886124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414886123}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.29681396, y: -2.5511882, z: -0.033858385}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 114232708}
+  m_Father: {fileID: 1834902579}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457508951
 GameObject:
   m_ObjectHideFlags: 3
@@ -24863,7 +24958,7 @@ GameObject:
   - component: {fileID: 1629469971}
   - component: {fileID: 1629469970}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas(Hp)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25206,9 +25301,9 @@ GameObject:
   - component: {fileID: 1834902578}
   - component: {fileID: 1834902577}
   - component: {fileID: 1834902581}
-  - component: {fileID: 1834902582}
   - component: {fileID: 1834902583}
   - component: {fileID: 1834902584}
+  - component: {fileID: 1834902582}
   m_Layer: 0
   m_Name: Ice(Boss4)
   m_TagString: Untagged
@@ -25298,11 +25393,13 @@ Transform:
   m_GameObject: {fileID: 1834902576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.33, y: -4.41, z: 0}
+  m_LocalPosition: {x: 37.98, y: -3.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1629469969}
+  - {fileID: 1414886124}
+  - {fileID: 191623658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1834902581
@@ -25346,6 +25443,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 10
   detectionAttack: 4
+  attackCooldown: 4
+  attackDuration: 0.5
+  attackSkill: {fileID: 2705412580757114891, guid: b3b76028b21c17c4ab2753f77c67c096, type: 3}
+  attack: {fileID: 114232708}
+  iceBall: {fileID: 1393841026187258659, guid: b5c8269f4deb508499fd658d98765521, type: 3}
+  iceTransform: {fileID: 1868444514}
   healSlider: {fileID: 923375138}
   health: 0
   player: {fileID: 1689527239}
@@ -25381,7 +25484,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021331787, y: 0.036569}
+  m_Offset: {x: 0.11920357, y: 0.036569}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25392,7 +25495,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6899796, y: 3.1208332}
+  m_Size: {x: 2.4089088, y: 3.1208332}
   m_EdgeRadius: 0
 --- !u!58 &1834902584
 CircleCollider2D:
@@ -25429,6 +25532,37 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1.471039}
   serializedVersion: 2
   m_Radius: 0.0627563
+--- !u!1 &1868444513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1868444514}
+  m_Layer: 0
+  m_Name: Transform(IceBall)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1868444514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868444513}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6268158, y: 2.1911883, z: -0.03862651}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 191623658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1990407983
 GameObject:
   m_ObjectHideFlags: 0
@@ -25768,11 +25902,11 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 7097309357926720444, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -78.73
+      value: -80.02
       objectReference: {fileID: 0}
     - target: {fileID: 7097309357926720444, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.73
+      value: -5.96
       objectReference: {fileID: 0}
     - target: {fileID: 7097309357926720444, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_LocalPosition.z
