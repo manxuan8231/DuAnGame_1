@@ -15,7 +15,7 @@ public class IceBoss4 : MonoBehaviour
     private float attackEndTime;
     private bool isAttacking = false;
     private bool stopAttack = true;
-
+    bool isStopAttack = true;
     //skill 1
     public GameObject attackSkill;
     public Transform attack;
@@ -121,7 +121,9 @@ public class IceBoss4 : MonoBehaviour
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
-    {      
+    {
+        if (isStopAttack)
+        {
             //chạm shuriken
             if (other.gameObject.CompareTag("Shuriken"))
             {
@@ -141,9 +143,13 @@ public class IceBoss4 : MonoBehaviour
                     Destroy(other.gameObject);//shuriken biến mất
 
                 }
-
+                if (health <= 0)
+                {
+                    
+                    isStopAttack = false;
+                }
                 stopAttack = false;
-                
+
             }
             else
             {
@@ -160,7 +166,11 @@ public class IceBoss4 : MonoBehaviour
                 }
 
                 stopAttack = false;
-                
+                if (health <= 0)
+                {
+                    
+                    isStopAttack = false;
+                }
             }
             else
             {
@@ -175,8 +185,13 @@ public class IceBoss4 : MonoBehaviour
                     animator.SetTrigger("isHurt");
 
                 }
-               
+
                 stopAttack = false;
+                if (health <= 0)
+                {
+                   
+                    isStopAttack = false;
+                }
             }
             else
             {
@@ -191,8 +206,12 @@ public class IceBoss4 : MonoBehaviour
                     animator.SetTrigger("isHurt");
 
                 }
-                
+
                 stopAttack = false;
+                if (health <= 0)
+                {                  
+                    isStopAttack = false;
+                }
             }
             else
             {
@@ -208,19 +227,23 @@ public class IceBoss4 : MonoBehaviour
 
                 }
                 stopAttack = false;
-               
+                if (health <= 0)
+                {
+                   
+                    isStopAttack = false;
+                }
             }
             else
             {
                 stopAttack = true;
             }
+        }
         
         if(health <= 0)
         {
-            Destroy(gameObject,1.2f);
-            animator.SetTrigger("isDeath");
-           
-        }
-        
+            Destroy(gameObject,2f);
+            animator.SetTrigger("isDeath");     
+            isStopAttack = false;
+        }        
     }
 }
