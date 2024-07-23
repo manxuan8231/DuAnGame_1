@@ -32,7 +32,7 @@ public class DemonFire3 : MonoBehaviour
     public GameObject fireBall4;
     public Transform fireTransform4;
 
-    
+    private bool isTakeDamage;
     private bool right;
     Vector2 moveDirection;
     Rigidbody2D rb;
@@ -48,11 +48,17 @@ public class DemonFire3 : MonoBehaviour
   
     void Update()
     {
-      
+        if (health > 0)
+        {
             FollowPlayer();
             Attack();
             Flip();
-            
+            isTakeDamage = true;
+        }
+        else
+        {
+            isTakeDamage = false;
+        }
     }
     void FollowPlayer()
     {
@@ -156,88 +162,89 @@ public class DemonFire3 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
-        //chạm shuriken
-        if (other.gameObject.CompareTag("Shuriken"))
+        if (isTakeDamage)
         {
-            health -= 5;
-            healSlider.value = health;
-            animator.SetTrigger("isTakeHit");
-            if (right)
+            //chạm shuriken
+            if (other.gameObject.CompareTag("Shuriken"))
             {
-                transform.Translate(Vector2.left * 6f * Time.deltaTime);
+                health -= 5;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+                if (right)
+                {
+                    transform.Translate(Vector2.left * 6f * Time.deltaTime);
+                }
+                else
+                {
+                    transform.Translate(Vector2.right * 6f * Time.deltaTime);
+                }
+
+                Destroy(other.gameObject);//shuriken biến mất
+                stopAttack = false;
+
             }
             else
             {
-                transform.Translate(Vector2.right * 6f * Time.deltaTime);
+                stopAttack = true;
             }
-           
-            Destroy(other.gameObject);//shuriken biến mất
-            stopAttack = false;
+            if (other.gameObject.CompareTag("Attack1"))
+            {
+                health -= 10;
+                healSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
 
-        }
-        else
-        {
-            stopAttack = true;
-        }
-        if (other.gameObject.CompareTag("Attack1"))
-        {
-            health -= 10;
-            healSlider.value = health;
-            animator.SetTrigger("isHurt");
-            stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
 
-        }
-        else
-        {
-            stopAttack = true;
-        }
+            if (other.gameObject.CompareTag("Attack2"))
+            {
+                health -= 20;
+                healSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
 
-        if (other.gameObject.CompareTag("Attack2"))
-        {
-            health -= 20;
-            healSlider.value = health;
-            animator.SetTrigger("isHurt");
-            stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
 
-        }
-        else
-        {
-            stopAttack = true;
-        }
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                health -= 35;
+                healSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
 
-        if (other.gameObject.CompareTag("Attack3"))
-        {
-            health -= 35;
-            healSlider.value = health;
-            animator.SetTrigger("isHurt");
-            stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
 
-        }
-        else
-        {
-            stopAttack = true;
-        }
+            if (other.gameObject.CompareTag("SpecialAttack"))
+            {
 
-        if (other.gameObject.CompareTag("SpecialAttack"))
-        {
+                health -= 40;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+                stopAttack = false;
 
-            health -= 40;
-            healSlider.value = health;
-            animator.SetTrigger("isTakeHit");
-            stopAttack = false;
-
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (health <= 0)
+            {
+                Destroy(gameObject, 1.8f);
+                animator.SetTrigger("isDeath");
+            }
         }
-        else
-        {
-            stopAttack = true;
-        }
-        if(health <= 0)
-        {
-            Destroy(gameObject,1.8f);
-            animator.SetTrigger("isDeath");
-        }
-
     }
     private void OnTriggerExit2D(Collider2D other)
     {
