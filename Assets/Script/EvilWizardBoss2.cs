@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -37,8 +38,11 @@ public class EvilWizardBoss2 : MonoBehaviour
     public Slider healthSlider;//slider hp
     private float health = 700;
 
-    private bool stopAttack = true;
+    private bool isTakeAttack;
+    private bool stopAttack;
     private bool right;
+    private float Cooldown;
+
     Vector2 moveDirection;
     Animator animator;
     Rigidbody2D rb;
@@ -53,10 +57,22 @@ public class EvilWizardBoss2 : MonoBehaviour
   
     void Update()
     {
-        
-            followPlayer();
-            Attack();
-   
+        if (health > 0)
+        {
+            if (stopAttack)
+            {               
+                followPlayer();
+                Attack();
+            }
+        }
+        if (health <= 0)
+        {            
+            isTakeAttack = false;
+        }
+        else
+        {
+            isTakeAttack = true;
+        }
     }
     void Attack()
     {
@@ -95,40 +111,36 @@ public class EvilWizardBoss2 : MonoBehaviour
                 }
             }
         }
-    }
-   void death()
-    {
-        if (health <= 0)
-        {
-            animator.SetTrigger("isDeath");
-            Destroy(gameObject, 2f);
-            
-        }
+              
     }
     private void followPlayer()//thấy player thì chạy theo
     {
-        // Tính khoảng cách giữa quái vật và người chơi
-        float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
-        // Nếu khoảng cách nhỏ hơn phạm vi phát hiện, quái vật sẽ đuổi theo người chơi
-        if (distanceToPlayer <= detectionRange)
+        if (stopAttack )
         {
-            if (distanceToPlayer > stopRange)
+            
+            // Tính khoảng cách giữa quái vật và người chơi
+            float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
+            // Nếu khoảng cách nhỏ hơn phạm vi phát hiện, quái vật sẽ đuổi theo người chơi
+            if (distanceToPlayer <= detectionRange)
             {
-                moveDirection = (Player.position - transform.position).normalized;
-                transform.Translate(moveDirection * 2f * Time.deltaTime);// Tốc độ di chuyển
-                animator.SetBool("isRun", true);
+                if (distanceToPlayer > stopRange)
+                {
+                    moveDirection = (Player.position - transform.position).normalized;
+                    transform.Translate(moveDirection * 2f * Time.deltaTime);// Tốc độ di chuyển
+                    animator.SetBool("isRun", true);
 
-                //xoay mặt
-                Flip();
+                    //xoay mặt
+                    Flip();
+                }
+                else
+                {
+                    animator.SetBool("isRun", false);
+                }
             }
             else
-            {              
+            {
                 animator.SetBool("isRun", false);
             }
-        }
-        else
-        {         
-            animator.SetBool("isRun", false);
         }
     }
     private void Flip()//xoay mat
@@ -145,83 +157,91 @@ public class EvilWizardBoss2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //chạm shuriken
-        if (other.gameObject.CompareTag("Shuriken"))
+        if (isTakeAttack)
         {
-            if (health > 0)
+            //chạm shuriken
+            if (other.gameObject.CompareTag("Shuriken"))
             {
-                health -= 5;
-                healthSlider.value = health;
-                animator.SetTrigger("isTakeHit");
+                if (health > 0)
+                {
+                    health -= 5;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isTakeHit");
+
+                }
+               
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("Attack1"))
+            {
+                if (health > 0)
+                {
+                    health -= 10;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+               
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("Attack2"))
+            {
+                if (health > 0)
+                {
+                    health -= 20;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+               
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                if (health > 0)
+                {
+                    health -= 30;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
                 
+                stopAttack = false;
             }
-            
-            death();
-            stopAttack = false;
-        }
-        else
-        {
-            stopAttack = true;
-        }
-        if (other.gameObject.CompareTag("Attack1"))
-        {
-            if (health > 0)
+            else
             {
-                health -= 10;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                stopAttack = true;
             }
-            death();
-            stopAttack = false;
-        }
-        else
-        {
-            stopAttack = true;
-        }
-        if (other.gameObject.CompareTag("Attack2"))
-        {
-            if (health > 0)
+            if (other.gameObject.CompareTag("SpecialAttack"))
             {
-                health -= 20;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                if (health > 0)
+                {
+                    health -= 100;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+                
+                stopAttack = false;
             }
-            death();
-            stopAttack = false;
-        }
-        else
-        {
-            stopAttack = true;
-        }
-        if (other.gameObject.CompareTag("Attack3"))
-        {
-            if (health > 0)
+            else
             {
-                health -= 30;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                stopAttack = true;
             }
-            death();
-            stopAttack = false;
-        }
-        else
-        {
-            stopAttack = true;
-        }
-        if (other.gameObject.CompareTag("SpecialAttack"))
-        {
-            if (health > 0)
+            if(health <= 0)
             {
-                health -= 40;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                Destroy(gameObject,5f);
+                animator.SetBool("isDeath",true);
             }
-            death();
-            stopAttack = false;
         }
-        else
-        {
-            stopAttack = true;
-        }
+        
     }
 }
