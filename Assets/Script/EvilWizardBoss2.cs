@@ -115,7 +115,7 @@ public class EvilWizardBoss2 : MonoBehaviour
             if (distanceToPlayer > stopRange)
             {
                 moveDirection = (Player.position - transform.position).normalized;
-                transform.Translate(moveDirection * 3f * Time.deltaTime);// Tốc độ di chuyển
+                transform.Translate(moveDirection * 2f * Time.deltaTime);// Tốc độ di chuyển
                 animator.SetBool("isRun", true);
 
                 //xoay mặt
@@ -153,6 +153,7 @@ public class EvilWizardBoss2 : MonoBehaviour
                 health -= 5;
                 healthSlider.value = health;
                 animator.SetTrigger("isTakeHit");
+                
             }
             
             death();
@@ -213,7 +214,7 @@ public class EvilWizardBoss2 : MonoBehaviour
             {
                 health -= 40;
                 healthSlider.value = health;
-                animator.SetTrigger("isTakeHit");
+                animator.SetTrigger("isHurt");
             }
             death();
             stopAttack = false;

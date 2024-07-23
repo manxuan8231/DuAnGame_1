@@ -23,7 +23,7 @@ public class BringerOfDeath : MonoBehaviour
    
     
 
-    private float TimeAttackRate = 2f;
+    private float TimeAttackRate = 4f;
     private float timeAttack;
 
     private bool right;
@@ -49,7 +49,6 @@ public class BringerOfDeath : MonoBehaviour
             TimeAttack();//độ trể khi thấy player sau 3f tấn công
         }
     }
-  
     void TimeAttack()
     {
 
@@ -104,7 +103,7 @@ public class BringerOfDeath : MonoBehaviour
        
         if (other.gameObject.CompareTag("Shuriken"))//nếu chạm shuriken thì mất máu
         {            
-            health -= 5;
+            health -= 10;
             healthSlider.value = health;
            
             animator.SetTrigger("isHurt");
@@ -118,7 +117,7 @@ public class BringerOfDeath : MonoBehaviour
 
         if (other.gameObject.CompareTag("Attack1"))
         {
-            health -= 10;
+            health -= 15;
             healthSlider.value = health;
            
             animator.SetTrigger("isHurt");
@@ -130,7 +129,7 @@ public class BringerOfDeath : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
-            health -= 20;
+            health -= 25;
             healthSlider.value = health;
            
             animator.SetTrigger("isHurt");
@@ -142,7 +141,7 @@ public class BringerOfDeath : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
-            health -= 30;
+            health -= 35;
             healthSlider.value = health;
             
             animator.SetTrigger("isHurt");
@@ -155,7 +154,7 @@ public class BringerOfDeath : MonoBehaviour
         if (other.gameObject.CompareTag("SpecialAttack"))
         {
 
-            health -= 40;
+            health -= 50;
             healthSlider.value = health;
             animator.SetTrigger("isHurt");
             stopAttack = false;

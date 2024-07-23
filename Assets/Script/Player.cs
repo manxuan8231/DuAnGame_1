@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
             }
             TimeHp();
             TimeMana();
-            CurrentHealAndMana();//trả hp và mana theo mặc định đã cho sẵn
+            
             TakingHeal();
         
     }
@@ -149,21 +149,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void CurrentHealAndMana()
-    {
-        //nếu hp hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành hp đã cho
-        if (currentHealth > maxHealth && currentHealth<maxHealth)
-        {
-            currentHealth = maxHealth;
-            _textHeal.text = currentHealth.ToString();
-        }
-        //nếu mana hiện tại lớn hơn hp đã cho thì sẽ chuyển lại thành mana đã cho
-        if (currentMana > maxMana)
-        {
-            currentMana = maxMana;
-            _textMana.text = currentMana.ToString();
-        }
-    }
 
     private void Move()
     {
@@ -184,6 +169,8 @@ public class Player : MonoBehaviour
                 rb.AddForce(Vector2.up * _moveJump, ForceMode2D.Impulse);
             }
         }
+       
+        
     }
     private void Dash()
     {
@@ -391,7 +378,7 @@ public class Player : MonoBehaviour
             {
 
                 //nếu đụng enemy thì mất 10Hp
-                currentHealth -= 10;
+                currentHealth -= 5;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString();
                 Death();
@@ -454,7 +441,12 @@ public class Player : MonoBehaviour
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString();
                 Destroy(other.gameObject);//bình hp biến mất
-
+                if(currentHealth > maxHealth)
+                {
+                    currentHealth = maxHealth;
+                    _healthSlider.value = currentHealth;
+                    _textHeal.text = currentHealth.ToString();
+                }              
             }
             if (other.gameObject.CompareTag("Mana"))
             {
@@ -463,6 +455,12 @@ public class Player : MonoBehaviour
                 _manaSlider.value = currentMana;
                 _textMana.text = currentMana.ToString();
                 Destroy(other.gameObject);
+               if(currentMana > maxMana)
+                {
+                    currentMana = maxMana;
+                    _manaSlider.value = currentMana;
+                    _textMana.text=currentMana.ToString();
+                }
             }
         }
     }

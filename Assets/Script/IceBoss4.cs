@@ -27,7 +27,7 @@ public class IceBoss4 : MonoBehaviour
     public float health;
     private bool right;
 
-    private bool isTakeDamage=true;
+    
     public Transform player;
     Animator animator;
     Vector2 moveSpeed;

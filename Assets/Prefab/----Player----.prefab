@@ -1102,8 +1102,8 @@ MonoBehaviour:
   Attack3bullet: {fileID: 4679998391499452836, guid: b60c6cb30ed915c4388b7f231fdd2c3e, type: 3}
   SpecialBullet: {fileID: 7062543220206371936, guid: 7f3448da8d644e1498dbaab84dff3558, type: 3}
   damageAmount: 10
-  damageInterval: 2
-  damageDuration: 7
+  damageInterval: 1
+  damageDuration: 3
 --- !u!1 &6953684829899538519
 GameObject:
   m_ObjectHideFlags: 0
