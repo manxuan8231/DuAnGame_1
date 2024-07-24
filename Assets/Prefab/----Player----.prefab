@@ -871,7 +871,7 @@ Transform:
   m_GameObject: {fileID: 6553936079398979339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 104.56, y: 4.17, z: -1571.1066}
+  m_LocalPosition: {x: 106.04, y: 3.86, z: -1571.1066}
   m_LocalScale: {x: 1, y: 0.9791, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   Attack2bullet: {fileID: 7778251353215916096, guid: 9033e438743b7124989aa43f8431cb15, type: 3}
   Attack3bullet: {fileID: 4679998391499452836, guid: b60c6cb30ed915c4388b7f231fdd2c3e, type: 3}
   SpecialBullet: {fileID: 7062543220206371936, guid: 7f3448da8d644e1498dbaab84dff3558, type: 3}
-  damageAmount: 10
+  damageAmount: 4
   damageInterval: 1
   damageDuration: 3
 --- !u!1 &6953684829899538519
