@@ -5,7 +5,11 @@ using UnityEngine;
 public class Godzilla : MonoBehaviour
 {
     public Transform player;
-    //xử lý xuất hiện
+    //xử lý chạy theo player
+    public float detectionWalk = 3f; //tính khoản cách player không trong phạm vi thì walk
+    public float detectionRun = 7f; //tính khoản cách player không trong phạm vi thì run
+    private bool isWalk;
+    //xử lý xuất hiện 
     public float detectionAppear = 7f; //phạm vi nhìn thấy người chơi 
     private float appearTimer;
     private bool isAppearing = false; // để theo dõi trạng thái "Appear"
@@ -15,11 +19,11 @@ public class Godzilla : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
-
-   
+ 
     void Update()
     {
-        Appear();    
+        Appear();
+        Walk();
     }
     
     private void Appear()//thấy người chơi thì xuất hiện
@@ -38,8 +42,28 @@ public class Godzilla : MonoBehaviour
             {
                 animator.SetTrigger("isIdle");
                 isAppearing = false;
+                isWalk = true;//chạy xong idle mới dc true
+            }else
+            {
+                isWalk = false;
             }
         }
     }
-    
+    private void Walk()
+    {
+        if(isWalk)
+        {
+            float distance = Vector3.Distance(player.position, transform.position);
+            if (distance > detectionWalk)
+            {
+                Vector2 moveWalk = (player.position - transform.position).normalized;
+                transform.Translate(moveWalk * 1f * Time.deltaTime);
+                animator.SetBool("isWalk", true);
+            }
+            else
+            {
+                animator.SetBool("isWalk", false);
+            }
+        }
+    }
 }

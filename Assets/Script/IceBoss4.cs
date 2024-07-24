@@ -65,7 +65,7 @@ public class IceBoss4 : MonoBehaviour
             if (distance > StopRange)
             {
                moveSpeed = (player.position - transform.position).normalized;
-                transform.Translate(moveSpeed * 1f * Time.deltaTime);
+                transform.Translate(moveSpeed * 5f * Time.deltaTime);
                 animator.SetBool("isWalk", true);
 
             }
