@@ -21,6 +21,10 @@ TagManager:
   - HitBox
   - Skill1(Boss3)
   - FireBall1
+  - IceBall
+  - IceSkill1
+  - Coin
+  - Diamond
   layers:
   - Default
   - TransparentFX

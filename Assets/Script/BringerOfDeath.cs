@@ -20,14 +20,12 @@ public class BringerOfDeath : MonoBehaviour
     public GameObject attackSkill;//skill
     public Transform attack;//vị trí tấn công
 
-   
-    
-
-    private float TimeAttackRate = 2f;
+    private bool isTakeDamage;
+    private float TimeAttackRate = 4f;
     private float timeAttack;
 
     private bool right;
-
+    private bool stopAttack = true;
 
     Animator animator;
     Rigidbody2D rb;
@@ -43,12 +41,23 @@ public class BringerOfDeath : MonoBehaviour
 
     void Update()
     {
-        followPlayer();
-        TimeAttack();//độ trể khi thấy player sau 3f tấn công
+        if (stopAttack)
+        {
+            if (health > 0)
+            {
+                followPlayer();
+                TimeAttack();//độ trể khi thấy player sau 3f tấn công
+                isTakeDamage = true;
+            }
+            else
+            {
+                isTakeDamage = false;
+            }
+        }
     }
-  
     void TimeAttack()
     {
+
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
         if (distanceToPlayer < detectionRangeAttack)
         {
@@ -97,50 +106,76 @@ public class BringerOfDeath : MonoBehaviour
     } 
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
-        if (other.gameObject.CompareTag("Shuriken"))//nếu chạm shuriken thì mất máu
-        {            
-            health -= 5;
-            healthSlider.value = health;
-           
-            animator.SetTrigger("isHurt");
-            Destroy(other.gameObject);//shuriken biến mất
-        }
-        
-        if (other.gameObject.CompareTag("Attack1"))
+        if (isTakeDamage)
         {
-            health -= 10;
-            healthSlider.value = health;
-           
-            animator.SetTrigger("isHurt");
-        }
-        if (other.gameObject.CompareTag("Attack2"))
-        {
-            health -= 20;
-            healthSlider.value = health;
-           
-            animator.SetTrigger("isHurt");
-        }
-        if (other.gameObject.CompareTag("Attack3"))
-        {
-            health -= 30;
-            healthSlider.value = health;
-            
-            animator.SetTrigger("isHurt");
-        }
-        if (other.gameObject.CompareTag("SpecialAttack"))
-        {
+            if (other.gameObject.CompareTag("Shuriken"))//nếu chạm shuriken thì mất máu
+            {
+                health -= 10;
+                healthSlider.value = health;
 
-            health -= 40;
-            healthSlider.value = health;
-            animator.SetTrigger("isHurt");
-           
-        }
+                animator.SetTrigger("isHurt");
+                Destroy(other.gameObject);//shuriken biến mất
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
 
-        if (health <= 0)
-        {
-            Destroy(gameObject,1f);
-            animator.SetTrigger("isDeath");
+            if (other.gameObject.CompareTag("Attack1"))
+            {
+                health -= 15;
+                healthSlider.value = health;
+
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("Attack2"))
+            {
+                health -= 25;
+                healthSlider.value = health;
+
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                health -= 35;
+                healthSlider.value = health;
+
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("SpecialAttack"))
+            {
+
+                health -= 100;
+                healthSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+
+            if (health <= 0)
+            {
+                Destroy(gameObject, 1f);
+                animator.SetTrigger("isDeath");
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)

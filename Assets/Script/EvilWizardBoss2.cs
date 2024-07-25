@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -37,7 +38,11 @@ public class EvilWizardBoss2 : MonoBehaviour
     public Slider healthSlider;//slider hp
     private float health = 700;
 
+    private bool isTakeAttack;
+    private bool stopAttack;
     private bool right;
+    private float Cooldown;
+
     Vector2 moveDirection;
     Animator animator;
     Rigidbody2D rb;
@@ -52,79 +57,90 @@ public class EvilWizardBoss2 : MonoBehaviour
   
     void Update()
     {
-        followPlayer();
-        Attack();
-        
+        if (health > 0)
+        {
+            if (stopAttack)
+            {               
+                followPlayer();
+                Attack();
+            }
+        }
+        if (health <= 0)
+        {            
+            isTakeAttack = false;
+        }
+        else
+        {
+            isTakeAttack = true;
+        }
     }
     void Attack()
     {
+        if(stopAttack) { 
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
-        if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
-        {
-            nextAttackTime = Time.time + attackInterval;
-            int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
+            if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
+            {
+                nextAttackTime = Time.time + attackInterval;
+                int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
 
-            if (attackType == 0)
-            {
-                animator.SetTrigger("isAttack");
-                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
-                Destroy(oneSkill, 0.1f);
-            }          
-            if (attackType == 1) 
-            {
-                animator.SetTrigger("isAttack2");
-                var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
-                Destroy(oneSkill, 0.1f);
-            }
-            if (attackType == 2)
-            {              
-                var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);               
-                Destroy(fireTmp, 5f);
-                var fireTmp2 = Instantiate(fireBall2, fire2.position, Quaternion.identity);
-                Destroy(fireTmp2, 5f);
-                var fireTmp3 = Instantiate(fireBall3, fire3.position, Quaternion.identity);
-                Destroy(fireTmp3, 5f);
-                var fireTmp4 = Instantiate(fireBall4, fire4.position, Quaternion.identity);
-                Destroy(fireTmp4, 5f);
-                var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
-                Destroy(fireTmp5, 5f);
+                if (attackType == 0)
+                {
+                    animator.SetTrigger("isAttack");
+                    var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                    Destroy(oneSkill, 0.1f);
+                }
+                if (attackType == 1)
+                {
+                    animator.SetTrigger("isAttack2");
+                    var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
+                    Destroy(oneSkill, 0.1f);
+                }
+                if (attackType == 2)
+                {
+                    var fireTmp = Instantiate(fireBall, fire.position, Quaternion.identity);
+                    Destroy(fireTmp, 5f);
+                    var fireTmp2 = Instantiate(fireBall2, fire2.position, Quaternion.identity);
+                    Destroy(fireTmp2, 5f);
+                    var fireTmp3 = Instantiate(fireBall3, fire3.position, Quaternion.identity);
+                    Destroy(fireTmp3, 5f);
+                    var fireTmp4 = Instantiate(fireBall4, fire4.position, Quaternion.identity);
+                    Destroy(fireTmp4, 5f);
+                    var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
+                    Destroy(fireTmp5, 5f);
+                }
             }
         }
-    }
-   void death()
-    {
-        if (health <= 0)
-        {
-            animator.SetTrigger("isDeath");
-            Destroy(gameObject, 2f);
-            
-        }
+              
     }
     private void followPlayer()//thấy player thì chạy theo
     {
-        // Tính khoảng cách giữa quái vật và người chơi
-        float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
-        // Nếu khoảng cách nhỏ hơn phạm vi phát hiện, quái vật sẽ đuổi theo người chơi
-        if (distanceToPlayer <= detectionRange)
+        if (stopAttack )
         {
-            if (distanceToPlayer > stopRange)
+            
+            // Tính khoảng cách giữa quái vật và người chơi
+            float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
+            // Nếu khoảng cách nhỏ hơn phạm vi phát hiện, quái vật sẽ đuổi theo người chơi
+            if (distanceToPlayer <= detectionRange)
             {
-                moveDirection = (Player.position - transform.position).normalized;
-                transform.Translate(moveDirection * 3f * Time.deltaTime);// Tốc độ di chuyển
-                animator.SetBool("isRun", true);
+                if (distanceToPlayer > stopRange)
+                {
+                    moveDirection = (Player.position - transform.position).normalized;
+                    transform.Translate(moveDirection * 2f * Time.deltaTime);// Tốc độ di chuyển
+                    animator.SetBool("isRun", true);
 
-                //xoay mặt
-                Flip();
+                    //xoay mặt
+                    Flip();
+                }
+                else
+                {
+                    animator.SetBool("isRun", false);
+                }
             }
             else
-            {              
+            {
                 animator.SetBool("isRun", false);
             }
-        }
-        else
-        {         
-            animator.SetBool("isRun", false);
         }
     }
     private void Flip()//xoay mat
@@ -141,57 +157,90 @@ public class EvilWizardBoss2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //chạm shuriken
-        if (other.gameObject.CompareTag("Shuriken"))
+        if (isTakeAttack)
         {
-            if (health > 0)
+            //chạm shuriken
+            if (other.gameObject.CompareTag("Shuriken"))
             {
-                health -= 5;
-                healthSlider.value = health;
-                animator.SetTrigger("isTakeHit");
+                if (health > 0)
+                {
+                    health -= 5;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isTakeHit");
+
+                }
+               
+                stopAttack = false;
             }
-            
-            death();
-        }
-        if (other.gameObject.CompareTag("Attack1"))
-        {
-            if (health > 0)
+            else
             {
-                health -= 10;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                stopAttack = true;
             }
-            death();
-        }
-        if (other.gameObject.CompareTag("Attack2"))
-        {
-            if (health > 0)
+            if (other.gameObject.CompareTag("Attack1"))
             {
-                health -= 20;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                if (health > 0)
+                {
+                    health -= 10;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+               
+                stopAttack = false;
             }
-            death();
-        }
-        if (other.gameObject.CompareTag("Attack3"))
-        {
-            if (health > 0)
+            else
             {
-                health -= 30;
-                healthSlider.value = health;
-                animator.SetTrigger("isHurt");
+                stopAttack = true;
             }
-            death();
-        }
-        if (other.gameObject.CompareTag("SpecialAttack"))
-        {
-            if (health > 0)
+            if (other.gameObject.CompareTag("Attack2"))
             {
-                health -= 40;
-                healthSlider.value = health;
-                animator.SetTrigger("isTakeHit");
+                if (health > 0)
+                {
+                    health -= 20;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+               
+                stopAttack = false;
             }
-            death();
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                if (health > 0)
+                {
+                    health -= 30;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+                
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (other.gameObject.CompareTag("SpecialAttack"))
+            {
+                if (health > 0)
+                {
+                    health -= 100;
+                    healthSlider.value = health;
+                    animator.SetTrigger("isHurt");
+                }
+                
+                stopAttack = false;
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if(health <= 0)
+            {
+                Destroy(gameObject,5f);
+                animator.SetBool("isDeath",true);
+            }
         }
         
     }

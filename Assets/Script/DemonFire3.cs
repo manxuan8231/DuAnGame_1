@@ -15,10 +15,10 @@ public class DemonFire3 : MonoBehaviour
     private float nextAttackTime = 0f;
     private float attackEndTime;
     private bool isAttacking = false;
-
+    private bool stopAttack = true; 
     //xử lí hp
     public Slider healSlider;
-    private float health = 800;
+    private float health;
     //skill 1
     public GameObject attackSkill;
     public Transform attack;
@@ -32,7 +32,7 @@ public class DemonFire3 : MonoBehaviour
     public GameObject fireBall4;
     public Transform fireTransform4;
 
-    
+    private bool isTakeDamage;
     private bool right;
     Vector2 moveDirection;
     Rigidbody2D rb;
@@ -41,15 +41,24 @@ public class DemonFire3 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        health = 800;
         healSlider.maxValue = health;
     }
 
   
     void Update()
     {
-        FollowPlayer();
-        Attack();
-        Flip();
+        if (health > 0)
+        {
+            FollowPlayer();
+            Attack();
+            Flip();
+            isTakeDamage = true;
+        }
+        else
+        {
+            isTakeDamage = false;
+        }
     }
     void FollowPlayer()
     {
@@ -76,67 +85,68 @@ public class DemonFire3 : MonoBehaviour
     }
     void Attack()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        if (distance <= deterctionAttack && Time.time >= nextAttackTime && !isAttacking)
+        if (stopAttack)
         {
-            nextAttackTime = Time.time + attackCooldown;
-            int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
-            if (attackType == 0)
+            float distance = Vector3.Distance(transform.position, player.position);
+            if (distance <= deterctionAttack && Time.time >= nextAttackTime && !isAttacking)
             {
-                
-                attackEndTime = Time.time + attackDuration;
-                isAttacking = true;
-                animator.SetTrigger("isAttack");
+                nextAttackTime = Time.time + attackCooldown;
+                int attackType = Random.Range(0, 2);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
+                if (attackType == 0)
+                {
+                    attackEndTime = Time.time + attackDuration;
+                    isAttacking = true;
+                    animator.SetTrigger("isAttack");
+                }
+                if (attackType == 1)
+                {
+                    var oneBullet = Instantiate(fireBall, fireTransform.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity.x = 50;
+                    }
+                    oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+                    var oneBullet2 = Instantiate(fireBall2, fireTransform2.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity2 = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity2.x = 50;
+                    }
+                    oneBullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+                    var oneBullet3 = Instantiate(fireBall3, fireTransform3.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity3 = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity3.x = 50;
+                    }
+                    oneBullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+                    var oneBullet4 = Instantiate(fireBall4, fireTransform4.position, Quaternion.identity);
+                    //cho đạn bay theo huong nhân vật
+                    var velocity4 = new Vector2(50f, 0);
+                    if (right == false)
+                    {
+                        velocity4.x = 50;
+                    }
+                    oneBullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
+
+
+                }
             }
-            if (attackType == 1)
+            if (isAttacking && Time.time >= attackEndTime)
             {
-                var oneBullet = Instantiate(fireBall, fireTransform.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity.x = 50;
-                }
-                oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
 
-                var oneBullet2 = Instantiate(fireBall2, fireTransform2.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity2 = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity2.x = 50;
-                }
-                oneBullet2.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
-
-                var oneBullet3 = Instantiate(fireBall3, fireTransform3.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity3 = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity3.x = 50;
-                }
-                oneBullet3.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
-
-                var oneBullet4 = Instantiate(fireBall4, fireTransform4.position, Quaternion.identity);
-                //cho đạn bay theo huong nhân vật
-                var velocity4 = new Vector2(50f, 0);
-                if (right == false)
-                {
-                    velocity4.x = 50;
-                }
-                oneBullet4.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -4 : 4, 0);
-                
-
+                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                Destroy(oneSkill, 0.5f);
+                isAttacking = false;
             }
         }
-        if (isAttacking && Time.time >= attackEndTime)
-        {
-           
-            var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
-            Destroy(oneSkill, 0.5f);
-            isAttacking= false;
-        }
-
     }
    
     void Flip()
@@ -152,56 +162,88 @@ public class DemonFire3 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
-        //chạm shuriken
-        if (other.gameObject.CompareTag("Shuriken"))
+        if (isTakeDamage)
         {
-            health -= 5;
-            healSlider.value = health;
-            animator.SetTrigger("isTakeHit");
-            if (right)
+            //chạm shuriken
+            if (other.gameObject.CompareTag("Shuriken"))
             {
-                transform.Translate(Vector2.left * 20f * Time.deltaTime);
+                health -= 5;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+                if (right)
+                {
+                    transform.Translate(Vector2.left * 6f * Time.deltaTime);
+                }
+                else
+                {
+                    transform.Translate(Vector2.right * 6f * Time.deltaTime);
+                }
+
+                Destroy(other.gameObject);//shuriken biến mất
+                stopAttack = false;
+
             }
             else
             {
-                transform.Translate(Vector2.right * 20f * Time.deltaTime);
+                stopAttack = true;
             }
-            Destroy(other.gameObject);//shuriken biến mất
-        }
-        if (other.gameObject.CompareTag("Attack1"))
-        {
-            health -= 10;
-            healSlider.value = health;
-            animator.SetTrigger("isHurt");
+            if (other.gameObject.CompareTag("Attack1"))
+            {
+                health -= 10;
+                healSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
 
-        }
-        if (other.gameObject.CompareTag("Attack2"))
-        {
-            health -= 20;
-            healSlider.value = health;
-            animator.SetTrigger("isHurt");
+            }
+            else
+            {
+                stopAttack = true;
+            }
 
-        }
-        if (other.gameObject.CompareTag("Attack3"))
-        {
-            health -= 35;
-            healSlider.value = health;
-            animator.SetTrigger("isHurt");
+            if (other.gameObject.CompareTag("Attack2"))
+            {
+                health -= 20;
+                healSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
 
-        }
-        if (other.gameObject.CompareTag("SpecialAttack"))
-        {
+            }
+            else
+            {
+                stopAttack = true;
+            }
 
-            health -= 40;
-            healSlider.value = health;
-            animator.SetTrigger("isTakeHit");
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                health -= 35;
+                healSlider.value = health;
+                animator.SetTrigger("isHurt");
+                stopAttack = false;
 
-        }
-        if (health <= 0)
-        {
-            Destroy(gameObject, 1f);
-            animator.SetTrigger("isDeath");
+            }
+            else
+            {
+                stopAttack = true;
+            }
+
+            if (other.gameObject.CompareTag("SpecialAttack"))
+            {
+
+                health -= 40;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+                stopAttack = false;
+
+            }
+            else
+            {
+                stopAttack = true;
+            }
+            if (health <= 0)
+            {
+                Destroy(gameObject, 1.8f);
+                animator.SetTrigger("isDeath");
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)

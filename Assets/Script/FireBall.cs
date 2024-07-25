@@ -17,7 +17,7 @@ public class FireBall : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player")|| other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Boss"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Boss"))
         {
             animator.SetTrigger("isBreak");
             Destroy(gameObject, 0.5f);

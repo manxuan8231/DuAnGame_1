@@ -7,6 +7,7 @@ public class Menu : MonoBehaviour
    public void Choi()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1;
     }
     public void Options()
     {
