@@ -417,6 +417,13 @@ public class Player : MonoBehaviour
                 _textHeal.text = currentHealth.ToString();
                 Death();
             }
+            if (other.gameObject.CompareTag("GoblinAttack"))
+            {
+                currentHealth -= 3;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString();
+                Death();
+            }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
             {
                 currentHealth -= 6;

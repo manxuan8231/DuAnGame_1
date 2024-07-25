@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Goblin : MonoBehaviour
 {
@@ -10,10 +11,24 @@ public class Goblin : MonoBehaviour
     [SerializeField] private float rightBoundary;
     [SerializeField] private float _moveSpeed;
 
+    public Transform attack;
+    public GameObject attackSkill;
+
     public Transform player;
-    public float detectionRange = 5f; //tính khoản cách thấy player r chạy theo  
-    public float detectionAttack1 = 1f;
+    //tính khoản cách thấy player 
+    public float detectionRange = 5f; 
+    public float detectionAttack = 1f;
     public float detectionIdle = 1f;
+
+    public float attackCooldown = 5f; // Thời gian hồi chiêu sau mỗi lần tấn công
+    public float attackDuration = 2.3f; // Thời gian thực hiện đòn tấn công (tính từ lúc bắt đầu đến khi kết thúc)
+    private float nextAttackTime = 0f;
+    private float attackEndTime;
+    private bool isAttacking = false;
+
+    //xử lí hp
+    public Slider healSlider;
+    private float health;
 
     Animator animator;
     bool isFollow;   
@@ -21,25 +36,31 @@ public class Goblin : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        health = 100;
+        healSlider.maxValue = health;
     }
   
     void Update()
     {
-        FollowPlayer();
-        Curent();
-        moveRun();      
+        if (health > 0)
+        {
+            FollowPlayer();
+            moveRun();
+            Attack();
+        }
     }
 
     private void moveRun()
     {
-        if (isFollow == true)
+        if (isFollow)
         {
             var direction = Vector3.right;
             if (isRight == false)
             {
                 direction = Vector3.left;
             }
-            transform.Translate(direction * _moveSpeed * Time.deltaTime);      
+            transform.Translate(direction * _moveSpeed * Time.deltaTime);    
+            //flip
             if(direction.x != 0)
             {
                 if(direction.x > 0)
@@ -52,7 +73,9 @@ public class Goblin : MonoBehaviour
                 }
             }
             animator.SetBool("isRun", true);
+            Curent();
         }
+        
     }
     private void Curent()
     {
@@ -66,16 +89,35 @@ public class Goblin : MonoBehaviour
             isRight = true;    
         }        
     }
-
+    private void Attack()
+    {
+        float distance = Vector3.Distance(transform.position, player.position);
+        if (distance <= detectionAttack && Time.time >= nextAttackTime && !isAttacking)
+        {
+            nextAttackTime = Time.time + attackCooldown;
+            attackEndTime = Time.time + attackDuration;
+            isAttacking = true;
+            animator.SetTrigger("isAttack");
+        }
+        
+        
+        if (isAttacking && Time.time >= attackEndTime)
+        {
+            var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+            Destroy(oneSkill, 0.5f);
+            isAttacking = false;
+        }
+    }
     private void FollowPlayer()
     {
         float direction = Vector3.Distance(transform.position, player.position);
         if(direction < detectionRange)
-        {           
+        {
+           
             if (direction > detectionIdle)
             {
-                animator.SetBool("isRun", true);
                 isFollow = false;
+                animator.SetBool("isRun", true);             
                 Vector2 moveDirection = (player.position - transform.position).normalized;
                 transform.Translate(moveDirection * _moveSpeed * Time.deltaTime);
                 //flip
@@ -90,12 +132,66 @@ public class Goblin : MonoBehaviour
             else
             {
                 animator.SetBool("isRun", false);
-            }       
+                
+            }
         }
         else
         {
-            isFollow = true;           
+            isFollow = true;
         }
+       
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (health > 0)
+        {
+            //chạm shuriken
+            if (other.gameObject.CompareTag("Shuriken"))
+            {
+                health -= 5;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+            }
+            if (other.gameObject.CompareTag("Attack1"))
+            {
+                health -= 10;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+
+            }
+
+
+            if (other.gameObject.CompareTag("Attack2"))
+            {
+                health -= 20;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+            }
+
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                health -= 35;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+
+            }
+
+
+            if (other.gameObject.CompareTag("SpecialAttack"))
+            {
+
+                health -= 50;
+                healSlider.value = health;
+                animator.SetTrigger("isTakeHit");
+            }
+
+            if (health <= 0)
+            {
+                Destroy(gameObject, 3f);
+                animator.SetTrigger("isDeath");
+            }
+        }
     }
 }
+

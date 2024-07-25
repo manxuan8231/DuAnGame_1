@@ -25,6 +25,7 @@ TagManager:
   - IceSkill1
   - Coin
   - Diamond
+  - GoblinAttack
   layers:
   - Default
   - TransparentFX
