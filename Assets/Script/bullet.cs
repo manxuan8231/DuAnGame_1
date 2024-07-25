@@ -5,18 +5,30 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    private GameObject player; 
+    private GameObject player;
     private Rigidbody2D rb;
+    private Animator an;
     public float force;
+    public bool ex;
     private void Start()
     {
-         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        an = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Hitbox");
+        
+        Vector3 direction = player.transform.position - transform.position;
+        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
-        Vector3 direction = player.transform.position - transform.position; 
-        rb.velocity = new Vector2 (direction.x, direction.y).normalized * force;
+        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot+180);
+    }
 
-        float rot = Mathf.Atan2(-direction.y, -direction.x)* Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") || collision.CompareTag("Ground"))
+        {
+            an.SetTrigger("exbullet");
+            Destroy(gameObject,0.25f);
+        }
     }
 }

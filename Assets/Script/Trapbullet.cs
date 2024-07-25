@@ -19,7 +19,7 @@ public class Trapbullet : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime; 
-        if(timer > 2)
+        if(timer > 1)
         {
             timer =0 ;
             shoot();
