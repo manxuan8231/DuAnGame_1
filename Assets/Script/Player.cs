@@ -370,7 +370,7 @@ public class Player : MonoBehaviour
                 animator.SetBool("isJump", false);
             }
             //chạm skill mất hp
-            if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("AttackBoss"))
+            if (other.gameObject.CompareTag("AttackBoss"))
             {
 
                 //nếu đụng enemy thì mất 10Hp

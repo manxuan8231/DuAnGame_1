@@ -38,8 +38,6 @@ public class IceBoss4 : MonoBehaviour
         healSlider.maxValue = health;
        
     }
-
-
     void Update()
     {
         if (health > 0)
@@ -52,11 +50,8 @@ public class IceBoss4 : MonoBehaviour
         else
         {
             isTakeDamage = false;
-        }
-       
-
+        }      
     }
-    
     void FollowPlayer()
     {
         float distance = Vector3.Distance(transform.position, player.position);
