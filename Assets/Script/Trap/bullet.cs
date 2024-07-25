@@ -9,7 +9,7 @@ public class bullet : MonoBehaviour
     private Rigidbody2D rb;
     private Animator an;
     public float force;
-    public bool ex;
+    
     private void Start()
     {
         an = GetComponent<Animator>();
