@@ -7,22 +7,28 @@ using UnityEngine;
 
 public class Trapbullet : MonoBehaviour
 {
+    [SerializeField] private Transform target;
     public GameObject bullet;
-    public Transform bulletPos;
+    public Transform bulletPos;   
+    public float work;
 
     public float timer;
     private void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("HitBox").transform;
+
     }
 
     private void Update()
     {
-        timer += Time.deltaTime; 
-        if(timer > 1)
+        if (Vector2.Distance(transform.position, target.position) < work)
         {
-            timer =0 ;
-            shoot();
+            timer += Time.deltaTime;
+            if (timer > 1)
+            {
+                timer = 0;
+                shoot();
+            }
         }
     }
     void shoot()
