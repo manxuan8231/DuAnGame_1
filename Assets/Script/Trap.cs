@@ -5,30 +5,31 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    public float tocdoxoay;
-    public float tocdodiChuyen;
-    public Transform diemA; 
-    public Transform diemB;
-    private Vector3 diemMuctieu;
-    
-    private void Start()
+    [Header("Trap Settings")]
+    public float speed;
+    public Transform[] waypoints;
+    private int currentWaypointIndex = 0;
+    public float tocdoxoay; 
+    void Start()
     {
-        diemMuctieu = diemA.position;    
+        transform.position = waypoints[currentWaypointIndex].position;
     }
-    private void Update()
+
+    void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position,diemMuctieu,tocdodiChuyen * Time.deltaTime);
-        if(Vector3.Distance(transform.position, diemMuctieu) < 0.1f)
+        Move();
+    }
+
+    private void Move()
+    {
+        if (Vector2.Distance(transform.position, waypoints[currentWaypointIndex].position) < 0.1f)
         {
-            if(transform.position== diemA.position) 
-            {
-                diemMuctieu = diemB.position;
-            }else
-            {
-                diemMuctieu = diemA.position;
-            }
+            currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
         }
+
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].position, speed * Time.deltaTime);
     }
+
     private void FixedUpdate()
     {
         transform.Rotate(0, 0, tocdoxoay);
