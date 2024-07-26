@@ -6,8 +6,9 @@ public class TrapArrow : MonoBehaviour
 {
     public GameObject projectile;
     public Transform SpawnLocation;
-    public Quaternion SpawnRotation; 
-
+    public Quaternion SpawnRotation;
+    public float spawnTime = 0.5f;
+    private float timeSinceSpawned = 0f; 
     void Start()
     {
         
@@ -16,7 +17,11 @@ public class TrapArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(projectile, SpawnLocation.position,SpawnRotation);
+        timeSinceSpawned += Time.deltaTime;
+        if (timeSinceSpawned >= spawnTime)
+        {
+            Instantiate(projectile, SpawnLocation.position, SpawnRotation);
+        }
     }
     
 }
