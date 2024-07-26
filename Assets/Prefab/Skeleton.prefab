@@ -573,7 +573,7 @@ MonoBehaviour:
   _moveSpeed: 1
   attack: {fileID: 8972298948947494448}
   attackSkill: {fileID: 7656057936562184957, guid: e4527f830c568bf43a91b806ee91ad52, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 1753937491615002466, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
   detectionRange: 5
   detectionAttack: 1.5
   detectionIdle: 1.5
