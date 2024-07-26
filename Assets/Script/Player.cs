@@ -364,7 +364,7 @@ public class Player : MonoBehaviour
         if (currentHealth >= 0)
         {
             //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground"))
+            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests"))
             {
                 okJump = true;
                 animator.SetBool("isJump", false);

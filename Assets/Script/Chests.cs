@@ -15,12 +15,15 @@ public class Chests : MonoBehaviour
     private float itemMoveDuration = 1f; // Thời gian vật phẩm bay lên
     private float itemMoveElapsed = 0;
 
+    private BoxCollider2D chestsCollider;
+    public float health;
     void Start()
     {
         animator = GetComponent<Animator>();
+        chestsCollider = GetComponent<BoxCollider2D>();
+        health = 3;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isMovingItem && spawnedItem != null) // Kiểm tra nếu item còn tồn tại
@@ -32,22 +35,57 @@ public class Chests : MonoBehaviour
             if (t >= 1.0f)
             {
                 isMovingItem = false;
-                
+                chestsCollider.isTrigger = true;
             }
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && isOpen)
-        {
-            animator.SetTrigger("isOpen");
-            isOpen = false;
-            spawnedItem = Instantiate(itemPrefab, itemSpawnPoint.position, Quaternion.identity);
-            itemStartPos = spawnedItem.transform.position;
-            itemEndPos = itemStartPos + new Vector3(0, 1f, 0); //vi tri bay len
-            isMovingItem = true;
-            itemMoveElapsed = 0; // Đặt lại thời gian đã trôi qua cho chuyển động
+       if (health <= 0)
+            {
+                if (isOpen)
+                {
+                    animator.SetTrigger("isOpen");
+                    isOpen = false;
+                    spawnedItem = Instantiate(itemPrefab, itemSpawnPoint.position, Quaternion.identity);
+                    itemStartPos = spawnedItem.transform.position;
+                    itemEndPos = itemStartPos + new Vector3(0, 1f, 0); //vi tri bay len
+                    isMovingItem = true;
+                    itemMoveElapsed = 0; // Đặt lại thời gian đã trôi qua cho chuyển động
 
+                }
+            }
+        if (health > 0)
+        {
+            if (other.gameObject.CompareTag("Shuriken"))
+            {
+                health -= 1;
+                Destroy(other.gameObject);//shuriken biến mất
+                animator.SetTrigger("isHit");
+            }
+
+            if (other.gameObject.CompareTag("Attack1"))
+            {
+                health -= 1;
+                animator.SetTrigger("isHit");
+            }
+
+            if (other.gameObject.CompareTag("Attack2"))
+            {
+                health -= 1;
+                animator.SetTrigger("isHit");
+            }
+            if (other.gameObject.CompareTag("Attack3"))
+            {
+                health -= 1;
+                animator.SetTrigger("isHit");
+            }
+
+            if (other.gameObject.CompareTag("SpecialAttack"))
+            {
+                animator.SetTrigger("isHit");
+                health -= 1;
+            }
         }
     }
 }
