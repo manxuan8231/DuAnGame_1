@@ -8,20 +8,23 @@ public class TrapArrow : MonoBehaviour
     public Transform SpawnLocation;
     public Quaternion SpawnRotation;
     public float spawnTime = 0.5f;
-    private float timeSinceSpawned = 0f; 
-    void Start()
+    private float timeSinceSpawned = 0f;
+    private Animator an;
+    private void Start()
     {
-        
+      an  = GetComponent<Animator>();
     }
-
     // Update is called once per frame
-    void Update()
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        timeSinceSpawned += Time.deltaTime;
-        if (timeSinceSpawned >= spawnTime)
+        if (collision.CompareTag("Player"))
         {
-            Instantiate(projectile, SpawnLocation.position, SpawnRotation);
+            an.SetTrigger("Shot");
         }
     }
-    
+    private void shoot()
+    {
+        Instantiate(projectile, SpawnLocation.position, SpawnRotation);
+    }
 }
