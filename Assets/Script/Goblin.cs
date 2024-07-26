@@ -59,11 +59,11 @@ public class Goblin : MonoBehaviour
             {
                 direction = Vector3.left;
             }
-            transform.Translate(direction * _moveSpeed * Time.deltaTime);    
+            transform.Translate(direction * _moveSpeed * Time.deltaTime);
             //flip
-            if(direction.x != 0)
+            if (direction.x != 0)
             {
-                if(direction.x > 0)
+                if (direction.x > 0)
                 {
                     transform.localScale = new Vector3(-1, 1, 1);
                 }
@@ -97,6 +97,10 @@ public class Goblin : MonoBehaviour
             nextAttackTime = Time.time + attackCooldown;
             attackEndTime = Time.time + attackDuration;
             isAttacking = true;
+             
+        }
+        if(isAttacking)
+        {
             animator.SetTrigger("isAttack");
         }
         
