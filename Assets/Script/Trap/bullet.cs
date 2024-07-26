@@ -15,18 +15,19 @@ public class bullet : MonoBehaviour
         an = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Hitbox");
-        
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
         float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot+180);
+        transform.rotation = Quaternion.Euler(0, 0, rot + 180);
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") || collision.CompareTag("Ground"))
         {
+            rb.velocity = Vector3.zero;
             an.SetTrigger("exbullet");
             Destroy(gameObject,0.25f);
         }
