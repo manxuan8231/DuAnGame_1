@@ -110,8 +110,8 @@ GameObject:
   - component: {fileID: 493442075579933935}
   - component: {fileID: 1910019009756127981}
   - component: {fileID: 2351423744038792328}
-  - component: {fileID: 5174053506209463006}
   - component: {fileID: 653008655556211692}
+  - component: {fileID: 5174053506209463006}
   m_Layer: 0
   m_Name: Demon(Boss3)
   m_TagString: Boss
@@ -272,34 +272,6 @@ CircleCollider2D:
   m_Offset: {x: 0.9228418, y: -2.5124443}
   serializedVersion: 2
   m_Radius: 0.15117073
---- !u!114 &5174053506209463006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2788600241243270037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ab901e10fdc33a459cd3b665e0fa5bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRange: 8
-  deterctionAttack: 6
-  player: {fileID: 0}
-  attackCooldown: 4
-  attackDuration: 0.5
-  healSlider: {fileID: 4341422735411193244}
-  attackSkill: {fileID: 1446628022724028588, guid: 2efa683aa28a4984cb9f9f556a7a23c6, type: 3}
-  attack: {fileID: 417211428537046424}
-  fireBall: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
-  fireTransform: {fileID: 3029657068052993668}
-  fireBall2: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
-  fireTransform2: {fileID: 5525143316326750069}
-  fireBall3: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
-  fireTransform3: {fileID: 4986720833585692609}
-  fireBall4: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
-  fireTransform4: {fileID: 712729126393757079}
 --- !u!61 &653008655556211692
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -345,6 +317,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4502487, y: 2.4665267}
   m_EdgeRadius: 0
+--- !u!114 &5174053506209463006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2788600241243270037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab901e10fdc33a459cd3b665e0fa5bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 8
+  deterctionAttack: 6
+  player: {fileID: 0}
+  attackCooldown: 4
+  attackDuration: 0.5
+  healSlider: {fileID: 4341422735411193244}
+  attackSkill: {fileID: 1446628022724028588, guid: 2efa683aa28a4984cb9f9f556a7a23c6, type: 3}
+  attack: {fileID: 417211428537046424}
+  fireBall: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
+  fireTransform: {fileID: 3029657068052993668}
+  fireBall2: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
+  fireTransform2: {fileID: 5525143316326750069}
+  fireBall3: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
+  fireTransform3: {fileID: 4986720833585692609}
+  fireBall4: {fileID: 1217796601996502493, guid: 8a38239c9d17def4b993d45a0528b5f7, type: 3}
+  fireTransform4: {fileID: 712729126393757079}
 --- !u!1 &3524641707728260671
 GameObject:
   m_ObjectHideFlags: 0
