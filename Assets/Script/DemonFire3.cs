@@ -61,7 +61,7 @@ public class DemonFire3 : MonoBehaviour
         }
     }
     void FollowPlayer()
-    {
+    {      
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if(distanceToPlayer < detectionRange)
         {

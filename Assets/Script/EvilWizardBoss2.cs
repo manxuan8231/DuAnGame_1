@@ -35,7 +35,7 @@ public class EvilWizardBoss2 : MonoBehaviour
     public GameObject attackSkill;//skill 1  
     public GameObject attackSkill2;//skill 2
 
-    public Slider healthSlider;//slider hp
+   
     private float health = 700;
 
     private bool isTakeAttack;
@@ -50,7 +50,7 @@ public class EvilWizardBoss2 : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        healthSlider.maxValue = health;
+       
         
     }
 
@@ -165,11 +165,11 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 5;
-                    healthSlider.value = health;
+                    
                     animator.SetTrigger("isTakeHit");
 
                 }
-               
+                Destroy(other.gameObject);
                 stopAttack = false;
             }
             else
@@ -181,7 +181,7 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 10;
-                    healthSlider.value = health;
+                    
                     animator.SetTrigger("isHurt");
                 }
                
@@ -196,7 +196,7 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 20;
-                    healthSlider.value = health;
+                    
                     animator.SetTrigger("isHurt");
                 }
                
@@ -211,7 +211,7 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 30;
-                    healthSlider.value = health;
+                  
                     animator.SetTrigger("isHurt");
                 }
                 
@@ -226,7 +226,7 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 100;
-                    healthSlider.value = health;
+                    
                     animator.SetTrigger("isHurt");
                 }
                 

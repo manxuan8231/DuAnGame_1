@@ -12,9 +12,7 @@ public class BringerOfDeath : MonoBehaviour
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
     
     public Transform Player;//follow player
-   
-
-    public Slider healthSlider;//slider hp boss
+  
     private int health;
 
     public GameObject attackSkill;//skill
@@ -33,8 +31,7 @@ public class BringerOfDeath : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        health = 500;
-        healthSlider.maxValue = health;
+        health = 500;    
         timeAttack = TimeAttackRate;
         
     }
@@ -111,8 +108,7 @@ public class BringerOfDeath : MonoBehaviour
             if (other.gameObject.CompareTag("Shuriken"))//nếu chạm shuriken thì mất máu
             {
                 health -= 10;
-                healthSlider.value = health;
-
+      
                 animator.SetTrigger("isHurt");
                 Destroy(other.gameObject);//shuriken biến mất
                 stopAttack = false;
@@ -124,9 +120,7 @@ public class BringerOfDeath : MonoBehaviour
 
             if (other.gameObject.CompareTag("Attack1"))
             {
-                health -= 15;
-                healthSlider.value = health;
-
+                health -= 15;             
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
             }
@@ -137,8 +131,7 @@ public class BringerOfDeath : MonoBehaviour
             if (other.gameObject.CompareTag("Attack2"))
             {
                 health -= 25;
-                healthSlider.value = health;
-
+               
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
             }
@@ -149,8 +142,7 @@ public class BringerOfDeath : MonoBehaviour
             if (other.gameObject.CompareTag("Attack3"))
             {
                 health -= 35;
-                healthSlider.value = health;
-
+               
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
             }
@@ -162,7 +154,7 @@ public class BringerOfDeath : MonoBehaviour
             {
 
                 health -= 100;
-                healthSlider.value = health;
+              
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
             }
@@ -173,7 +165,7 @@ public class BringerOfDeath : MonoBehaviour
 
             if (health <= 0)
             {
-                Destroy(gameObject, 1f);
+                Destroy(gameObject, 1.5f);
                 animator.SetTrigger("isDeath");
             }
         }

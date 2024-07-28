@@ -13,8 +13,7 @@ public class SliderHealth : MonoBehaviour
     } 
     void Update()
     {
-       
-       
+  
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,7 +41,7 @@ public class SliderHealth : MonoBehaviour
         {
             health -= 40;
         }
-
+        //animator
         if (health <= 640)
         {
             animator.SetBool("is1St",true);
