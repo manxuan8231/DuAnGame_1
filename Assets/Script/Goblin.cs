@@ -97,20 +97,17 @@ public class Goblin : MonoBehaviour
             nextAttackTime = Time.time + attackCooldown;
             attackEndTime = Time.time + attackDuration;
             isAttacking = true;
-             
-        }
-        if(isAttacking)
-        {
             animator.SetTrigger("isAttack");
         }
-        
-        
+                         
         if (isAttacking && Time.time >= attackEndTime)
         {
             var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
             Destroy(oneSkill, 0.5f);
             isAttacking = false;
+            
         }
+       
     }
     private void FollowPlayer()
     {
@@ -197,5 +194,7 @@ public class Goblin : MonoBehaviour
             }
         }
     }
+
+    
 }
 

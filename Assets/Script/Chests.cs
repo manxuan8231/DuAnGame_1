@@ -19,44 +19,48 @@ public class Chests : MonoBehaviour
     public float health;
     void Start()
     {
-        animator = GetComponent<Animator>();
-        chestsCollider = GetComponent<BoxCollider2D>();
-        health = 3;
+        
+            animator = GetComponent<Animator>();
+            chestsCollider = GetComponent<BoxCollider2D>();
+            health = 3;
+        
     }
 
     void Update()
     {
-        if (isMovingItem && spawnedItem != null) // Kiểm tra nếu item còn tồn tại
-        {
-            itemMoveElapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(itemMoveElapsed / itemMoveDuration);
-            spawnedItem.transform.position = Vector3.Lerp(itemStartPos, itemEndPos, t);
-
-            if (t >= 1.0f)
+        
+            if (isMovingItem && spawnedItem != null) // Kiểm tra nếu item còn tồn tại
             {
-                isMovingItem = false;
-                chestsCollider.isTrigger = true;
+                itemMoveElapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(itemMoveElapsed / itemMoveDuration);
+                spawnedItem.transform.position = Vector3.Lerp(itemStartPos, itemEndPos, t);
+
+                if (t >= 1.0f)
+                {
+                    isMovingItem = false;
+                    chestsCollider.isTrigger = true;
+                }
             }
-        }
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if (health <= 0)
-            {
-                if (isOpen)
-                {
-                    animator.SetTrigger("isOpen");
+    if(health >=0) 
+    { 
+        if (health <= 0)
+        {
+            animator.SetBool("isOpen",true);
+            if (isOpen)
+            {                   
                     isOpen = false;
                     spawnedItem = Instantiate(itemPrefab, itemSpawnPoint.position, Quaternion.identity);
                     itemStartPos = spawnedItem.transform.position;
                     itemEndPos = itemStartPos + new Vector3(0, 1f, 0); //vi tri bay len
                     isMovingItem = true;
                     itemMoveElapsed = 0; // Đặt lại thời gian đã trôi qua cho chuyển động
-
-                }
             }
-        if (health > 0)
-        {
+        }
+        
             if (other.gameObject.CompareTag("Shuriken"))
             {
                 health -= 1;

@@ -17,7 +17,7 @@ public class DemonFire3 : MonoBehaviour
     private bool isAttacking = false;
     private bool stopAttack = true; 
     //xử lí hp
-    public Slider healSlider;
+    
     private float health;
     //skill 1
     public GameObject attackSkill;
@@ -42,7 +42,7 @@ public class DemonFire3 : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         health = 800;
-        healSlider.maxValue = health;
+        
     }
 
   
@@ -168,7 +168,7 @@ public class DemonFire3 : MonoBehaviour
             if (other.gameObject.CompareTag("Shuriken"))
             {
                 health -= 5;
-                healSlider.value = health;
+               
                 animator.SetTrigger("isTakeHit");
                 if (right)
                 {
@@ -190,7 +190,7 @@ public class DemonFire3 : MonoBehaviour
             if (other.gameObject.CompareTag("Attack1"))
             {
                 health -= 10;
-                healSlider.value = health;
+                
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
 
@@ -203,7 +203,7 @@ public class DemonFire3 : MonoBehaviour
             if (other.gameObject.CompareTag("Attack2"))
             {
                 health -= 20;
-                healSlider.value = health;
+               
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
 
@@ -216,7 +216,7 @@ public class DemonFire3 : MonoBehaviour
             if (other.gameObject.CompareTag("Attack3"))
             {
                 health -= 35;
-                healSlider.value = health;
+                
                 animator.SetTrigger("isHurt");
                 stopAttack = false;
 
@@ -230,7 +230,7 @@ public class DemonFire3 : MonoBehaviour
             {
 
                 health -= 40;
-                healSlider.value = health;
+                
                 animator.SetTrigger("isTakeHit");
                 stopAttack = false;
 
