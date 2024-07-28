@@ -351,7 +351,7 @@ MonoBehaviour:
   rightBoundary: 40.08
   _moveSpeed: 1
   attack: {fileID: 6688670838978888089}
-  attackSkill: {fileID: 3727157998484352128, guid: 9c4b3e25b3134a64287ea49f5ad27f00, type: 3}
+  attackSkill: {fileID: 8020941483020127448, guid: 0354aa988cd3770448e12befd82308ef, type: 3}
   player: {fileID: 0}
   detectionRange: 5
   detectionAttack: 1
