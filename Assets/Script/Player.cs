@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
     private bool okJump;//true false được phép nhảy
 
     //cooldown skill
+    private float cooldownFullSkill;
     private float lastShurikenTime;
     private float lastSkill1Time;
     private float lastSkill2Time;
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Flip();
-        if (currentMana > 0)
+        if (currentMana > 0 && currentHealth >0)
         {
             PlayerAttack();           
             Dash();
@@ -210,8 +211,8 @@ public class Player : MonoBehaviour
     }
     private void PlayerAttack()
     {
-        if (currentHealth >= 0)
-        {
+        if (currentHealth >= 0 && Time.time >= cooldownFullSkill + 0.5f)
+        {            
             if (Time.time >= lastSkill1Time + 0.5f) //skill 1
             {
                 //tấn công
@@ -219,6 +220,7 @@ public class Player : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
+                        cooldownFullSkill = Time.time;
                         lastSkill1Time = Time.time;
                         //xử lý slide and text
                         animator.SetTrigger("isAttack1");
@@ -233,6 +235,7 @@ public class Player : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
+                    cooldownFullSkill = Time.time;
                     lastSkill2Time = Time.time;
                     animator.SetTrigger("isAttack2");
                     //xử lý skill
@@ -244,6 +247,7 @@ public class Player : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.C))
                 {
+                    cooldownFullSkill = Time.time;
                     lastSkill3Time = Time.time;
                     animator.SetTrigger("isAttack3");
                     currentMana -= 10;
@@ -261,6 +265,7 @@ public class Player : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.F))
                     {
+                        cooldownFullSkill = Time.time;
                         lastShurikenTime = Time.time;
                         animator.SetTrigger("isShuriken");
                         currentMana -= 5;
@@ -286,6 +291,7 @@ public class Player : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.R))
                     {
+                        cooldownFullSkill = Time.time;
                         lastSkill4Time = Time.time;
                         animator.SetTrigger("isAttackSpecia");
                         currentMana -= 30;
@@ -329,7 +335,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
     private void TakingHeal()
     {
         if (currentHealth >= 0) {
@@ -419,7 +424,7 @@ public class Player : MonoBehaviour
             }
             if (other.gameObject.CompareTag("GoblinAttack"))
             {
-                currentHealth -= 3;
+                currentHealth -= 10;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString();
                 Death();

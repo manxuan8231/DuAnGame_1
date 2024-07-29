@@ -14,7 +14,8 @@ public class bullet : MonoBehaviour
     {
         an = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Hitbox");
+        player = GameObject.FindGameObjectWithTag("HitBox");
+
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
