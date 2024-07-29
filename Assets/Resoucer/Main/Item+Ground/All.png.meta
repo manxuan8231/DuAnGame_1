@@ -270,7 +270,7 @@ TextureImporter:
         width: 43
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,6 +278,69 @@ TextureImporter:
       bones: []
       spriteID: e17444cfb4ee2894a830191d90b0fe81
       internalID: 1025643406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_7
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 145
+        width: 39
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44511928e91de14dacda1121bdedfd5
+      internalID: -938314905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_8
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 290
+        width: 50
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de93e88520029cd43b2766db771a0a0b
+      internalID: 1379152763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: All_9
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 260
+        width: 42
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b393802b96546814d8281025e8c004b6
+      internalID: 2027347065
       vertices: []
       indices: 
       edges: []
@@ -301,6 +364,8 @@ TextureImporter:
       All_5: 1585686705
       All_6: 1025643406
       All_7: -938314905
+      All_8: 1379152763
+      All_9: 2027347065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
