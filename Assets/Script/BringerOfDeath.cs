@@ -9,17 +9,22 @@ public class BringerOfDeath : MonoBehaviour
 {
 
     public float detectionRangeAttack = 2.5f;  // Phạm vi phát hiện người chơi
+    public float detectionRangeAttak2 = 5f;
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
-    
+    private float nextAttackTime;
+    public GameObject Skill2;
+
     public Transform Player;//follow player
-  
+    private bool isAttack2;
+    private float attackEndTime;
+    private bool isAttacking = false;
     private int health;
 
     public GameObject attackSkill;//skill
     public Transform attack;//vị trí tấn công
 
     private bool isTakeDamage;
-    private float TimeAttackRate = 4f;
+    private float TimeAttackRate = 3f;
     private float timeAttack;
 
     private bool right;
@@ -44,6 +49,7 @@ public class BringerOfDeath : MonoBehaviour
             {
                 followPlayer();
                 TimeAttack();//độ trể khi thấy player sau 3f tấn công
+                Attack2();
                 isTakeDamage = true;
             }
             else
@@ -59,17 +65,45 @@ public class BringerOfDeath : MonoBehaviour
         if (distanceToPlayer < detectionRangeAttack)
         {
             timeAttack -= Time.deltaTime;
+            
             if (timeAttack <= 0)
-            {
-                //animation tấn công
-                animator.SetTrigger("isAttack");
-                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
-                Destroy(oneSkill, 0.1f);
-                timeAttack = TimeAttackRate;
+            {                
+                    //animation tấn công
+                    animator.SetTrigger("isAttack");
+                    var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                    Destroy(oneSkill, 0.1f);
+                    timeAttack = TimeAttackRate;  
+                    isAttack2 = false;
             }
         }
+        else
+        {
+            isAttack2 = true;
+        }
     }
+    void Attack2()
+    {
+        float distance = Vector3.Distance(transform.position , Player.position);
+        if(distance < detectionRangeAttak2 && Time.time >= nextAttackTime + 3f && !isAttacking)
+        {
+            nextAttackTime = Time.time;
+            if (isAttack2)
+            {
+                attackEndTime = Time.time + 0.5f;      
+                animator.SetTrigger("isAttack2");
+                isAttacking = true;
 
+            }
+            
+        }
+        if (isAttacking && Time.time > attackEndTime)
+        {           
+            Vector3 skillPosition = Player.position + new Vector3(0, 0.8f, 0);
+            var skillTance = Instantiate(Skill2, skillPosition, Quaternion.identity);
+            Destroy(skillTance, 0.5f);
+            isAttacking = false;
+        }
+    }
 
     private void followPlayer()//thấy player thì chạy theo
     {

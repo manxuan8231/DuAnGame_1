@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
     {
         Move();
         Flip();
-        if (currentMana > 0)
+        if (currentMana > 0 && currentHealth >0)
         {
             PlayerAttack();           
             Dash();
