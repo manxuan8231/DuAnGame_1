@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
     private int maxMana;//mana
     public int currentMana;//mana hien tai
     private float manaTimer;
-    private float manaRate = 1f;
+    private float manaRate = 0.2f;
     public TextMeshProUGUI _textMana;
     //score
     public TextMeshProUGUI _textScore;//điểm số
@@ -79,13 +79,13 @@ public class Player : MonoBehaviour
         currentHealth = maxHealth = 100;
         _healthSlider.maxValue = maxHealth;
         healTimer = healRate;
-        _textHeal.text = currentHealth.ToString();
+        _textHeal.text = currentHealth.ToString()+"/"+maxHealth.ToString();
 
         //mana nguoi chs
         currentMana = maxMana = 200;
         _manaSlider.maxValue = maxMana;
         manaTimer = manaRate;
-        _textMana.text = currentMana.ToString();
+        _textMana.text = currentMana.ToString()+"/"+maxMana.ToString();
 
         _textScore.text = score.ToString();
     }
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
                 Heal(1);//cộng 1 hp
                 _healthSlider.value = currentHealth;
                 healTimer = healRate;// sau 1 giây sẽ hồi lại máu
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
             }
 
         }
@@ -133,10 +133,10 @@ public class Player : MonoBehaviour
             manaTimer -= Time.deltaTime;
             if (manaTimer <= 0)
             {
-                Mana(10);
+                Mana(1);
                 manaTimer = manaRate;
                 _manaSlider.value = currentMana;
-                _textMana.text = currentMana.ToString();
+                _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
             }
         }
     }
@@ -184,7 +184,7 @@ public class Player : MonoBehaviour
                     animator.SetTrigger("isDash");
                     currentMana -= 20;
                     _manaSlider.value = currentMana;
-                    _textMana.text = currentMana.ToString();
+                    _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
                 }
 
                 if (isDashing)
@@ -252,7 +252,7 @@ public class Player : MonoBehaviour
                     animator.SetTrigger("isAttack3");
                     currentMana -= 10;
                     _manaSlider.value = currentMana;
-                    _textMana.text = currentMana.ToString();
+                    _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
 
                     //xử lý skill
                     var oneAttackk1 = Instantiate(Attack3bullet, Gun.position, Quaternion.identity);
@@ -270,7 +270,7 @@ public class Player : MonoBehaviour
                         animator.SetTrigger("isShuriken");
                         currentMana -= 5;
                         _manaSlider.value = currentMana;
-                        _textMana.text = currentMana.ToString();
+                        _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
                         //tạo ra viên đạn tại vị trí súng
                         var oneBullet = Instantiate(ShurikenBullet, Gun.position, Quaternion.identity);
                         //cho đạn bay theo huong nhân vật
@@ -296,7 +296,7 @@ public class Player : MonoBehaviour
                         animator.SetTrigger("isAttackSpecia");
                         currentMana -= 30;
                         _manaSlider.value = currentMana;
-                        _textMana.text = currentMana.ToString();
+                        _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
 
                         //xử lý skill
                         var oneAttackk1 = Instantiate(SpecialBullet, Special.position, Quaternion.identity);
@@ -345,8 +345,8 @@ public class Player : MonoBehaviour
                 if (intervalTimer >= damageInterval)
                 {
                     currentHealth -= damageAmount;
-                    _healthSlider.value = currentHealth;
-                    _textHeal.text = currentHealth.ToString();
+                    _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                    
                     if (currentHealth > 0)
                     {
                         animator.SetTrigger("isFireHurt");
@@ -381,7 +381,7 @@ public class Player : MonoBehaviour
                 //nếu đụng enemy thì mất 10Hp
                 currentHealth -= 3;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
             }
             //chạm skill 1 của boss 2
@@ -390,7 +390,7 @@ public class Player : MonoBehaviour
                 //nếu đụng enemy thì mất 10Hp
                 currentHealth -= 2;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
 
                 Death();
             }
@@ -400,14 +400,14 @@ public class Player : MonoBehaviour
                 //nếu đụng enemy thì mất 5Hp
                 currentHealth -= 5;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
             }
             if (other.gameObject.CompareTag("FireBall1"))
             {
                 currentHealth -= 5;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
 
                 isTakingDamage = true;
                 damageTimer = 0f;  // Reset bộ đếm thời gian
@@ -419,31 +419,31 @@ public class Player : MonoBehaviour
                 //nếu đụng enemy thì mất Hp
                 currentHealth -= 10;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
             }
             if (other.gameObject.CompareTag("GoblinAttack"))
             {
                 currentHealth -= 10;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
             }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
             {
                 currentHealth -= 6;
                 _healthSlider.value = currentHealth;
-                _textHeal.text= currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
             }if(currentHealth < 0)
             {
                 currentHealth = 0;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
             }
             if (other.gameObject.CompareTag("Item"))
             {
                 score += 20;
-                _textScore.text = score.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Destroy(other.gameObject);
             }
             if (other.gameObject.CompareTag("Hp"))
@@ -451,13 +451,13 @@ public class Player : MonoBehaviour
                 //Đụng bình hp tăng 10Hp và slider tăng theo
                 currentHealth += 10;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Destroy(other.gameObject);//bình hp biến mất
                 if(currentHealth > maxHealth)
                 {
                     currentHealth = maxHealth;
                     _healthSlider.value = currentHealth;
-                    _textHeal.text = currentHealth.ToString();
+                    _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 }              
             }
             if (other.gameObject.CompareTag("Mana"))
@@ -465,13 +465,13 @@ public class Player : MonoBehaviour
                 //đụng bình mana tăng 50
                 currentMana += 50;
                 _manaSlider.value = currentMana;
-                _textMana.text = currentMana.ToString();
+                _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
                 Destroy(other.gameObject);
                if(currentMana > maxMana)
                 {
                     currentMana = maxMana;
                     _manaSlider.value = currentMana;
-                    _textMana.text=currentMana.ToString();
+                    _textMana.text = currentMana.ToString() + "/" + maxMana.ToString();
                 }
             }
             if (other.gameObject.CompareTag("Coin"))
