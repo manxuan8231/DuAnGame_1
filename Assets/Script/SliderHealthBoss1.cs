@@ -1,9 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SliderHealthBoss1 : MonoBehaviour
 {
+
+   
     public float health = 500f;
     Animator animator;
     void Start()
@@ -13,7 +15,8 @@ public class SliderHealthBoss1 : MonoBehaviour
     }
     void Update()
     {
-
+       
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -65,4 +68,5 @@ public class SliderHealthBoss1 : MonoBehaviour
 
 
     }
+    
 }

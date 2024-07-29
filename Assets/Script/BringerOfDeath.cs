@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class BringerOfDeath : MonoBehaviour
 {
-
+    
     public float detectionRangeAttack = 2.5f;  // Phạm vi phát hiện người chơi
     public float detectionRangeAttak2 = 5f;
     public float detectionRange = 7f;  // Phạm vi phát hiện người chơi
@@ -43,6 +43,7 @@ public class BringerOfDeath : MonoBehaviour
 
     void Update()
     {
+        
         if (stopAttack)
         {
             if (health > 0)
