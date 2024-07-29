@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class EvilWizardBoss2 : MonoBehaviour
@@ -29,6 +30,8 @@ public class EvilWizardBoss2 : MonoBehaviour
     public GameObject fireBall3;
     public GameObject fireBall4;
     public GameObject fireBall5;
+    //boss chết thì tắt tilemap
+    public Tilemap Tilemap;
 
 
     public Transform attack;//vị trí tấn công
@@ -68,6 +71,7 @@ public class EvilWizardBoss2 : MonoBehaviour
         if (health <= 0)
         {            
             isTakeAttack = false;
+            Tilemap.gameObject.SetActive(false);
         }
         else
         {
