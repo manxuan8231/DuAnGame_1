@@ -58,7 +58,7 @@ public class SliderHealthEvil : MonoBehaviour
         {
             animator.SetBool("is4St", true);
         }
-        if (health <= 0)
+        if (health <= 1)
         {
             animator.SetBool("is5St", true);
         }
