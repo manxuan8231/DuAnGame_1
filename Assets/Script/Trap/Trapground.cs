@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Trapground : MonoBehaviour
 {
+    public float timetoshot;
+    public float speep;
     public float x , y,z;
     public GameObject pipePrefab; 
     public List<GameObject> pipes;
@@ -20,20 +22,20 @@ public class Trapground : MonoBehaviour
         if (timeToCreatePipes <= 0)
         {
             CreateRandomPipes();
-            timeToCreatePipes = 2f;
+            timeToCreatePipes = timetoshot;
         }
     }
     private void CreateRandomPipes()
     {
 
         
-        var randomY = Random.Range(-3f, 3f);
+        var randomY = Random.Range(y, z);
         var pipe = Instantiate(pipePrefab,new Vector3(x, randomY , 0), Quaternion.identity);
-        Destroy(pipe, 10);
+        Destroy(pipe,2);
         MovePipes(pipe);
     }
     private void MovePipes(GameObject pipe)
     {
-        pipe.GetComponent<Rigidbody2D>().velocity = Vector2.left * 2;
+        pipe.GetComponent<Rigidbody2D>().velocity = Vector2.left * speep;
     }
 }
