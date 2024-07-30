@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //Hp người chs
-        currentHealth = maxHealth = 100;
+        currentHealth = maxHealth = 200;
         _healthSlider.maxValue = maxHealth;
         healTimer = healRate;
         _textHeal.text = currentHealth.ToString()+"/"+maxHealth.ToString();
@@ -102,7 +102,10 @@ public class Player : MonoBehaviour
         TimeHp();
         TimeMana();
         TakingHeal();
-        
+        if(currentHealth < 1)
+        {
+            currentHealth = 0;
+        }
     }
 
     private void TimeHp()

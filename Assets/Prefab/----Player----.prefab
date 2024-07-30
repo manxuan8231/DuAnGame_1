@@ -252,9 +252,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 200
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1207,11 +1207,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1017845835667483343, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 122.97
+      value: -8.6
       objectReference: {fileID: 0}
     - target: {fileID: 1017845835667483343, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 1017845835667483343, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1249,6 +1249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5429719163328896161, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6679865587757377453, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
       propertyPath: _textHeal
       value: 
@@ -1269,6 +1273,18 @@ PrefabInstance:
       propertyPath: _healthSlider
       value: 
       objectReference: {fileID: 5419399664971592623}
+    - target: {fileID: 6781237683746356967, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_Size.x
+      value: 0.45844465
+      objectReference: {fileID: 0}
+    - target: {fileID: 6781237683746356967, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0020645857
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984833610744547365, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_Name
+      value: target
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

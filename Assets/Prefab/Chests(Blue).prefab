@@ -271,6 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b96298b8fdd974ca54d3a3a1f9c626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 7854514417352635790, guid: c4e3d87d81b694e4bbf80cd9522ce9e3, type: 3}
+  itemPrefab: {fileID: 806945078991122281, guid: 2d8596729f476924e95eddafbbbec203, type: 3}
   itemSpawnPoint: {fileID: 3213995098199977793}
   health: 0
