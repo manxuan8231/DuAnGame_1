@@ -18,8 +18,7 @@ public class Enermyfly : MonoBehaviour
     public float rightBoundary;
     public float leftBoundary;
     public bool _isMovingRight;
-
-
+   
     private float timeBtwShot;
     public float startTimeBtwShort;
 
@@ -29,7 +28,7 @@ public class Enermyfly : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Hitbox").transform;
-
+       
     }
     void Update()
     {
@@ -143,6 +142,7 @@ public class Enermyfly : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
     }
+   
 }
     
 

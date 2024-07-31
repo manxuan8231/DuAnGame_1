@@ -38,7 +38,9 @@ public class Player : MonoBehaviour
     private static float score = 0;
 
     float speedX;//Horizontal(A,B)
-
+    //Game over
+    public GameObject gameOver;
+    
     private bool Right;//mặc định mặt bên phải
     private bool okJump;//true false được phép nhảy
 
@@ -67,6 +69,12 @@ public class Player : MonoBehaviour
     private float damageTimer = 0f;       // Bộ đếm thời gian tổng cho sát thương
     private float intervalTimer = 0f;     // Bộ đếm thời gian cho khoảng cách giữa mỗi lần giảm máu
 
+    //phát nhạc 
+    //tham chiếu đến AudiouSource
+    private AudioSource AudioSource;//trình phát nhạc
+    [SerializeField] private AudioClip coinCollectSXF;//file coin
+    [SerializeField] private AudioClip hitCollectSXF;//file hit
+
 
     Rigidbody2D rb;
     Animator animator;
@@ -88,6 +96,8 @@ public class Player : MonoBehaviour
         _textMana.text = currentMana.ToString()+"/"+maxMana.ToString();
 
         _textScore.text = score.ToString();
+
+       AudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -106,6 +116,7 @@ public class Player : MonoBehaviour
         {
             currentHealth = 0;
             _textScore.text = currentHealth.ToString();
+            
         }
     }
 
@@ -244,6 +255,7 @@ public class Player : MonoBehaviour
                     animator.SetTrigger("isAttack2");
                     //xử lý skill
                     var oneAttackk1 = Instantiate(Attack2bullet, Gun.position, Quaternion.identity);
+                   
                     Destroy(oneAttackk1, 0.1f);//hủy skill 
                 }
             }
@@ -316,13 +328,13 @@ public class Player : MonoBehaviour
         {
             //animation Hurt
             animator.SetTrigger("isHurt");
-           
+            AudioSource.PlayOneShot(hitCollectSXF);
         }
         if (currentHealth <= 0)
         {
-
             //animation death
-            animator.SetTrigger("isDeath");           
+            animator.SetTrigger("isDeath");    
+            
         }
     }
     private void Flip()//Xoay mặt
@@ -385,7 +397,7 @@ public class Player : MonoBehaviour
                 //nếu đụng enemy thì mất 10Hp
                 currentHealth -= 3;
                 _healthSlider.value = currentHealth;
-                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();               
                 Death();
             }
             //chạm skill 1 của boss 2
@@ -482,6 +494,7 @@ public class Player : MonoBehaviour
             {
                 score += 30;
                 _textScore.text = score.ToString();
+                AudioSource.PlayOneShot(coinCollectSXF);
                 Destroy(other.gameObject,0.01f);
             }
             if (other.gameObject.CompareTag("Diamond"))
@@ -490,8 +503,13 @@ public class Player : MonoBehaviour
                 _textScore.text = score.ToString();
                 Destroy(other.gameObject, 0.01f);
             }
-
+            if(currentHealth <= 0 )
+            {
+                gameOver.SetActive(true);
+            }   
+                
         }
+       
     }
     private void OnTriggerExit2D(Collider2D other)
     {
