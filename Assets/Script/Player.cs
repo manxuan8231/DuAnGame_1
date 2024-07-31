@@ -102,9 +102,10 @@ public class Player : MonoBehaviour
         TimeHp();
         TimeMana();
         TakingHeal();
-        if(currentHealth < 1)
+        if(currentHealth < 0)
         {
             currentHealth = 0;
+            _textScore.text = currentHealth.ToString();
         }
     }
 
@@ -452,7 +453,7 @@ public class Player : MonoBehaviour
             if (other.gameObject.CompareTag("Hp"))
             {
                 //Đụng bình hp tăng 10Hp và slider tăng theo
-                currentHealth += 10;
+                currentHealth += 50;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Destroy(other.gameObject);//bình hp biến mất
