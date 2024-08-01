@@ -112,7 +112,7 @@ public class Goblin : MonoBehaviour
     private void FollowPlayer()
     {
         
-        float direction = Vector3.Distance(transform.position, player.position);
+        float direction = Vector3.Distance(transform.position,player.position);
         if (direction < detectionRange)
         {
            

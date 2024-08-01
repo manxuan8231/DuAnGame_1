@@ -368,6 +368,11 @@ public class Player : MonoBehaviour
                         animator.SetTrigger("isFireHurt");
                     }
                     intervalTimer = 0f;
+                    if(currentHealth < 0)
+                    {
+                        currentHealth = 0;
+                        _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                    }
                     Death();
                 }
                 if (damageTimer >= damageDuration)

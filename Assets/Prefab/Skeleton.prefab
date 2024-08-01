@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 3508132273206396693}
   - component: {fileID: 7942981625462282963}
   - component: {fileID: 2944016993146577018}
-  - component: {fileID: 5054880924381197758}
+  - component: {fileID: 5152230083653370175}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -496,7 +496,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 500
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -540,10 +540,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.100198746, y: -0.031430006}
+  m_Offset: {x: -0.10020065, y: -0.01913476}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -554,7 +554,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9968376, y: 1.2984529}
+  m_Size: {x: 0.7509308, y: 1.2738624}
   m_EdgeRadius: 0
 --- !u!114 &2944016993146577018
 MonoBehaviour:
@@ -580,8 +580,8 @@ MonoBehaviour:
   attackCooldown: 5
   attackDuration: 0.8
   healSlider: {fileID: 8468366235178635550}
---- !u!58 &5054880924381197758
-CircleCollider2D:
+--- !u!61 &5152230083653370175
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -609,9 +609,19 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.22799492, y: -0.65099084}
+  m_Offset: {x: -0.1162014, y: 0.007746935}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.75, y: 3.75}
+    newSize: {x: 3.75, y: 3.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.008768082
+  m_Size: {x: 0.88368607, y: 1.3484912}
+  m_EdgeRadius: 0
