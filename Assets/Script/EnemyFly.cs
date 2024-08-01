@@ -28,7 +28,7 @@ public class EnemyFly : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("HitBox").transform;
-        health = 50;
+        health = 1;
         animator = GetComponent<Animator>();
     }
 
@@ -144,14 +144,14 @@ public class EnemyFly : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Shuriken") || other.gameObject.CompareTag("SpecialAttack"))
+        if (other.gameObject.CompareTag("Shuriken") || other.gameObject.CompareTag("SpecialAttack") || other.gameObject.CompareTag("Attack1") || other.gameObject.CompareTag("Attack2"))
         {
             health -= 10;
             animator.SetTrigger("isTakeHit");
             if(health < 0)
             {
                 animator.SetTrigger("isDeath");
-                Destroy(gameObject,1f);
+                Destroy(gameObject,0.3f);
             }
         }
     }
