@@ -390,7 +390,7 @@ public class Player : MonoBehaviour
         if (currentHealth >= 0)
         {
             //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests"))
+            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
             {
                 okJump = true;
                 animator.SetBool("isJump", false);
@@ -519,7 +519,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
        
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
         {
             okJump= false;         
         }
