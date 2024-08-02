@@ -390,7 +390,7 @@ public class Player : MonoBehaviour
         if (currentHealth >= 0)
         {
             //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Ground"))
             {
                 okJump = true;
                 animator.SetBool("isJump", false);
@@ -446,6 +446,13 @@ public class Player : MonoBehaviour
             if (other.gameObject.CompareTag("GoblinAttack"))
             {
                 currentHealth -= 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                Death();
+            }
+            if (other.gameObject.CompareTag("Trap"))
+            {
+                currentHealth = 0f;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
@@ -519,7 +526,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
        
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             okJump= false;         
         }

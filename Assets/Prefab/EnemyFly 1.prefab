@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 207010634183207074}
   m_Layer: 0
   m_Name: EnemyFly 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd052393c7006b4394e13910eb53f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   speed: 2
   target: {fileID: 0}
   follw: 7
