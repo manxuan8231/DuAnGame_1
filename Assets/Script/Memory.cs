@@ -23,7 +23,7 @@ public class Memory : MonoBehaviour
     {
         var score = _player.GetScore();
         var maxScore = Mathf.Max(score);
-        _highestScore.text = $"Best: {maxScore}";
+        _highestScore.text = $"Bess: {maxScore}";
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

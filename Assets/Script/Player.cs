@@ -290,12 +290,12 @@ public class Player : MonoBehaviour
                         //tạo ra viên đạn tại vị trí súng
                         var oneBullet = Instantiate(ShurikenBullet, Gun.position, Quaternion.identity);
                         //cho đạn bay theo huong nhân vật
-                        var velocity = new Vector2(30f, 0);
+                        var velocity = new Vector2(50f, 0);
                         if (Right == false)
                         {
-                            velocity.x = 30;
+                            velocity.x = 50;
                         }
-                        oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -30 : 30, 0);
+                        oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -50 : 50, 0);
 
                         Destroy(oneBullet, 1.5f);
                     }
