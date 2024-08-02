@@ -35,7 +35,7 @@ public class IceBoss4 : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        health = 700;
+        health = 600;
         healSlider.maxValue = health;
        
     }
