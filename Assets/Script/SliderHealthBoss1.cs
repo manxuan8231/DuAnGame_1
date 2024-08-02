@@ -19,21 +19,21 @@ public class SliderHealthBoss1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Shuriken"))
         {
-            health -= 10;
+            health -= 20;
 
         }
         if (other.gameObject.CompareTag("Attack1"))
         {
-            health -= 15;
+            health -= 30;
         }
         if (other.gameObject.CompareTag("Attack2"))
         {
-            health -= 25;
+            health -= 40;
 
         }
         if (other.gameObject.CompareTag("Attack3"))
         {
-            health -= 35;
+            health -= 50;
 
         }
 

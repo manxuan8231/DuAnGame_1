@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class DemonFire3 : MonoBehaviour
@@ -32,6 +33,7 @@ public class DemonFire3 : MonoBehaviour
     public GameObject fireBall4;
     public Transform fireTransform4;
 
+    public Tilemap tilemap;
     private bool isTakeDamage;
     private bool right;
     Vector2 moveDirection;
@@ -65,7 +67,7 @@ public class DemonFire3 : MonoBehaviour
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
         if(distanceToPlayer < detectionRange)
         {
-
+            tilemap.gameObject.SetActive(true);
             if (distanceToPlayer > StopRange)
             {
                 moveDirection = (player.position - transform.position).normalized;
@@ -242,6 +244,7 @@ public class DemonFire3 : MonoBehaviour
             if (health <= 0)
             {
                 Destroy(gameObject, 1.8f);
+                tilemap.gameObject.SetActive(false);
                 animator.SetTrigger("isDeath");
             }
         }
