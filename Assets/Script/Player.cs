@@ -418,6 +418,15 @@ public class Player : MonoBehaviour
 
                 Death();
             }
+            if (other.gameObject.CompareTag("AttackGodzilla"))
+            {
+                //nếu đụng enemy thì mất 10Hp
+                currentHealth -= 15;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+
+                Death();
+            }
             //chạm skill 2 của boss 2
             if (other.gameObject.CompareTag("Skill2(Boss2)"))
             {
