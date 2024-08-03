@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip coinCollectSXF;//file coin
     [SerializeField] private AudioClip hitCollectSXF;//file hit
 
+    
 
     Rigidbody2D rb;
     Animator animator;
@@ -118,8 +119,10 @@ public class Player : MonoBehaviour
             _textScore.text = currentHealth.ToString();
             
         }
-    }
 
+       
+    }
+   
     private void TimeHp()
     {
         if (currentHealth < maxHealth && currentHealth > 0)
@@ -459,7 +462,7 @@ public class Player : MonoBehaviour
             }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
             {
-                currentHealth -= 6;
+                currentHealth -= 15;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();

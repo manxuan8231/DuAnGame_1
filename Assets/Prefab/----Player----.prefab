@@ -1255,6 +1255,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3474292785013739028, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_Name
+      value: AttackTranform
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639200186430588353, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639200186430588353, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.68
+      objectReference: {fileID: 0}
     - target: {fileID: 5429719163328896161, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
       propertyPath: m_SortingOrder
       value: 6
