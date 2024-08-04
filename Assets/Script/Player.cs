@@ -96,9 +96,9 @@ public class Player : MonoBehaviour
         manaTimer = manaRate;
         _textMana.text = currentMana.ToString()+"/"+maxMana.ToString();
 
-        _textScore.text = score.ToString();
+        _textScore.text = "Score: " + score.ToString();
 
-       AudioSource = GetComponent<AudioSource>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -517,14 +517,14 @@ public class Player : MonoBehaviour
             if (other.gameObject.CompareTag("Coin"))
             {
                 score += 30;
-                _textScore.text = score.ToString();
+                _textScore.text ="Score: "+ score.ToString();
                 AudioSource.PlayOneShot(coinCollectSXF);
                 Destroy(other.gameObject,0.01f);
             }
             if (other.gameObject.CompareTag("Diamond"))
             {
                 score += 100;
-                _textScore.text = score.ToString();
+                _textScore.text = "Score: " + score.ToString();
                 Destroy(other.gameObject, 0.01f);
             }
             if(currentHealth <= 0 )
