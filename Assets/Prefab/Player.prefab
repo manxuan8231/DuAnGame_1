@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1017845835667483343}
   - component: {fileID: 5429719163328896161}
   - component: {fileID: 5174439192179405297}
-  - component: {fileID: 5927764814867244638}
   - component: {fileID: 1941409978710603730}
   - component: {fileID: 6781237683746356967}
   - component: {fileID: 6679865587757377453}
+  - component: {fileID: 7099937331896942803}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632118413117018303}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 106.04, y: 3.86, z: -1571.1066}
   m_LocalScale: {x: 1, y: 0.9791, z: 1}
   m_ConstrainProportionsScale: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: -1757641495, guid: ebb53c399db001d4bb623e9a7fae6f24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,51 +113,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &5927764814867244638
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632118413117018303}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.669522}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.86, y: 2.24}
-    newSize: {x: 1.86, y: 2.24}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.38, y: 0.6884514}
-  m_EdgeRadius: 0
 --- !u!50 &1941409978710603730
 Rigidbody2D:
   serializedVersion: 4
@@ -217,7 +172,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.047699}
+  m_Offset: {x: 0.0020645857, y: -1.047699}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -228,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.38, y: 0.06997204}
+  m_Size: {x: 0.45844465, y: 0.06997204}
   m_EdgeRadius: 0
 --- !u!114 &6679865587757377453
 MonoBehaviour:
@@ -254,6 +209,7 @@ MonoBehaviour:
   currentMana: 0
   _textMana: {fileID: 0}
   _textScore: {fileID: 0}
+  gameOver: {fileID: 0}
   Gun: {fileID: 4639200186430588353}
   Special: {fileID: 918680856571895083}
   ShurikenBullet: {fileID: 5563319070854690686, guid: a638f64ba71c48c4990700dbedd59bb0, type: 3}
@@ -264,6 +220,104 @@ MonoBehaviour:
   damageAmount: 4
   damageInterval: 1
   damageDuration: 3
+  coinCollectSXF: {fileID: 8300000, guid: 7188b74a61727054e85ecdccd97f2ff8, type: 3}
+  hitCollectSXF: {fileID: 8300000, guid: 549c70375931ba14db5a7f95128d6acc, type: 3}
+--- !u!82 &7099937331896942803
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632118413117018303}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2442741776981108259
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +343,7 @@ Transform:
   m_GameObject: {fileID: 2442741776981108259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.49, y: 0.37, z: 0.037597656}
+  m_LocalPosition: {x: 0.49, y: -0.03, z: 0.037597656}
   m_LocalScale: {x: 1, y: 1.0213462, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -305,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4639200186430588353}
   m_Layer: 0
-  m_Name: Gun
+  m_Name: AttackTranform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 3474292785013739028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.563, y: -0.72, z: -0.037781704}
+  m_LocalPosition: {x: 0.64, y: -0.68, z: -0.037781704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -336,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7708486656239101722}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: target
   m_TagString: HitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

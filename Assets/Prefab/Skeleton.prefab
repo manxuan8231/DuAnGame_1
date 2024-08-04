@@ -573,10 +573,10 @@ MonoBehaviour:
   _moveSpeed: 1
   attack: {fileID: 8972298948947494448}
   attackSkill: {fileID: 7656057936562184957, guid: e4527f830c568bf43a91b806ee91ad52, type: 3}
-  player: {fileID: 0}
-  detectionRange: 5
-  detectionAttack: 1.5
-  detectionIdle: 1.5
+  player: {fileID: 1017845835667483343, guid: 5a86b21852fa5f94fbaeb6a3d3c54107, type: 3}
+  detectionRange: 2
+  detectionAttack: 1
+  detectionIdle: 1
   attackCooldown: 5
   attackDuration: 0.8
   healSlider: {fileID: 8468366235178635550}

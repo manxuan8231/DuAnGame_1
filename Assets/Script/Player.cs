@@ -75,6 +75,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip coinCollectSXF;//file coin
     [SerializeField] private AudioClip hitCollectSXF;//file hit
 
+    
 
     Rigidbody2D rb;
     Animator animator;
@@ -95,9 +96,9 @@ public class Player : MonoBehaviour
         manaTimer = manaRate;
         _textMana.text = currentMana.ToString()+"/"+maxMana.ToString();
 
-        _textScore.text = score.ToString();
+        _textScore.text = "Score: " + score.ToString();
 
-       AudioSource = GetComponent<AudioSource>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -118,8 +119,10 @@ public class Player : MonoBehaviour
             _textScore.text = currentHealth.ToString();
             
         }
-    }
 
+       
+    }
+   
     private void TimeHp()
     {
         if (currentHealth < maxHealth && currentHealth > 0)
@@ -390,7 +393,7 @@ public class Player : MonoBehaviour
         if (currentHealth >= 0)
         {
             //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Ground"))
             {
                 okJump = true;
                 animator.SetBool("isJump", false);
@@ -410,6 +413,15 @@ public class Player : MonoBehaviour
             {
                 //nếu đụng enemy thì mất 10Hp
                 currentHealth -= 2;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+
+                Death();
+            }
+            if (other.gameObject.CompareTag("AttackGodzilla"))
+            {
+                //nếu đụng enemy thì mất 10Hp
+                currentHealth -= 15;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
 
@@ -450,9 +462,16 @@ public class Player : MonoBehaviour
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
             }
+            if (other.gameObject.CompareTag("Trap"))
+            {
+                currentHealth = 0f;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                Death();
+            }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
             {
-                currentHealth -= 6;
+                currentHealth -= 15;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
@@ -498,14 +517,14 @@ public class Player : MonoBehaviour
             if (other.gameObject.CompareTag("Coin"))
             {
                 score += 30;
-                _textScore.text = score.ToString();
+                _textScore.text ="Score: "+ score.ToString();
                 AudioSource.PlayOneShot(coinCollectSXF);
                 Destroy(other.gameObject,0.01f);
             }
             if (other.gameObject.CompareTag("Diamond"))
             {
                 score += 100;
-                _textScore.text = score.ToString();
+                _textScore.text = "Score: " + score.ToString();
                 Destroy(other.gameObject, 0.01f);
             }
             if(currentHealth <= 0 )
@@ -519,7 +538,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
        
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             okJump= false;         
         }
