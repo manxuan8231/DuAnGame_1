@@ -290,12 +290,12 @@ public class Player : MonoBehaviour
                         //tạo ra viên đạn tại vị trí súng
                         var oneBullet = Instantiate(ShurikenBullet, Gun.position, Quaternion.identity);
                         //cho đạn bay theo huong nhân vật
-                        var velocity = new Vector2(50f, 0);
+                        var velocity = new Vector2(30f, 0);
                         if (Right == false)
                         {
-                            velocity.x = 50;
+                            velocity.x = 30;
                         }
-                        oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -50 : 50, 0);
+                        oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -30 : 30, 0);
 
                         Destroy(oneBullet, 1.5f);
                     }
@@ -390,7 +390,7 @@ public class Player : MonoBehaviour
         if (currentHealth >= 0)
         {
             //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+            if (other.gameObject.CompareTag("Ground"))
             {
                 okJump = true;
                 animator.SetBool("isJump", false);
@@ -446,6 +446,13 @@ public class Player : MonoBehaviour
             if (other.gameObject.CompareTag("GoblinAttack"))
             {
                 currentHealth -= 10;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                Death();
+            }
+            if (other.gameObject.CompareTag("Trap"))
+            {
+                currentHealth = 0f;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();
@@ -519,7 +526,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
        
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Chests") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             okJump= false;         
         }

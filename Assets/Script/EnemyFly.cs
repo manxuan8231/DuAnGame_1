@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFly : MonoBehaviour
 {
-    private float health;
+    public float health;
     private Animator animator;
     public float speed;
     [SerializeField] private Transform target;
@@ -28,7 +28,7 @@ public class EnemyFly : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("HitBox").transform;
-        health = 1;
+        health = 20;
         animator = GetComponent<Animator>();
     }
 

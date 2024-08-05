@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public class IceBoss4 : MonoBehaviour
@@ -8,7 +9,7 @@ public class IceBoss4 : MonoBehaviour
     public float detectionRange = 10f;  // Phạm vi phát hiện người chơi
     private float StopRange = 2.5f;
     public float detectionAttack = 5f;
-
+    public Tilemap tilemap;
     public float attackCooldown = 2f; // Thời gian hồi chiêu sau mỗi lần tấn công
     public float attackDuration = 2.3f; // Thời gian thực hiện đòn tấn công (tính từ lúc bắt đầu đến khi kết thúc)
     private float nextAttackTime = 0f;
@@ -34,7 +35,7 @@ public class IceBoss4 : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        health = 700;
+        health = 600;
         healSlider.maxValue = health;
        
     }
@@ -60,7 +61,7 @@ public class IceBoss4 : MonoBehaviour
             if (distance > StopRange)
             {
                moveSpeed = (player.position - transform.position).normalized;
-                transform.Translate(moveSpeed * 5f * Time.deltaTime);
+                transform.Translate(moveSpeed * 1f * Time.deltaTime);
                 animator.SetBool("isWalk", true);
 
             }
@@ -221,6 +222,7 @@ public class IceBoss4 : MonoBehaviour
             {
                 Destroy(gameObject, 5f);
                 animator.SetBool("isDeath", true);
+                tilemap.gameObject.SetActive(false);
             }
         }
         

@@ -271,7 +271,6 @@ GameObject:
   - component: {fileID: 5817468089780944741}
   - component: {fileID: 1054011744498087204}
   - component: {fileID: 7868850452486333471}
-  - component: {fileID: 2442247592514684659}
   - component: {fileID: 2164713037090187915}
   m_Layer: 0
   m_Name: Ice(Boss4)
@@ -443,41 +442,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4089088, y: 3.1208332}
   m_EdgeRadius: 0
---- !u!58 &2442247592514684659
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4718273764248015869}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.471039}
-  serializedVersion: 2
-  m_Radius: 0.0627563
 --- !u!114 &2164713037090187915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRange: 10
   detectionAttack: 4
+  tilemap: {fileID: 0}
   attackCooldown: 4
   attackDuration: 0.5
   attackSkill: {fileID: 2705412580757114891, guid: b3b76028b21c17c4ab2753f77c67c096, type: 3}
