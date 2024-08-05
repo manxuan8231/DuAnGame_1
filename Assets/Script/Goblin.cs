@@ -33,9 +33,13 @@ public class Goblin : MonoBehaviour
     Animator animator;
     bool isFollow;   
     bool isRight = true;
+    private BoxCollider2D BoxCollider2D;
+    private Rigidbody2D Rigidbody2D;
     void Start()
     {
         animator = GetComponent<Animator>();
+        BoxCollider2D = GetComponent<BoxCollider2D>();
+        Rigidbody2D = GetComponent<Rigidbody2D>();
         health = 100;
         healSlider.maxValue = health;
     }
@@ -192,6 +196,8 @@ public class Goblin : MonoBehaviour
             {
                 Destroy(gameObject, 3f);
                 animator.SetTrigger("isDeath");
+                BoxCollider2D.isTrigger = true;
+                Rigidbody2D.bodyType = RigidbodyType2D.Static;
             }
         }
     }

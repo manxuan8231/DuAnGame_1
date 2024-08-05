@@ -308,7 +308,7 @@ MonoBehaviour:
   attack: {fileID: 6688670838978888089}
   attackSkill: {fileID: 8020941483020127448, guid: 0354aa988cd3770448e12befd82308ef, type: 3}
   player: {fileID: 0}
-  detectionRange: 5
+  detectionRange: 2
   detectionAttack: 1
   detectionIdle: 1
   attackCooldown: 5

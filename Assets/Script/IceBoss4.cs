@@ -15,7 +15,7 @@ public class IceBoss4 : MonoBehaviour
     private float nextAttackTime = 0f;
     private float attackEndTime;
     private bool isAttacking = false;
-    private bool stopAttack = true;
+   
    
     //skill 1
     public GameObject attackSkill;
@@ -28,10 +28,16 @@ public class IceBoss4 : MonoBehaviour
     public float health;
     private bool right;
     private bool isTakeDamage;
+
+   
     
     public Transform player;
     Animator animator;
     Vector2 moveSpeed;
+
+    
+    private bool attackActive = true;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -51,7 +57,8 @@ public class IceBoss4 : MonoBehaviour
         else
         {
             isTakeDamage = false;
-        }      
+        }
+        
     }
     void FollowPlayer()
     {
@@ -77,8 +84,7 @@ public class IceBoss4 : MonoBehaviour
     }
     void Attack()
     {
-        if (stopAttack)
-        {
+        
             float distanceToPlayer = Vector3.Distance(transform.position, player.position);
            
             if (distanceToPlayer <= detectionAttack && Time.time >= nextAttackTime && !isAttacking)
@@ -90,20 +96,19 @@ public class IceBoss4 : MonoBehaviour
                     attackEndTime = Time.time + attackDuration;                   
                     isAttacking = true;
                     animator.SetTrigger("isAttack");
-
-
+                    attackActive = false;
                 }
                 
                 if (attackType == 1 ) 
                 {
                     var oneBullet = Instantiate(iceBall, iceTransform.position, Quaternion.identity);
                     Destroy(oneBullet,2f);
-                    var velocity = new Vector2(50f, 0);
+                    var velocity = new Vector2(-20f, 0);
                     if (right == false)
                     {
-                        velocity.x = 50;
+                        velocity.x = -20;
                     }
-                    oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? -20 : 20, 0);                    
+                    oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(!right ? 20 : -20, 0);                    
                 }                            
             }
             if (isAttacking && Time.time >= attackEndTime)
@@ -111,8 +116,10 @@ public class IceBoss4 : MonoBehaviour
                 var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
                 Destroy(oneSkill, 0.5f);
                 isAttacking = false;
+                attackActive = true;
             }
-        }
+            
+        
     }
     void Flip()
     {
@@ -128,6 +135,7 @@ public class IceBoss4 : MonoBehaviour
     {
         if (isTakeDamage)
         {
+           
             //chạm shuriken
             if (other.gameObject.CompareTag("Shuriken"))
             {
@@ -135,7 +143,10 @@ public class IceBoss4 : MonoBehaviour
                 {
                     health -= 5;
                     healSlider.value = health;
-                    animator.SetTrigger("isTakeHit");
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isTakeHit");
+                    }
                     if (right)
                     {
                         transform.Translate(Vector2.left * 6f * Time.deltaTime);
@@ -146,78 +157,72 @@ public class IceBoss4 : MonoBehaviour
                     }
                     Destroy(other.gameObject);//shuriken biến mất
 
-                }              
-                stopAttack = false;
+                }
             }
-            else
-            {
-                stopAttack = true;
-            }
+           
             if (other.gameObject.CompareTag("Attack1"))
             {
                 if (health > 0)
                 {
                     health -= 10;
                     healSlider.value = health;
-                    animator.SetTrigger("isHurt");
-
+                    if(attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                        
+                    }
+                    
                 }
-                stopAttack = false;             
+                      
             }
-            else
-            {
-                stopAttack = true;
-            }
+           
             if (other.gameObject.CompareTag("Attack2"))
             {
                 if (health > 0)
                 {
                     health -= 20;
                     healSlider.value = health;
-                    animator.SetTrigger("isHurt");
-
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                    }
                 }
 
-                stopAttack = false;
+               
                 
             }
-            else
-            {
-                stopAttack = true;
-            }
+            
             if (other.gameObject.CompareTag("Attack3"))
             {
                 if (health > 0)
                 {
                     health -= 35;
                     healSlider.value = health;
-                    animator.SetTrigger("isHurt");
-
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                    }
                 }
 
-                stopAttack = false;
+                
                
             }
-            else
-            {
-                stopAttack = true;
-            }
+           
             if (other.gameObject.CompareTag("SpecialAttack"))
             {
                 if (health > 0)
                 {
                     health -= 40;
                     healSlider.value = health;
-                    animator.SetTrigger("isTakeHit");
-
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isTakeHit");
+                    }
                 }
-                stopAttack = false;
+               
                
             }
-            else
-            {
-                stopAttack = true;
-            }
+            
             if (health <= 0)
             {
                 Destroy(gameObject, 5f);
