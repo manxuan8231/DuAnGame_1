@@ -44,7 +44,11 @@ public class EvilWizardBoss2 : MonoBehaviour
     private bool isTakeAttack;
     private bool stopAttack;
     private bool right;
-    private float Cooldown;
+
+    public float timeAttack;
+    public float durection = 0.5f;
+    private bool attackActive = true;
+    private bool isAttacking = false;
 
     Vector2 moveDirection;
     Animator animator;
@@ -83,22 +87,24 @@ public class EvilWizardBoss2 : MonoBehaviour
         if(stopAttack) { 
         float distanceToPlayer = Vector3.Distance(transform.position, Player.position);
 
-            if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime)
+            if (distanceToPlayer <= detectionRangeAttack && Time.time >= nextAttackTime && !isAttacking)
             {
                 nextAttackTime = Time.time + attackInterval;
                 int attackType = Random.Range(0, 3);  // Random số nguyên từ 0 tới 2 (0 hoặc 2)
 
                 if (attackType == 0)
                 {
+                    timeAttack = Time.time + durection;
                     animator.SetTrigger("isAttack");
-                    var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
-                    Destroy(oneSkill, 0.1f);
-                }
+                    isAttacking = true;
+                    attackActive = false;
+}
                 if (attackType == 1)
                 {
+                    timeAttack = Time.time + durection;
                     animator.SetTrigger("isAttack2");
-                    var oneSkill = Instantiate(attackSkill2, attack.position, Quaternion.identity);
-                    Destroy(oneSkill, 0.1f);
+                   isAttacking = true;
+                    attackActive = false;
                 }
                 if (attackType == 2)
                 {
@@ -113,6 +119,16 @@ public class EvilWizardBoss2 : MonoBehaviour
                     var fireTmp5 = Instantiate(fireBall5, fire5.position, Quaternion.identity);
                     Destroy(fireTmp5, 5f);
                 }
+            }
+            if (isAttacking&&Time.time >= timeAttack )
+            {
+                var oneSkill = Instantiate(attackSkill, attack.position, Quaternion.identity);
+                Destroy(oneSkill, 0.1f);
+
+                var oneSkill2 = Instantiate(attackSkill2, attack.position, Quaternion.identity);
+                Destroy(oneSkill2, 0.1f);
+                attackActive = true;
+                isAttacking = false;
             }
         }
               
@@ -161,7 +177,7 @@ public class EvilWizardBoss2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (isTakeAttack)
+        if (isTakeAttack && attackActive)
         {
             //chạm shuriken
             if (other.gameObject.CompareTag("Shuriken"))

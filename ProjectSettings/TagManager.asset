@@ -27,6 +27,8 @@ TagManager:
   - Diamond
   - GoblinAttack
   - Chests
+  - Trap
+  - AttackGodzilla
   layers:
   - Default
   - TransparentFX

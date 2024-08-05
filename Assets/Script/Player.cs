@@ -96,9 +96,9 @@ public class Player : MonoBehaviour
         manaTimer = manaRate;
         _textMana.text = currentMana.ToString()+"/"+maxMana.ToString();
 
-        _textScore.text = score.ToString();
+        _textScore.text = "Score: " + score.ToString();
 
-       AudioSource = GetComponent<AudioSource>();
+        AudioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -418,6 +418,15 @@ public class Player : MonoBehaviour
 
                 Death();
             }
+            if (other.gameObject.CompareTag("AttackGodzilla"))
+            {
+                //nếu đụng enemy thì mất 10Hp
+                currentHealth -= 15;
+                _healthSlider.value = currentHealth;
+                _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+
+                Death();
+            }
             //chạm skill 2 của boss 2
             if (other.gameObject.CompareTag("Skill2(Boss2)"))
             {
@@ -508,14 +517,14 @@ public class Player : MonoBehaviour
             if (other.gameObject.CompareTag("Coin"))
             {
                 score += 30;
-                _textScore.text = score.ToString();
+                _textScore.text ="Score: "+ score.ToString();
                 AudioSource.PlayOneShot(coinCollectSXF);
                 Destroy(other.gameObject,0.01f);
             }
             if (other.gameObject.CompareTag("Diamond"))
             {
                 score += 100;
-                _textScore.text = score.ToString();
+                _textScore.text = "Score: " + score.ToString();
                 Destroy(other.gameObject, 0.01f);
             }
             if(currentHealth <= 0 )
