@@ -25082,8 +25082,8 @@ Transform:
   m_GameObject: {fileID: 1720858039}
   serializedVersion: 2
   m_LocalRotation: {x: 0.017449792, y: 0.017449792, z: -0.000304588, w: 0.9996954}
-  m_LocalPosition: {x: -0.0259, y: -0.0253, z: 10.0015}
-  m_LocalScale: {x: 0.59446216, y: 0.5847274, z: 1}
+  m_LocalPosition: {x: -0.0008, y: 0.0088, z: 10.0018}
+  m_LocalScale: {x: 0.596305, y: 0.5891713, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721303914}
@@ -25631,6 +25631,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Size.x
+      value: 0.38569933
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7391994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.016002834
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.691697
+      objectReference: {fileID: 0}
     - target: {fileID: 4179003291732874136, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -25638,14 +25654,6 @@ PrefabInstance:
     - target: {fileID: 4179003291732874136, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4787938052319591803, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 66.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 4787938052319591803, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5937713711161525464, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_Camera

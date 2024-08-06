@@ -75,7 +75,8 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioClip coinCollectSXF;//file coin
     [SerializeField] private AudioClip hitCollectSXF;//file hit
 
-    
+    //jump
+    private float timeJump;
 
     Rigidbody2D rb;
     Animator animator;
@@ -181,12 +182,14 @@ public class Player : MonoBehaviour
             animator.SetFloat("isRun", Mathf.Abs(speedX));
 
             //nhảy
-            if (Input.GetKeyDown(KeyCode.Space) && okJump)
+            if (Input.GetKeyDown(KeyCode.Space) && Time.time >= timeJump + 0.5f)
             {
+                timeJump = Time.time;
                 //hiệu ứng nhảy
                 animator.SetBool("isJump", true);
                 rb.AddForce(Vector2.up * _moveJump, ForceMode2D.Impulse);
             }
+           
         }
 
     }
@@ -392,10 +395,9 @@ public class Player : MonoBehaviour
     {
         if (currentHealth >= 0)
         {
-            //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground")|| other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy")  || other.gameObject.CompareTag("Chests"))
-            {
-                okJump = true;
+            //chạm đất tắt animator nhảy
+            if (other.gameObject.CompareTag("Ground")|| other.gameObject.CompareTag("Chests"))
+            {              
                 animator.SetBool("isJump", false);
             }
             //chạm skill mất hp
@@ -536,15 +538,7 @@ public class Player : MonoBehaviour
         }
        
     }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-       
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Chests"))
-        {
-            okJump= false;         
-        }
-        
-    }
+    
     
     public float GetScore()//lấy điểm số
     {
