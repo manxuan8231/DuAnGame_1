@@ -21,4 +21,8 @@ public class Next : MonoBehaviour
         SceneManager.LoadScene(scene);
         Time.timeScale = 1.0f;
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

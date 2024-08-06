@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
@@ -42,7 +43,10 @@ public class Player : MonoBehaviour
     public GameObject gameOver;
     
     private bool Right;//mặc định mặt bên phải
-    private bool okJump;//true false được phép nhảy
+
+    //Khai báo thời gian chơi
+    private static float _time = 0;
+    public TextMeshProUGUI textTime;
 
     //cooldown skill
     private float cooldownFullSkill;
@@ -97,9 +101,13 @@ public class Player : MonoBehaviour
         manaTimer = manaRate;
         _textMana.text = currentMana.ToString()+"/"+maxMana.ToString();
 
+        //Score
         _textScore.text = "Score: " + score.ToString();
-
+        //AudioSource
         AudioSource = GetComponent<AudioSource>();
+
+        // Đặt CultureInfo mặc định để sử dụng dấu chấm
+        //CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
     }
 
     void Update()
@@ -117,11 +125,10 @@ public class Player : MonoBehaviour
         if(currentHealth < 0)
         {
             currentHealth = 0;
-            _textScore.text = currentHealth.ToString();
-            
+            _textScore.text = currentHealth.ToString();            
         }
-
-       
+        _time += Time.deltaTime;
+        textTime.text = $"Time: {_time:0.00}";
     }
    
     private void TimeHp()
@@ -544,5 +551,8 @@ public class Player : MonoBehaviour
     {
         return score;
     }
-    
+    public float GetTime()//lấy điểm số
+    {
+        return _time;
+    }
 }
