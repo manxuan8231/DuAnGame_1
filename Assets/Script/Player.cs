@@ -393,7 +393,7 @@ public class Player : MonoBehaviour
         if (currentHealth >= 0)
         {
             //chạm đất thì dc phép nhảy
-            if (other.gameObject.CompareTag("Ground"))
+            if (other.gameObject.CompareTag("Ground")|| other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy")  || other.gameObject.CompareTag("Chests"))
             {
                 okJump = true;
                 animator.SetBool("isJump", false);
@@ -525,6 +525,7 @@ public class Player : MonoBehaviour
             {
                 score += 100;
                 _textScore.text = "Score: " + score.ToString();
+                AudioSource.PlayOneShot(coinCollectSXF);
                 Destroy(other.gameObject, 0.01f);
             }
             if(currentHealth <= 0 )
@@ -538,7 +539,7 @@ public class Player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
        
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Chests"))
         {
             okJump= false;         
         }
