@@ -6912,7 +6912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 255159330a4051d4db6dec137f4c3f6c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fae6bcd953081645a21b22901480fef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -33703,7 +33703,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1384321464
 Canvas:
   m_ObjectHideFlags: 0
@@ -36090,7 +36090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071172139829733248, guid: 85830fe0a18452c4692ae0bd23739111, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2917101
+      value: 1.6809025
       objectReference: {fileID: 0}
     - target: {fileID: 8071172139829733248, guid: 85830fe0a18452c4692ae0bd23739111, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36098,7 +36098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071172139829733248, guid: 85830fe0a18452c4692ae0bd23739111, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -545.4102
+      value: -545.2234
       objectReference: {fileID: 0}
     - target: {fileID: 8071172139829733248, guid: 85830fe0a18452c4692ae0bd23739111, type: 3}
       propertyPath: m_LocalPosition.z
