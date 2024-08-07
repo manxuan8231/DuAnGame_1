@@ -29,6 +29,7 @@ TagManager:
   - Chests
   - Trap
   - AttackGodzilla
+  - Boom
   layers:
   - Default
   - TransparentFX
