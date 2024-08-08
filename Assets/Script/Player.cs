@@ -473,9 +473,10 @@ public class Player : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Trap"))
             {
-                currentHealth = 0f;
+                currentHealth -= 100f;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                rb.AddForce(Vector2.up * 20f,ForceMode2D.Impulse);
                 Death();
             }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
