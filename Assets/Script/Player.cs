@@ -310,6 +310,7 @@ public class Player : MonoBehaviour
                         }
                         oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -30 : 30, 0);
 
+                        oneBullet.transform.localScale = new Vector3(Right ? 1 : -1, 1, 1);
                         Destroy(oneBullet, 1.5f);
                     }
                 }
@@ -473,14 +474,15 @@ public class Player : MonoBehaviour
             }
             if (other.gameObject.CompareTag("Trap"))
             {
-                currentHealth = 0f;
+                currentHealth -= 100f;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
+                rb.AddForce(Vector2.up * 20f,ForceMode2D.Impulse);
                 Death();
             }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
             {
-                currentHealth -= 15;
+                currentHealth -= 10;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();

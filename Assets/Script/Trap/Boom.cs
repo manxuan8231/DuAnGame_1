@@ -19,7 +19,7 @@ public class Boom : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ground")|| other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             Destroy(gameObject,1.5f);
             animator.SetBool("isBoom", true);
