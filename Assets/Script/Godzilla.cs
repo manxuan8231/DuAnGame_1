@@ -38,6 +38,13 @@ public class Godzilla : MonoBehaviour
     public GameObject attack3;
     public GameObject hp;
     public GameObject mana;
+    //boom
+    public Transform boomTransform;
+    public GameObject Boom;
+    public Transform boomTransform2;
+    public GameObject Boom2;
+    public Transform boomTransform3;
+    public GameObject Boom3;
 
     public Transform player;
     Animator animator;
@@ -51,9 +58,7 @@ public class Godzilla : MonoBehaviour
         animator = GetComponent<Animator>();
         sliderHealth.maxValue = health;
         textHealth.text = health.ToString() + "/" + "1000";
-    }
-
-    
+    }  
     void Update()
     {
         if (health > 0)
@@ -270,6 +275,11 @@ public class Godzilla : MonoBehaviour
             {               
                Destroy(gameObject,5f);
                animator.SetTrigger("isDeath");
+                //boom
+               var oneBoom = Instantiate(Boom, boomTransform.position, Quaternion.identity);
+                var oneBoom2 = Instantiate(Boom2, boomTransform2.position, Quaternion.identity);
+                var oneBoom3 = Instantiate(Boom3, boomTransform3.position, Quaternion.identity);
+               
             }
         }
         

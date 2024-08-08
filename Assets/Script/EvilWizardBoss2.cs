@@ -39,7 +39,7 @@ public class EvilWizardBoss2 : MonoBehaviour
     public GameObject attackSkill2;//skill 2
 
    
-    private float health = 700;
+    public float health = 700;
 
     private bool isTakeAttack;
     private bool stopAttack;
@@ -177,7 +177,7 @@ public class EvilWizardBoss2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (isTakeAttack && attackActive)
+        if (isTakeAttack)
         {
             //chạm shuriken
             if (other.gameObject.CompareTag("Shuriken"))
@@ -185,8 +185,10 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 5;
-                    
-                    animator.SetTrigger("isTakeHit");
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isTakeHit");
+                    }
 
                 }
                 Destroy(other.gameObject);
@@ -201,8 +203,10 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 10;
-                    
-                    animator.SetTrigger("isHurt");
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                    }
                 }
                
                 stopAttack = false;
@@ -216,8 +220,10 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 20;
-                    
-                    animator.SetTrigger("isHurt");
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                    }
                 }
                
                 stopAttack = false;
@@ -231,8 +237,10 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 30;
-                  
-                    animator.SetTrigger("isHurt");
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                    }
                 }
                 
                 stopAttack = false;
@@ -246,8 +254,10 @@ public class EvilWizardBoss2 : MonoBehaviour
                 if (health > 0)
                 {
                     health -= 100;
-                    
-                    animator.SetTrigger("isHurt");
+                    if (attackActive)
+                    {
+                        animator.SetTrigger("isHurt");
+                    }
                 }
                 
                 stopAttack = false;
