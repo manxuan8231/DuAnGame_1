@@ -131,7 +131,7 @@ TextureImporter:
         width: 127
         height: 310
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 182
         height: 562
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 187
         height: 605
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,6 +181,69 @@ TextureImporter:
       bones: []
       spriteID: 2b9b6b0e92e00b94cb50c6c32efbf1dc
       internalID: -77510947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AssetBoom_3
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1187
+        width: 227
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f25de1474ea92439ba1e60b5d6ffff
+      internalID: 1897427917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AssetBoom_4
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1150
+        width: 226
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0d570e78debda4e91e7ad96fdc075b
+      internalID: -1260802232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AssetBoom_5
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 1113
+        width: 235
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14861d0435cdf8c49a8f46bc4c7f62e9
+      internalID: -357384281
       vertices: []
       indices: 
       edges: []
@@ -199,6 +262,9 @@ TextureImporter:
       AssetBoom_0: -340431238
       AssetBoom_1: -925125220
       AssetBoom_2: -77510947
+      AssetBoom_3: 1897427917
+      AssetBoom_4: -1260802232
+      AssetBoom_5: -357384281
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

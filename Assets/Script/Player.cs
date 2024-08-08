@@ -310,6 +310,7 @@ public class Player : MonoBehaviour
                         }
                         oneBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(Right ? -30 : 30, 0);
 
+                        oneBullet.transform.localScale = new Vector3(Right ? 1 : -1, 1, 1);
                         Destroy(oneBullet, 1.5f);
                     }
                 }
