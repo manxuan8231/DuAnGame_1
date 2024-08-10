@@ -128,7 +128,11 @@ public class Player : MonoBehaviour
             _textScore.text = currentHealth.ToString();            
         }
         _time += Time.deltaTime;
-        textTime.text = $"Time: {_time:0.00}";
+        // Tính toán phút và giây
+        int minutes = Mathf.FloorToInt(_time / 60F);
+        int seconds = Mathf.FloorToInt(_time % 60F);
+        // Hiển thị thời gian với định dạng "Phút:Giây"
+        textTime.text = $"Time: {minutes:00}:{seconds:00}";
     }
    
     private void TimeHp()
