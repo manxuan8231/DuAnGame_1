@@ -482,7 +482,7 @@ public class Player : MonoBehaviour
             }
             if (other.gameObject.CompareTag("IceSkill1")|| other.gameObject.CompareTag("IceBall"))
             {
-                currentHealth -= 15;
+                currentHealth -= 10;
                 _healthSlider.value = currentHealth;
                 _textHeal.text = currentHealth.ToString() + "/" + maxHealth.ToString();
                 Death();

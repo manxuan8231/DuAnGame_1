@@ -5165,7 +5165,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d308acf824ea4fa4e9c6f6355eb2fbeb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.16
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7328,11 +7328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2925211150047599509, guid: 04cd8a15243ae1644bea1472924f3ed5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.05
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 2925211150047599509, guid: 04cd8a15243ae1644bea1472924f3ed5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.88
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 4480746829956557892, guid: 04cd8a15243ae1644bea1472924f3ed5, type: 3}
       propertyPath: m_Size.x
@@ -7533,7 +7533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showCanvas: {fileID: 521725333}
   _highestScore: {fileID: 2016519717}
-  _highestTime: {fileID: 0}
+  _highestTime: {fileID: 584317145}
 --- !u!61 &817835005
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8862,6 +8862,22 @@ PrefabInstance:
     - target: {fileID: 1479481419729791893, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Size.x
+      value: 0.34506613
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7154076
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.013353385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490987998260920221, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.7035929
       objectReference: {fileID: 0}
     - target: {fileID: 4179003291732874136, guid: c8582674f74c776408c1d2ce4c4b2091, type: 3}
       propertyPath: m_AnchorMax.x
