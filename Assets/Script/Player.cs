@@ -86,6 +86,7 @@ public class Player : MonoBehaviour
     Animator animator;
     void Start()
     {
+        _time = 0;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
