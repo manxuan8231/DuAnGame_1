@@ -12,6 +12,7 @@ public class Gate : MonoBehaviour
     [SerializeField] private Slider _slider;
     [SerializeField] TextMeshProUGUI _progressText;
     private float _progress = 0;
+    public int scene;
     private void Start()
     {
         _loandingCanvas.SetActive(false);
@@ -37,7 +38,7 @@ public class Gate : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
             // chuyển màng chơi
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(scene);
 
         }
     }

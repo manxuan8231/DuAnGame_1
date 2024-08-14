@@ -6953,6 +6953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tele
       objectReference: {fileID: 0}
+    - target: {fileID: 6738887811057399564, guid: ae985127b6927ac41aa0ba6076f3af04, type: 3}
+      propertyPath: scene
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
