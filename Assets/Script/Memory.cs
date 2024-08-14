@@ -25,9 +25,10 @@ public class Memory : MonoBehaviour
         var score = _player.GetScore();
         var time = _player.GetTime();
         var maxScore = Mathf.Max(score);
-        var maxtime = Mathf.Max(time);
+        var minutes = Mathf.Max(time / 60f);
+        var seconds = Mathf.Max(time % 60f);
         _highestScore.text = $"Best: {maxScore}";
-        _highestTime.text = $"Time: {maxtime:0.00}";
+        _highestTime.text = $"Time: {minutes:00}:{seconds:00}";
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
