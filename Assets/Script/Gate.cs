@@ -34,10 +34,10 @@ public class Gate : MonoBehaviour
                 _progress += 1;
                 _slider.value = _progress;
                 _progressText.text = _progress + "%";
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.01f);
             }
             // chuyển màng chơi
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
 
         }
     }
