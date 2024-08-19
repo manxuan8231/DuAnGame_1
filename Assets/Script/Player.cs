@@ -65,6 +65,11 @@ public class Player : MonoBehaviour
     public GameObject Attack2bullet;
     public GameObject Attack3bullet;
     public GameObject SpecialBullet;
+    //skill immage
+    [SerializeField] private Slider skillCooldownSlider; // Slider hiển thị cooldown
+    private bool isSkillOnCooldown = false; // Cờ kiểm tra trạng thái cooldown   
+    private float cooldownTimer = 0f; // Bộ đếm thời gian cooldown
+    private float cooldownDuration = 4f;
     //mất hp dần 
     public float damageAmount = 10f;  // Lượng sát thương mỗi 2 giây
     public float damageInterval = 2f; // Thời gian giữa mỗi lần giảm máu
@@ -82,6 +87,7 @@ public class Player : MonoBehaviour
     //jump
     private float timeJump;
 
+    
     Rigidbody2D rb;
     Animator animator;
     void Start()
@@ -106,6 +112,12 @@ public class Player : MonoBehaviour
         _textScore.text = "Score: " + score.ToString();
         //AudioSource
         AudioSource = GetComponent<AudioSource>();
+
+        // Khởi tạo giá trị slider và ẩn nó lúc đầu
+        
+        skillCooldownSlider.maxValue = cooldownDuration;
+        skillCooldownSlider.value = cooldownDuration;
+        skillCooldownSlider.gameObject.SetActive(false);
 
         // Đặt CultureInfo mặc định để sử dụng dấu chấm
         //CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
@@ -134,6 +146,20 @@ public class Player : MonoBehaviour
         int seconds = Mathf.FloorToInt(_time % 60F);
         // Hiển thị thời gian với định dạng "Phút:Giây"
         textTime.text = $"Time: {minutes:00}:{seconds:00}";
+
+        if (isSkillOnCooldown)
+        {
+            // Cập nhật bộ đếm cooldown
+            cooldownTimer -= Time.deltaTime;
+            skillCooldownSlider.value = cooldownDuration - cooldownTimer;
+
+            if (cooldownTimer <= 0)
+            {
+                // Hết thời gian cooldown
+                isSkillOnCooldown = false;
+                skillCooldownSlider.gameObject.SetActive(false); // Ẩn slider
+            }
+        }
     }
    
     private void TimeHp()
@@ -336,6 +362,11 @@ public class Player : MonoBehaviour
                         //xử lý skill
                         var oneAttackk1 = Instantiate(SpecialBullet, Special.position, Quaternion.identity);
                         Destroy(oneAttackk1, 0.1f);//hủy skill 
+
+                        skillCooldownSlider.value = cooldownTimer;
+                        skillCooldownSlider.gameObject.SetActive(true);
+                        cooldownTimer = cooldownDuration;
+                        isSkillOnCooldown = true;
                     }
                 }
             }
