@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -3248,1248 +3250,1404 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Fire breather Trap Preview_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: fcbc42d7ab7e9cd4db38361d2f0be101
-    - name: Fire breather Trap Preview_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8e7e8813b08703a4bbf4e7117f2b211b
-    - name: Fire breather Trap Preview_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 17584d7f24a5a234784fd200493db795
-    - name: Fire breather Trap Preview_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 3f99d58da8de71840aaa08006138c9c5
-    - name: Fire breather Trap Preview_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: f07ae9c28ce3add429bfca0658509768
-    - name: Fire breather Trap Preview_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: adddf75dbb2a67d4dac979d2485fab57
-    - name: Fire breather Trap Preview_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 90e50168336f16046951edbf8c43e3ba
-    - name: Fire breather Trap Preview_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0a151c73f72da5a488521597470d17ad
-    - name: Fire breather Trap Preview_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: b12e24fe94f4f6648a9d2908a96c3e24
-    - name: Fire breather Trap Preview_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d3a181e9bedcc5143badb14b069001ce
-    - name: Fire breather Trap Preview_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: afa182a78dbe2cc48b991c57f94fbb07
-    - name: Fire breather Trap Preview_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: c3e7b0962e293c144a04de6cf57049b0
-    - name: Fire breather Trap Preview_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: aa677cba500372f4ea957a7f11b2efd4
-    - name: Fire breather Trap Preview_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 119f23c90de85c4489a2068575175595
-    - name: Fire breather Trap Preview_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a5706d129890eb545b595d0b68b448ab
-    - name: Fire breather Trap Preview_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 5ab2eaf5a64849341ae31312292e4a67
-    - name: Fire breather Trap Preview_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: dfb0bdd494619f14c87507abc625e132
-    - name: Fire breather Trap Preview_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 739fbe8ebf3920b46ae2f0da5080d1d0
-    - name: Fire breather Trap Preview_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 49451fbdd0ec0e641b38a9d0a68ffe1e
-    - name: Fire breather Trap Preview_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 39119d355d78ff74e80a4db2fde1348c
-    - name: Fire breather Trap Preview_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0a43efdd746584d44866d453ff862d9f
-    - name: Fire breather Trap Preview_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: adae0cde06b5f5a4a90a077be7da42bb
-    - name: Fire breather Trap Preview_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8279b85c65c6a62499651b9a08c18efa
-    - name: Fire breather Trap Preview_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 6c6de7c8b8ea87d4f8c51a5b2398f3f6
-    - name: Fire breather Trap Preview_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 9772a804305f470499787d55d087b85d
-    - name: Fire breather Trap Preview_Frame_25
+    - name: Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: c9e4d165f27a1a743bf7e29645286e70
-    - name: Fire breather Trap Preview_Frame_26
+    - name: Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2495410800458d94c9c423ecbaec6749
-    - name: Fire breather Trap Preview_Frame_27
+    - name: Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d2e4f6647409be14ba18726bfd73c16f
-    - name: Fire breather Trap Preview_Frame_28
+    - name: Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 21b8c8a8a8077364ab8f9a2924a090e4
-    - name: Fire breather Trap Preview_Frame_29
+    - name: Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 575d53a1492404e47ad3da700d82f6ab
-    - name: Fire breather Trap Preview_Frame_30
+    - name: Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 1279384fa0dbdd74b9660e90d49f91f3
-    - name: Fire breather Trap Preview_Frame_31
+    - name: Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: f3d055530f3e0ec468f85d22cc6a9ef4
-    - name: Fire breather Trap Preview_Frame_32
+    - name: Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 98cb8831e0f59dc4a9f93b77665e2723
-    - name: Fire breather Trap Preview_Frame_33
+    - name: Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 1c6a91b24cfa932409c0a2e0dbb25e69
-    - name: Fire breather Trap Preview_Frame_34
+    - name: Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0d8f9c874042fd84bbdb0db3b3ba27de
-    - name: Fire breather Trap Preview_Frame_35
+    - name: Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 3d7bcb6a09518aa45939a94838fa68be
-    - name: Fire breather Trap Preview_Frame_36
+    - name: Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0bb425460ab3b7b4fb3b2700863b45ca
-    - name: Fire breather Trap Preview_Frame_37
+    - name: Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 502724402b9743a4f99523062f7df137
-    - name: Fire breather Trap Preview_Frame_38
+    - name: Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 40d85df71dab1c9458d11f655f44c8d4
-    - name: Fire breather Trap Preview_Frame_39
+    - name: Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d563509820447cd42bc71b383f8233c4
-    - name: Fire breather Trap Preview_Frame_40
+    - name: Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: c94a2865e4402eb46a6043fa4d5d6f46
-    - name: Fire breather Trap Preview_Frame_41
+    - name: Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a898a98f48b4f1141be70705b8a0f68a
-    - name: Fire breather Trap Preview_Frame_42
+    - name: Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 9bd5d8a6a544eeb43bdbe80a5a41aa18
-    - name: Fire breather Trap Preview_Frame_43
+    - name: Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: db58d5fd4b43a3741a0ea3cac7da9e95
-    - name: Fire breather Trap Preview_Frame_44
+    - name: Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 7ec3a93e0ca6b2c4181a2a2a342323be
-    - name: Fire breather Trap Preview_Frame_45
+    - name: Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 555fc01ec591f324f85ca35d5754a664
-    - name: Fire breather Trap Preview_Frame_46
+    - name: Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 12db79e8333da5f42b27a03e077cf610
-    - name: Fire breather Trap Preview_Frame_47
+    - name: Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4720e732eac8a414d8959237dbb0253e
-    - name: Fire breather Trap Preview_Frame_48
+    - name: Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 138b412d52a82ed4788a564ff6c64033
-    - name: Fire breather Trap Preview_Frame_49
+    - name: Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2c24c938ecdc2b849a6ea95a4933a31f
-    - name: Fire breather Trap Preview_Frame_50
+    - name: Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 703ccde4db15ca74f9f005ced46cd327
-    - name: Fire breather Trap Preview_Frame_51
+    - name: Frame_51
       frameIndex: 51
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 3973c6487a728da42aa30aa9e1c3ba75
-    - name: Fire breather Trap Preview_Frame_52
+    - name: Frame_52
       frameIndex: 52
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 05ef2e1168fe7244bb4b4c562a3b0d78
-    - name: Fire breather Trap Preview_Frame_53
+    - name: Frame_53
       frameIndex: 53
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0727b798de4e44047a289ebfcee62d30
-    - name: Fire breather Trap Preview_Frame_54
+    - name: Frame_54
       frameIndex: 54
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4214902a38e81a44cb68698b86addd4a
-    - name: Fire breather Trap Preview_Frame_55
+    - name: Frame_55
       frameIndex: 55
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: f16e3448c14843f43865f6b86986eee0
-    - name: Fire breather Trap Preview_Frame_56
+    - name: Frame_56
       frameIndex: 56
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 5b1b923abcd70554baddc6553dc54677
-    - name: Fire breather Trap Preview_Frame_57
+    - name: Frame_57
       frameIndex: 57
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 02c6479eefe19184e906f52cc7a7dfbb
-    - name: Fire breather Trap Preview_Frame_58
+    - name: Frame_58
       frameIndex: 58
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: b4f0db69b35e18e409305fe798b61700
-    - name: Fire breather Trap Preview_Frame_59
+    - name: Frame_59
       frameIndex: 59
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 7148e009928055c46910268d27b05e9c
-    - name: Fire breather Trap Preview_Frame_60
+    - name: Frame_60
       frameIndex: 60
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: cbc400940bc4731488413c1f977c94f5
-    - name: Fire breather Trap Preview_Frame_61
+    - name: Frame_61
       frameIndex: 61
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 1aa45ab7087c2fa4c8431dca2853495d
-    - name: Fire breather Trap Preview_Frame_62
+    - name: Frame_62
       frameIndex: 62
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 6d1e83a5e8361fe40980da64f40d38a6
-    - name: Fire breather Trap Preview_Frame_63
+    - name: Frame_63
       frameIndex: 63
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 038b1494dbcf3ff4e81784fc7fea33b7
-    - name: Fire breather Trap Preview_Frame_64
+    - name: Frame_64
       frameIndex: 64
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d5690ba0935e14c4ca4e8fbf8e733b31
-    - name: Fire breather Trap Preview_Frame_65
+    - name: Frame_65
       frameIndex: 65
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 1b6c4fd900c034d47943f9a639d5237f
-    - name: Fire breather Trap Preview_Frame_66
+    - name: Frame_66
       frameIndex: 66
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 19c225fa5065e9446992eff90e78177b
-    - name: Fire breather Trap Preview_Frame_67
+    - name: Frame_67
       frameIndex: 67
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a03676ecf03d3fe4bbeda84d93e6de57
-    - name: Fire breather Trap Preview_Frame_68
+    - name: Frame_68
       frameIndex: 68
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a917cf669e43a094abfab7ce630db668
-    - name: Fire breather Trap Preview_Frame_69
+    - name: Frame_69
       frameIndex: 69
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: cd978f9df6ac96d4598069e6106f5049
-    - name: Fire breather Trap Preview_Frame_70
+    - name: Frame_70
       frameIndex: 70
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4dc914cdbb4e7034fab5fbb8c74cfa5e
-    - name: Fire breather Trap Preview_Frame_71
+    - name: Frame_71
       frameIndex: 71
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: dab9159c6fe29434d94e3a29c9ddd4d4
-    - name: Fire breather Trap Preview_Frame_72
+    - name: Frame_72
       frameIndex: 72
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 772d0b8e5d959224bb845e5c226f9e5a
-    - name: Fire breather Trap Preview_Frame_73
+    - name: Frame_73
       frameIndex: 73
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 86acc1fd5f834cb4a835b494d8a01c7c
-    - name: Fire breather Trap Preview_Frame_74
+    - name: Frame_74
       frameIndex: 74
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 27feac2928c5f1b41a58bbd39ec37dd4
-    - name: Fire breather Trap Preview_Frame_75
+    - name: Frame_75
       frameIndex: 75
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2bb32e8281bb1b047b1ef3859d0d3a1a
-    - name: Fire breather Trap Preview_Frame_76
+    - name: Frame_76
       frameIndex: 76
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d5494859ae76a6e438660d4c56c613ec
-    - name: Fire breather Trap Preview_Frame_77
+    - name: Frame_77
       frameIndex: 77
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 5c3fc88f29c19dc42a5911d07e421364
-    - name: Fire breather Trap Preview_Frame_78
+    - name: Frame_78
       frameIndex: 78
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: e5ecb65523e9d1c4a8883ad75daad626
-    - name: Fire breather Trap Preview_Frame_79
+    - name: Frame_79
       frameIndex: 79
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8194be6282d258440b70d5c3bd195f60
-    - name: Fire breather Trap Preview_Frame_80
+    - name: Frame_80
       frameIndex: 80
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 15d6b62f2c176234796c4ddd13c71e95
-    - name: Fire breather Trap Preview_Frame_81
+    - name: Frame_81
       frameIndex: 81
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 301eca7a447a23d479d29378fc98860f
-    - name: Fire breather Trap Preview_Frame_82
+    - name: Frame_82
       frameIndex: 82
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 9ee3e1ea0c4ed054eba13a0225150015
-    - name: Fire breather Trap Preview_Frame_83
+    - name: Frame_83
       frameIndex: 83
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 5c7eede965438b149a40d8c8fe2024ff
-    - name: Fire breather Trap Preview_Frame_84
+    - name: Frame_84
       frameIndex: 84
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 30799c05c2644c94a9ff71ccf53f6e17
-    - name: Fire breather Trap Preview_Frame_85
+    - name: Frame_85
       frameIndex: 85
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 88dcbd329d0d9dd4dab64213af26a171
-    - name: Fire breather Trap Preview_Frame_86
+    - name: Frame_86
       frameIndex: 86
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 244871ac3b3f85149b84207c9b325308
-    - name: Fire breather Trap Preview_Frame_87
+    - name: Frame_87
       frameIndex: 87
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0d40777d3211d8144ad0975c0803e25c
-    - name: Fire breather Trap Preview_Frame_88
+    - name: Frame_88
       frameIndex: 88
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2d7aa65f57f8661448019d10519f61ba
-    - name: Fire breather Trap Preview_Frame_89
+    - name: Frame_89
       frameIndex: 89
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: b25179607a1bbee469d56a7789ccd5f9
-    - name: Fire breather Trap Preview_Frame_90
+    - name: Frame_90
       frameIndex: 90
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 9c22f4be9c8573743aeca519e06fafcf
-    - name: Fire breather Trap Preview_Frame_91
+    - name: Frame_91
       frameIndex: 91
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 776a1d4be5311324793af2ee232ec1bb
-    - name: Fire breather Trap Preview_Frame_92
+    - name: Frame_92
       frameIndex: 92
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0c8cede421eb0244793e772b3af9e1db
-    - name: Fire breather Trap Preview_Frame_93
+    - name: Frame_93
       frameIndex: 93
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 7fb2cb28bb9aa91478d6828a494ce389
-    - name: Fire breather Trap Preview_Frame_94
+    - name: Frame_94
       frameIndex: 94
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 7be9227422c631a4c969853a4310aa38
-    - name: Fire breather Trap Preview_Frame_95
+    - name: Frame_95
       frameIndex: 95
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: e53f5f95e46caed4db90bad14e666c58
-    - name: Fire breather Trap Preview_Frame_96
+    - name: Frame_96
       frameIndex: 96
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 63f61b5f16ea761498e1b6a309b2a4cb
-    - name: Fire breather Trap Preview_Frame_97
+    - name: Frame_97
       frameIndex: 97
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 63f5090b5741bdd45accca9947d7d84a
-    - name: Fire breather Trap Preview_Frame_98
+    - name: Frame_98
       frameIndex: 98
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 96c4ec896282fd244baf9b3d528dcff1
-    - name: Fire breather Trap Preview_Frame_99
+    - name: Frame_99
       frameIndex: 99
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: bac07d0f83fd96646ab4845d87c93c41
-    - name: Fire breather Trap Preview_Frame_100
+    - name: Frame_100
       frameIndex: 100
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 3618a9bce00c300468819bd9385278a4
-    - name: Fire breather Trap Preview_Frame_101
+    - name: Frame_101
       frameIndex: 101
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: edbab7c4142a9f84a8f96212295d9389
-    - name: Fire breather Trap Preview_Frame_102
+    - name: Frame_102
       frameIndex: 102
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 307f3b3a0274f454388766d654400078
-    - name: Fire breather Trap Preview_Frame_103
+    - name: Frame_103
       frameIndex: 103
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4af8aac84d62d304eb9a585bff280c68
-    - name: Fire breather Trap Preview_Frame_104
+    - name: Frame_104
       frameIndex: 104
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 17bd18e01db10ed4ca664fdf07713ddf
-    - name: Fire breather Trap Preview_Frame_105
+    - name: Frame_105
       frameIndex: 105
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 164c4655a838f584bbb7b6da8f58d2f7
-    - name: Fire breather Trap Preview_Frame_106
+    - name: Frame_106
       frameIndex: 106
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: fdefbfafeb159684ca8cf80d71702063
-    - name: Fire breather Trap Preview_Frame_107
+    - name: Frame_107
       frameIndex: 107
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: e286260377441d448903bd1f45675b78
-    - name: Fire breather Trap Preview_Frame_108
+    - name: Frame_108
       frameIndex: 108
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 98e3cd68ad964a743972f7df71884a04
-    - name: Fire breather Trap Preview_Frame_109
+    - name: Frame_109
       frameIndex: 109
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d3304b214670edd4fa8c7c8cc83be2db
-    - name: Fire breather Trap Preview_Frame_110
+    - name: Frame_110
       frameIndex: 110
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 56a358342261a78408cd5601081cc308
-    - name: Fire breather Trap Preview_Frame_111
+    - name: Frame_111
       frameIndex: 111
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 80b46225c09ccda46902a0e2f9601f67
-    - name: Fire breather Trap Preview_Frame_112
+    - name: Frame_112
       frameIndex: 112
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: cd6f5703aa4b4ab4f99496a096697c12
-    - name: Fire breather Trap Preview_Frame_113
+    - name: Frame_113
       frameIndex: 113
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8902d39d59a1d4240995aaab78df7dfc
-    - name: Fire breather Trap Preview_Frame_114
+    - name: Frame_114
       frameIndex: 114
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 52aa4f7328d561743b6c08f5d8c1a13c
-    - name: Fire breather Trap Preview_Frame_115
+    - name: Frame_115
       frameIndex: 115
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: f53126dc917e7fc438b3022a65c13884
-    - name: Fire breather Trap Preview_Frame_116
+    - name: Frame_116
       frameIndex: 116
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 129dc4b1fc23294448de72d0d3cb7c59
-    - name: Fire breather Trap Preview_Frame_117
+    - name: Frame_117
       frameIndex: 117
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: bc2e17de4a13801419d234573b80d7fa
-    - name: Fire breather Trap Preview_Frame_118
+    - name: Frame_118
       frameIndex: 118
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4260593c5934305408633fca8ab0dc4a
-    - name: Fire breather Trap Preview_Frame_119
+    - name: Frame_119
       frameIndex: 119
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 35030c52465e700459d5acafa6330b61
-    - name: Fire breather Trap Preview_Frame_120
+    - name: Frame_120
       frameIndex: 120
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 75e3902da3608b647af81220784916eb
-    - name: Fire breather Trap Preview_Frame_121
+    - name: Frame_121
       frameIndex: 121
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2fd07ca1ab0dea2449a807147f1a985b
-    - name: Fire breather Trap Preview_Frame_122
+    - name: Frame_122
       frameIndex: 122
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: cda26f2616af78844917129c68b9cd39
-    - name: Fire breather Trap Preview_Frame_123
+    - name: Frame_123
       frameIndex: 123
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 63a869207ba47b54b8a13917f2ca6dd5
-    - name: Fire breather Trap Preview_Frame_124
+    - name: Frame_124
       frameIndex: 124
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: c93a6c6bdb31f7948ac098beb116d637
-    - name: Fire breather Trap Preview_Frame_125
+    - name: Frame_125
       frameIndex: 125
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 1be06d33eb389a74c9e78b2c0ae8b19f
-    - name: Fire breather Trap Preview_Frame_126
+    - name: Frame_126
       frameIndex: 126
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 80d564e54759e9147a5c29d36ca7c3cf
-    - name: Fire breather Trap Preview_Frame_127
+    - name: Frame_127
       frameIndex: 127
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 13fee535174ebba4aa6491f1a2b0c81d
-    - name: Fire breather Trap Preview_Frame_128
+    - name: Frame_128
       frameIndex: 128
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8812884ae0ec98c4dbe336155b87ab80
-    - name: Fire breather Trap Preview_Frame_129
+    - name: Frame_129
       frameIndex: 129
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8b8fcf5d2661eb545bdb2aa33c546d60
-    - name: Fire breather Trap Preview_Frame_130
+    - name: Frame_130
       frameIndex: 130
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: e38032c346145f3439d21730b5010e49
-    - name: Fire breather Trap Preview_Frame_131
+    - name: Frame_131
       frameIndex: 131
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 444ebe1572216694f867923f165ca6ad
-    - name: Fire breather Trap Preview_Frame_132
+    - name: Frame_132
       frameIndex: 132
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0344a39b2edbfd5479393af5ef983cb9
-    - name: Fire breather Trap Preview_Frame_133
+    - name: Frame_133
       frameIndex: 133
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 6e62cfec21c60664495008ef9b1af8fd
-    - name: Fire breather Trap Preview_Frame_134
+    - name: Frame_134
       frameIndex: 134
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8639406ea88ccf14587dd90e27ef591e
-    - name: Fire breather Trap Preview_Frame_135
+    - name: Frame_135
       frameIndex: 135
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 362f57aa5c78de24381064930c3b6efc
-    - name: Fire breather Trap Preview_Frame_136
+    - name: Frame_136
       frameIndex: 136
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2fcbb032e7822f34c8ab6add53cbad7d
-    - name: Fire breather Trap Preview_Frame_137
+    - name: Frame_137
       frameIndex: 137
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 377bb3bb8825cea4eb38e05b478bc605
-    - name: Fire breather Trap Preview_Frame_138
+    - name: Frame_138
       frameIndex: 138
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 6f4acf6fea4d9254b86a892dd3df7d38
-    - name: Fire breather Trap Preview_Frame_139
+    - name: Frame_139
       frameIndex: 139
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: eb55db3dbf813c547a9df8c18617251e
-    - name: Fire breather Trap Preview_Frame_140
+    - name: Frame_140
       frameIndex: 140
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: bdf3599666f50f944bc58f85bab84d04
-    - name: Fire breather Trap Preview_Frame_141
+    - name: Frame_141
       frameIndex: 141
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: e4bd44d298d1c6d49a6d8bf790e9a502
-    - name: Fire breather Trap Preview_Frame_142
+    - name: Frame_142
       frameIndex: 142
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 50b61b8bb881da2448df33cfa77ba3c1
-    - name: Fire breather Trap Preview_Frame_143
+    - name: Frame_143
       frameIndex: 143
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 2ff1d7e9199f28d498a07df17170a7bd
-    - name: Fire breather Trap Preview_Frame_144
+    - name: Frame_144
       frameIndex: 144
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: ebe14f575a71bc549ab6c8d1971437c9
-    - name: Fire breather Trap Preview_Frame_145
+    - name: Frame_145
       frameIndex: 145
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8faa4cb14b99d144e858fe27e64dff87
-    - name: Fire breather Trap Preview_Frame_146
+    - name: Frame_146
       frameIndex: 146
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 304838f1941b91c4abb8c14fba6d9ab5
-    - name: Fire breather Trap Preview_Frame_147
+    - name: Frame_147
       frameIndex: 147
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 192120c5415ec0347b97314f638fba57
-    - name: Fire breather Trap Preview_Frame_148
+    - name: Frame_148
       frameIndex: 148
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 3f69f401dad9e0944af8755193eb3ae1
-    - name: Fire breather Trap Preview_Frame_149
+    - name: Frame_149
       frameIndex: 149
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 21dd990288f7ca14c9b30d0d30628e0c
-    - name: Fire breather Trap Preview_Frame_150
+    - name: Frame_150
       frameIndex: 150
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: d952423d564d98246b6a3b11c75d471f
-    - name: Fire breather Trap Preview_Frame_151
+    - name: Frame_151
       frameIndex: 151
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a3904a5114059db4b847d254b1678b70
-    - name: Fire breather Trap Preview_Frame_152
+    - name: Frame_152
       frameIndex: 152
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 6ea1a98a3c0694243ab22898a4f42b46
-    - name: Fire breather Trap Preview_Frame_153
+    - name: Frame_153
       frameIndex: 153
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a337a524a00a1bc428e5c5b436671775
-    - name: Fire breather Trap Preview_Frame_154
+    - name: Frame_154
       frameIndex: 154
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: c06350bce3867a44f8b67b6b6370857e
-    - name: Fire breather Trap Preview_Frame_155
+    - name: Frame_155
       frameIndex: 155
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -4499,6 +4657,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 160, y: 96}

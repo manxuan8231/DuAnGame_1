@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -408,112 +410,126 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Ceiling Trap - Level 1_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 2b7926319a87b964e9d0ca1f8217612a
-    - name: Ceiling Trap - Level 1_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 7c241b286022291478c0a0a1a0bcd372
-    - name: Ceiling Trap - Level 1_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 3c03d6920524cd64db88f0925affbd91
-    - name: Ceiling Trap - Level 1_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 680a9ca246f15194389e4b0ad0b3a0e5
-    - name: Ceiling Trap - Level 1_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 14f41a5fcb249da49bc887381d7a6f4f
-    - name: Ceiling Trap - Level 1_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 72548b5f312a131459e39024c21be856
-    - name: Ceiling Trap - Level 1_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 8c0eeeb1512579d41ba490534c8da2c8
-    - name: Ceiling Trap - Level 1_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 140cfcc3e2439fc45b24f09bb247edb8
-    - name: Ceiling Trap - Level 1_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: ea7e317516dea0341a5f90b6185183d4
-    - name: Ceiling Trap - Level 1_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 9fd7aa92889c0964f8185982df09f64c
-    - name: Ceiling Trap - Level 1_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: da150eeb7a29dc7479a06ee7d6f22377
-    - name: Ceiling Trap - Level 1_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: 4f59cf09f0ff40744b8cdbed3b02a2ab
-    - name: Ceiling Trap - Level 1_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 64
         height: 64
       spriteId: e0749393ddeb6de42ae7a75ec53c67fc
-    - name: Ceiling Trap - Level 1_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -523,6 +539,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}

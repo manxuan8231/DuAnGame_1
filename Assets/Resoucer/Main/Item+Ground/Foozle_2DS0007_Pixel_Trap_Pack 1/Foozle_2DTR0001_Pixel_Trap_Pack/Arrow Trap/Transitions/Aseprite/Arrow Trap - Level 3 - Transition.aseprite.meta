@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -388,104 +390,117 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Arrow Trap - Level 3 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 19cdfda51be494342be9f7a22a083493
-    - name: Arrow Trap - Level 3 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 8c4dde68c7c60e141b46f27ec4c2f5e5
-    - name: Arrow Trap - Level 3 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 41f0bbe2db0e04847925d16ff54ef972
-    - name: Arrow Trap - Level 3 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: e2126d9ca29990841be5c8793f2b5a00
-    - name: Arrow Trap - Level 3 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 295cbfcfeb6729d449abcf6d42a73cb1
-    - name: Arrow Trap - Level 3 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 1f7c02ad722c5b9409691f1ed53857c8
-    - name: Arrow Trap - Level 3 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: ee0011eab4829b84ba9fd1afd94dd1d1
-    - name: Arrow Trap - Level 3 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 857d1bed0af963742a5dea2b63f436dd
-    - name: Arrow Trap - Level 3 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: 91665bbb776e5bf4baa5965adae33630
-    - name: Arrow Trap - Level 3 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: c4cf1f99012b95e40b0e4f39f096c385
-    - name: Arrow Trap - Level 3 - Transition_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: db12eb4b4b55f3445b211f0aa15b231c
-    - name: Arrow Trap - Level 3 - Transition_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 128
         height: 64
       spriteId: b89f7d2641c3f4c4a967aa64eca5d6a2
-    - name: Arrow Trap - Level 3 - Transition_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -495,6 +510,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 128, y: 64}

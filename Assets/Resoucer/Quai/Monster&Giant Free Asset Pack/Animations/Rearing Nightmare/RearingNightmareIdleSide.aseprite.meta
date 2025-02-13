@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -288,64 +290,72 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: RearingNightmareIdleSide_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 31
         height: 32
       spriteId: e8559264dd5f57242a4be82960a0ed33
-    - name: RearingNightmareIdleSide_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 30
         height: 32
       spriteId: 891a43e59a0ba66468ce60a0b18aba6a
-    - name: RearingNightmareIdleSide_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 30
         height: 30
       spriteId: 9bbb56173b437bf49a19737a2e8f64b6
-    - name: RearingNightmareIdleSide_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 30
         height: 30
       spriteId: d091c72716354fd4f807281222f31b9b
-    - name: RearingNightmareIdleSide_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 31
         height: 32
       spriteId: d44d7f4d62a52e1478fea85373067d32
-    - name: RearingNightmareIdleSide_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 30
         height: 32
       spriteId: ed9077c24a49af348a32499bc8b8ed70
-    - name: RearingNightmareIdleSide_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 30
         height: 31
       spriteId: 6bd5bd870c7fa5947a387ad818c34799
-    - name: RearingNightmareIdleSide_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -355,6 +365,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 32}

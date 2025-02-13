@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -5048,1968 +5050,2214 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Toxic Trap Preview_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a1489e9f9d5f0fa4e88603658c239b8e
-    - name: Toxic Trap Preview_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4e14a497f2623bc4fb31f11ad24e739a
-    - name: Toxic Trap Preview_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4ded440b434d8394d803e34a8923831f
-    - name: Toxic Trap Preview_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: f6b7584aed14eef4baf1a83331779c57
-    - name: Toxic Trap Preview_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7b21cd1e82ac7e04fb4dcaa11980aebd
-    - name: Toxic Trap Preview_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 238d78338336e0b46b8681f07269d05e
-    - name: Toxic Trap Preview_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1cf1420cc3d63c945856a86fedf38d07
-    - name: Toxic Trap Preview_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8e5667de4f4f0ea47a8b2195d036cc75
-    - name: Toxic Trap Preview_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2bca65d06097c274aabdd48b5b511797
-    - name: Toxic Trap Preview_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ff5a0a3c46882854eab5d590b9b938d4
-    - name: Toxic Trap Preview_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7d0fcc74528e6c54d88c1a6dd6b81f7d
-    - name: Toxic Trap Preview_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5378f1b5b484b594eb59bcee657f9382
-    - name: Toxic Trap Preview_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: cf9eca59b0aae47499c3ddc3bbc77997
-    - name: Toxic Trap Preview_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8bc8cd1f0c710a345bb90c7ff0395086
-    - name: Toxic Trap Preview_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 975017f61b6966747b74f0a9662a7001
-    - name: Toxic Trap Preview_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3b761f510e592044091ea9dd9670b471
-    - name: Toxic Trap Preview_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a8055805f1fbd614792c9ca17205dd55
-    - name: Toxic Trap Preview_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 526081899570afa4bab0f9f7bf39186c
-    - name: Toxic Trap Preview_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e4401ba6f169588478d8d641928926ae
-    - name: Toxic Trap Preview_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e2327bc251d9a3f4a85258a18a985f5d
-    - name: Toxic Trap Preview_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 66fed919a9b352840bc615a5ff4b5021
-    - name: Toxic Trap Preview_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b7e05dbcc38584f4ea48c20019ae3c7c
-    - name: Toxic Trap Preview_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 54e5b8a12a1c4b84396a719a37b18171
-    - name: Toxic Trap Preview_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 62078e049fffc4443b8c548445bfcb28
-    - name: Toxic Trap Preview_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2f36f1c9ec4978542ab81abd7526fb48
-    - name: Toxic Trap Preview_Frame_25
+    - name: Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c70d91bfe096e754c9f0758f88698394
-    - name: Toxic Trap Preview_Frame_26
+    - name: Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 55ed145dbb8e00b4c993993ad2b623aa
-    - name: Toxic Trap Preview_Frame_27
+    - name: Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d5511ea6b438c404f8e5bac7f9b62bb6
-    - name: Toxic Trap Preview_Frame_28
+    - name: Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bee1b6f2cb2e870408cedaa4ca72236d
-    - name: Toxic Trap Preview_Frame_29
+    - name: Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2135210c7aab4f644a21a80dd36c6109
-    - name: Toxic Trap Preview_Frame_30
+    - name: Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c03c125de40b7fb4a9c4fa66e840967e
-    - name: Toxic Trap Preview_Frame_31
+    - name: Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a605a1e7f555b25468191fe74a7c5f8d
-    - name: Toxic Trap Preview_Frame_32
+    - name: Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 65c05bd78e22b7f4e96b0098832a256c
-    - name: Toxic Trap Preview_Frame_33
+    - name: Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8e9b8355318c6164bb5a62dee7c35652
-    - name: Toxic Trap Preview_Frame_34
+    - name: Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4634f89291b76a2479bf18fc10bc81c2
-    - name: Toxic Trap Preview_Frame_35
+    - name: Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4ea82f93e3a0169438368fbb5188dee9
-    - name: Toxic Trap Preview_Frame_36
+    - name: Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e431a7eb13166a04fb765010273725c4
-    - name: Toxic Trap Preview_Frame_37
+    - name: Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 471f421c1017259448e861678d600791
-    - name: Toxic Trap Preview_Frame_38
+    - name: Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b54042ab393ebe14cbf096a4cd03eb55
-    - name: Toxic Trap Preview_Frame_39
+    - name: Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3e79e19186c5b8045ae2ce426da1d09d
-    - name: Toxic Trap Preview_Frame_40
+    - name: Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e52da18783599034c8658ac5aad2d37a
-    - name: Toxic Trap Preview_Frame_41
+    - name: Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5f6fcea87c365ed419d7380eacffc58b
-    - name: Toxic Trap Preview_Frame_42
+    - name: Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c0cba1d513b19c24b804a864f367946a
-    - name: Toxic Trap Preview_Frame_43
+    - name: Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3eb09911b1635ee46994201de7e8a810
-    - name: Toxic Trap Preview_Frame_44
+    - name: Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bc413efebd35b9149863dd2526f3ebf3
-    - name: Toxic Trap Preview_Frame_45
+    - name: Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7c258eafa3ce1cd4db73f47199ae2f43
-    - name: Toxic Trap Preview_Frame_46
+    - name: Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4a6515ecae457f2408da50f5f00d4eb6
-    - name: Toxic Trap Preview_Frame_47
+    - name: Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 6d58e8bb276c27f488f07d0287a45c98
-    - name: Toxic Trap Preview_Frame_48
+    - name: Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 38dd7678f72d768449919f3198f8dd0e
-    - name: Toxic Trap Preview_Frame_49
+    - name: Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5bd5cbfe88c52904fb2689a74e3b3887
-    - name: Toxic Trap Preview_Frame_50
+    - name: Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 12001459ce789fd428b6b602f213f41b
-    - name: Toxic Trap Preview_Frame_51
+    - name: Frame_51
       frameIndex: 51
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 65fdb5daf5aa5924f827e64ca1446307
-    - name: Toxic Trap Preview_Frame_52
+    - name: Frame_52
       frameIndex: 52
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 28ec1f14388bcb1468aea327d00a2195
-    - name: Toxic Trap Preview_Frame_53
+    - name: Frame_53
       frameIndex: 53
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 61865387a3e2c7643b120fcc28d8a831
-    - name: Toxic Trap Preview_Frame_54
+    - name: Frame_54
       frameIndex: 54
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: fe84b66711c14f8458c6d8387516e0b3
-    - name: Toxic Trap Preview_Frame_55
+    - name: Frame_55
       frameIndex: 55
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 93ce34f27e0bd4d42a39f17b0cd284f9
-    - name: Toxic Trap Preview_Frame_56
+    - name: Frame_56
       frameIndex: 56
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 46f31c2b071a2684788d8e5dbc7f7abd
-    - name: Toxic Trap Preview_Frame_57
+    - name: Frame_57
       frameIndex: 57
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2909e4637ff4c8d44b11f847bff988ac
-    - name: Toxic Trap Preview_Frame_58
+    - name: Frame_58
       frameIndex: 58
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3889efa254732f141a6fe82739622bd9
-    - name: Toxic Trap Preview_Frame_59
+    - name: Frame_59
       frameIndex: 59
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4872343903537914bb7337c8cee3c4d0
-    - name: Toxic Trap Preview_Frame_60
+    - name: Frame_60
       frameIndex: 60
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 83517a04216ab74468a118c1329f13ff
-    - name: Toxic Trap Preview_Frame_61
+    - name: Frame_61
       frameIndex: 61
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4a4eca27993ef7649a57f645f474e2e4
-    - name: Toxic Trap Preview_Frame_62
+    - name: Frame_62
       frameIndex: 62
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1735fde838964bd4bab5d9df7de7bd61
-    - name: Toxic Trap Preview_Frame_63
+    - name: Frame_63
       frameIndex: 63
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2a6ee30755892ab48b4b537eff9deb92
-    - name: Toxic Trap Preview_Frame_64
+    - name: Frame_64
       frameIndex: 64
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d74206aaaffdbc644aaa87a6a5466cd9
-    - name: Toxic Trap Preview_Frame_65
+    - name: Frame_65
       frameIndex: 65
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 21d4eb0b2768bd443a04e3e664add7b9
-    - name: Toxic Trap Preview_Frame_66
+    - name: Frame_66
       frameIndex: 66
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0ca75a8b46102ac44b0136d7b62e7f89
-    - name: Toxic Trap Preview_Frame_67
+    - name: Frame_67
       frameIndex: 67
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 813df35e14ae17b46a93a00e8589ea46
-    - name: Toxic Trap Preview_Frame_68
+    - name: Frame_68
       frameIndex: 68
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b78f292ec4d860e499c54bc8c6962ff0
-    - name: Toxic Trap Preview_Frame_69
+    - name: Frame_69
       frameIndex: 69
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3d869d229a6239c4198f59b61b03ce8e
-    - name: Toxic Trap Preview_Frame_70
+    - name: Frame_70
       frameIndex: 70
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ff0b4e0aee42e6c4b87e43f3737f0293
-    - name: Toxic Trap Preview_Frame_71
+    - name: Frame_71
       frameIndex: 71
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e8cd05fd32330da42945aa0cbae80e76
-    - name: Toxic Trap Preview_Frame_72
+    - name: Frame_72
       frameIndex: 72
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: aa6ebc6afa6982047bcc1afcdfe1d8ef
-    - name: Toxic Trap Preview_Frame_73
+    - name: Frame_73
       frameIndex: 73
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 95c00786831ec6e4aae9c2eaf93bde6d
-    - name: Toxic Trap Preview_Frame_74
+    - name: Frame_74
       frameIndex: 74
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 62157e3816ede5547857b8fe7b5ed79e
-    - name: Toxic Trap Preview_Frame_75
+    - name: Frame_75
       frameIndex: 75
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c50fba2238daa64478a1db490b2a38d5
-    - name: Toxic Trap Preview_Frame_76
+    - name: Frame_76
       frameIndex: 76
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9b232da96a1d73d499f5a763cb634658
-    - name: Toxic Trap Preview_Frame_77
+    - name: Frame_77
       frameIndex: 77
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4a2a031652800a2419f2ea2350023a8f
-    - name: Toxic Trap Preview_Frame_78
+    - name: Frame_78
       frameIndex: 78
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 44eeeb0b8cc8b9e419459c55ebadfeff
-    - name: Toxic Trap Preview_Frame_79
+    - name: Frame_79
       frameIndex: 79
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 25e4b1d3c93343f48bbe06c6d09da5ea
-    - name: Toxic Trap Preview_Frame_80
+    - name: Frame_80
       frameIndex: 80
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4311038b0ca2af441904230bb2a046a8
-    - name: Toxic Trap Preview_Frame_81
+    - name: Frame_81
       frameIndex: 81
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1befad62ced3ea247b4abc88e3b1ce6d
-    - name: Toxic Trap Preview_Frame_82
+    - name: Frame_82
       frameIndex: 82
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 055906c53bba1fe48aea7f7bb5edfa1c
-    - name: Toxic Trap Preview_Frame_83
+    - name: Frame_83
       frameIndex: 83
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9dc5f5ff627a1e84485da353ff1b9b10
-    - name: Toxic Trap Preview_Frame_84
+    - name: Frame_84
       frameIndex: 84
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 28ba46507b0e0a7458d3479a9330a391
-    - name: Toxic Trap Preview_Frame_85
+    - name: Frame_85
       frameIndex: 85
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9b210962116a47245be2870ca40434a3
-    - name: Toxic Trap Preview_Frame_86
+    - name: Frame_86
       frameIndex: 86
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e64aff440605bb148b41c8fb917c7667
-    - name: Toxic Trap Preview_Frame_87
+    - name: Frame_87
       frameIndex: 87
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: cb23444e123728a4db23fe6d72571674
-    - name: Toxic Trap Preview_Frame_88
+    - name: Frame_88
       frameIndex: 88
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 10c827e1df927f04b97af088c179a97d
-    - name: Toxic Trap Preview_Frame_89
+    - name: Frame_89
       frameIndex: 89
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0f786f811454cf1449841cdb856d56b0
-    - name: Toxic Trap Preview_Frame_90
+    - name: Frame_90
       frameIndex: 90
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d5cc2356f0c923640ad53cdf4b36732a
-    - name: Toxic Trap Preview_Frame_91
+    - name: Frame_91
       frameIndex: 91
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: fae4789ed98441b4381a573fc82949fd
-    - name: Toxic Trap Preview_Frame_92
+    - name: Frame_92
       frameIndex: 92
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0cc632b681470ae40b87e97d3bbdc383
-    - name: Toxic Trap Preview_Frame_93
+    - name: Frame_93
       frameIndex: 93
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a6761eb4a86b07d4db65f118caac1792
-    - name: Toxic Trap Preview_Frame_94
+    - name: Frame_94
       frameIndex: 94
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 00f2782740da7f64cb0e4a010911a531
-    - name: Toxic Trap Preview_Frame_95
+    - name: Frame_95
       frameIndex: 95
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 19d2919a7d95cdb4c8fecc42c924f70f
-    - name: Toxic Trap Preview_Frame_96
+    - name: Frame_96
       frameIndex: 96
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 692c5a5a2a4e3c44da1febcd26b94273
-    - name: Toxic Trap Preview_Frame_97
+    - name: Frame_97
       frameIndex: 97
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 398c11d4a941ae34c922abbaf587f32c
-    - name: Toxic Trap Preview_Frame_98
+    - name: Frame_98
       frameIndex: 98
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 35ca350568e6bfa45b6041d81d01b515
-    - name: Toxic Trap Preview_Frame_99
+    - name: Frame_99
       frameIndex: 99
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: fbca943e93938ae4f83ae923a3aa0e75
-    - name: Toxic Trap Preview_Frame_100
+    - name: Frame_100
       frameIndex: 100
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7996cf0ecef4cb14ab44852e3535a86f
-    - name: Toxic Trap Preview_Frame_101
+    - name: Frame_101
       frameIndex: 101
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 591e9c6b0a73fbf488a8d4bbe79f5c36
-    - name: Toxic Trap Preview_Frame_102
+    - name: Frame_102
       frameIndex: 102
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 52a4a255507ab794aa9b7addf274d017
-    - name: Toxic Trap Preview_Frame_103
+    - name: Frame_103
       frameIndex: 103
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d41df1bb5bed6f6438ef00ac9947fb5b
-    - name: Toxic Trap Preview_Frame_104
+    - name: Frame_104
       frameIndex: 104
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a17306bba4c18664fb2bf2f02ded22fc
-    - name: Toxic Trap Preview_Frame_105
+    - name: Frame_105
       frameIndex: 105
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2ad505821861c394f886b70a904d0e90
-    - name: Toxic Trap Preview_Frame_106
+    - name: Frame_106
       frameIndex: 106
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bd81e7ba4d453914e8d6f3aa96410e7a
-    - name: Toxic Trap Preview_Frame_107
+    - name: Frame_107
       frameIndex: 107
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9cd03d9e531b9df43865fae166b3d6a4
-    - name: Toxic Trap Preview_Frame_108
+    - name: Frame_108
       frameIndex: 108
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b966ab72fccb9894a96d619d1c5ef9e1
-    - name: Toxic Trap Preview_Frame_109
+    - name: Frame_109
       frameIndex: 109
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 30395ece336464045900f9bfb3717faf
-    - name: Toxic Trap Preview_Frame_110
+    - name: Frame_110
       frameIndex: 110
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ec06aa7bae8d97b49bfea36d8f679654
-    - name: Toxic Trap Preview_Frame_111
+    - name: Frame_111
       frameIndex: 111
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2184ed17b78326b438de36b079f4278a
-    - name: Toxic Trap Preview_Frame_112
+    - name: Frame_112
       frameIndex: 112
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e0e3b5ed5f7ee5741badb80194049737
-    - name: Toxic Trap Preview_Frame_113
+    - name: Frame_113
       frameIndex: 113
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7193c0787943fd64f8ebac383c256ae6
-    - name: Toxic Trap Preview_Frame_114
+    - name: Frame_114
       frameIndex: 114
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: cc6949dfb01be3c468703598a18b21d8
-    - name: Toxic Trap Preview_Frame_115
+    - name: Frame_115
       frameIndex: 115
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 56115c12a6d27534e960388883cb9b6b
-    - name: Toxic Trap Preview_Frame_116
+    - name: Frame_116
       frameIndex: 116
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 91aa986cb22b6a4429848218ae8fc307
-    - name: Toxic Trap Preview_Frame_117
+    - name: Frame_117
       frameIndex: 117
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 20985097ac8e5a64db0ab94c24b9a20b
-    - name: Toxic Trap Preview_Frame_118
+    - name: Frame_118
       frameIndex: 118
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5c309d34250410e42a5affb0d57452a4
-    - name: Toxic Trap Preview_Frame_119
+    - name: Frame_119
       frameIndex: 119
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ba1855d1e9c16bd498cff8a219b6343c
-    - name: Toxic Trap Preview_Frame_120
+    - name: Frame_120
       frameIndex: 120
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: fae11c360ba95aa48b2a90d282732621
-    - name: Toxic Trap Preview_Frame_121
+    - name: Frame_121
       frameIndex: 121
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ebd0af2ece53b17468e78e11362cc0fc
-    - name: Toxic Trap Preview_Frame_122
+    - name: Frame_122
       frameIndex: 122
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 474d5db51c46db04298a7f1aa8dc3574
-    - name: Toxic Trap Preview_Frame_123
+    - name: Frame_123
       frameIndex: 123
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1bf6d169f11d7a749bdfd41c90495270
-    - name: Toxic Trap Preview_Frame_124
+    - name: Frame_124
       frameIndex: 124
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c5284c110cfa9724f8da2d830d7d543f
-    - name: Toxic Trap Preview_Frame_125
+    - name: Frame_125
       frameIndex: 125
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a70448cacdabcf04296040d1f6e87dfe
-    - name: Toxic Trap Preview_Frame_126
+    - name: Frame_126
       frameIndex: 126
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: df4c7e90bf658fc489780ef5e15dac5a
-    - name: Toxic Trap Preview_Frame_127
+    - name: Frame_127
       frameIndex: 127
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: f5e130ddb2f4a844dbd96cf0d4281db3
-    - name: Toxic Trap Preview_Frame_128
+    - name: Frame_128
       frameIndex: 128
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1f223bd3fdfb0ac43b22c3fa5822b71b
-    - name: Toxic Trap Preview_Frame_129
+    - name: Frame_129
       frameIndex: 129
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d2b78685a281caf4b8b4cfb28fb27dbc
-    - name: Toxic Trap Preview_Frame_130
+    - name: Frame_130
       frameIndex: 130
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e2e878783d9b8004d93fd1bf53a25e1c
-    - name: Toxic Trap Preview_Frame_131
+    - name: Frame_131
       frameIndex: 131
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 171c4cea45fa7f342b590ea1a5a4102e
-    - name: Toxic Trap Preview_Frame_132
+    - name: Frame_132
       frameIndex: 132
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3e6555252ca12ca458151f19d6909b58
-    - name: Toxic Trap Preview_Frame_133
+    - name: Frame_133
       frameIndex: 133
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 11cbbb57923229b4b86457796fe1cbe0
-    - name: Toxic Trap Preview_Frame_134
+    - name: Frame_134
       frameIndex: 134
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5b56ebb9346a3f0438d04349fcef228e
-    - name: Toxic Trap Preview_Frame_135
+    - name: Frame_135
       frameIndex: 135
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1a0de57c669c1a743a0d55609c7c2dde
-    - name: Toxic Trap Preview_Frame_136
+    - name: Frame_136
       frameIndex: 136
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: cddc90142aa764140bb3d73b227615ce
-    - name: Toxic Trap Preview_Frame_137
+    - name: Frame_137
       frameIndex: 137
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e868a044befa3b1479c38a0410bfec9e
-    - name: Toxic Trap Preview_Frame_138
+    - name: Frame_138
       frameIndex: 138
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 52e37a078a5c3c84bb8b27f290d6dcf0
-    - name: Toxic Trap Preview_Frame_139
+    - name: Frame_139
       frameIndex: 139
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a60e048ad3760a849a0abd8a5f205ea1
-    - name: Toxic Trap Preview_Frame_140
+    - name: Frame_140
       frameIndex: 140
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7cbe47128bdf6d74a8648211f328aa7a
-    - name: Toxic Trap Preview_Frame_141
+    - name: Frame_141
       frameIndex: 141
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9f4c2d92fbe477d4cb68ef1d8cb242a1
-    - name: Toxic Trap Preview_Frame_142
+    - name: Frame_142
       frameIndex: 142
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a7c59296bb712fc429a358bb09f42205
-    - name: Toxic Trap Preview_Frame_143
+    - name: Frame_143
       frameIndex: 143
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bfef6354da2b4fb42a9be4d0808522b0
-    - name: Toxic Trap Preview_Frame_144
+    - name: Frame_144
       frameIndex: 144
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b07ff7f662b23ab4e869f48e0ed3719f
-    - name: Toxic Trap Preview_Frame_145
+    - name: Frame_145
       frameIndex: 145
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 98762c3dc8d6f294e9ff32eb94f13892
-    - name: Toxic Trap Preview_Frame_146
+    - name: Frame_146
       frameIndex: 146
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4defc4b6546c84d45a7965254b94ac0b
-    - name: Toxic Trap Preview_Frame_147
+    - name: Frame_147
       frameIndex: 147
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: fc814b8d5cd338143ac8445c48fc6c03
-    - name: Toxic Trap Preview_Frame_148
+    - name: Frame_148
       frameIndex: 148
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bfe5ceb652c102747bf85bb24b3c9a8d
-    - name: Toxic Trap Preview_Frame_149
+    - name: Frame_149
       frameIndex: 149
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 50ca18f67d230f1458077343744fd1bd
-    - name: Toxic Trap Preview_Frame_150
+    - name: Frame_150
       frameIndex: 150
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 48cfcd9bc18f6e24499277484b6f2a01
-    - name: Toxic Trap Preview_Frame_151
+    - name: Frame_151
       frameIndex: 151
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1993568852d1ea445ad3c2cd87934884
-    - name: Toxic Trap Preview_Frame_152
+    - name: Frame_152
       frameIndex: 152
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4853a0c8dfea95949b456f02fb3bde2e
-    - name: Toxic Trap Preview_Frame_153
+    - name: Frame_153
       frameIndex: 153
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 97f96fe4f78be9c4d833f3b624a73325
-    - name: Toxic Trap Preview_Frame_154
+    - name: Frame_154
       frameIndex: 154
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a1b34678b0e76eb4aa74e8f8e1ec8856
-    - name: Toxic Trap Preview_Frame_155
+    - name: Frame_155
       frameIndex: 155
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: f53d3d296924b12468299acc707d8f6e
-    - name: Toxic Trap Preview_Frame_156
+    - name: Frame_156
       frameIndex: 156
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a80f300f75e38f64ca4ff3a92f3ece78
-    - name: Toxic Trap Preview_Frame_157
+    - name: Frame_157
       frameIndex: 157
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bd29690fb70eb244f9fc9a12f32c4cfd
-    - name: Toxic Trap Preview_Frame_158
+    - name: Frame_158
       frameIndex: 158
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 6113388cce1088e45b5ade23c57e2757
-    - name: Toxic Trap Preview_Frame_159
+    - name: Frame_159
       frameIndex: 159
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 01751e4793bd3674cbd5e1a08e65e1bd
-    - name: Toxic Trap Preview_Frame_160
+    - name: Frame_160
       frameIndex: 160
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c62ad3debad32c445971d8940d64f9af
-    - name: Toxic Trap Preview_Frame_161
+    - name: Frame_161
       frameIndex: 161
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 96e3c510fb99a844998dcb2f41bd7aac
-    - name: Toxic Trap Preview_Frame_162
+    - name: Frame_162
       frameIndex: 162
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: f93c1ae1ce0dc3e41a7d6b3e778fb7c5
-    - name: Toxic Trap Preview_Frame_163
+    - name: Frame_163
       frameIndex: 163
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4202fe35488044741978631b995a424c
-    - name: Toxic Trap Preview_Frame_164
+    - name: Frame_164
       frameIndex: 164
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9c0b204c95276624d85fb569443e330e
-    - name: Toxic Trap Preview_Frame_165
+    - name: Frame_165
       frameIndex: 165
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a6bf4c72dbd07a945b73683667cac5d6
-    - name: Toxic Trap Preview_Frame_166
+    - name: Frame_166
       frameIndex: 166
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e67275080eacd0e499b77efa119dd431
-    - name: Toxic Trap Preview_Frame_167
+    - name: Frame_167
       frameIndex: 167
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 070be4d3f4ee5bc46be81cfb328fb1fe
-    - name: Toxic Trap Preview_Frame_168
+    - name: Frame_168
       frameIndex: 168
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 81756bfaa09a90b48b7558ddf6413730
-    - name: Toxic Trap Preview_Frame_169
+    - name: Frame_169
       frameIndex: 169
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8c97c5bedb042d843a74abe6125afd8e
-    - name: Toxic Trap Preview_Frame_170
+    - name: Frame_170
       frameIndex: 170
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1b1fd0f47f0f9de43b5ce18b9d3cb01b
-    - name: Toxic Trap Preview_Frame_171
+    - name: Frame_171
       frameIndex: 171
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e71bfb2bd624a4346b66d8d2925fb78f
-    - name: Toxic Trap Preview_Frame_172
+    - name: Frame_172
       frameIndex: 172
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d0ff5cd7b787a614196ab6620138d5d5
-    - name: Toxic Trap Preview_Frame_173
+    - name: Frame_173
       frameIndex: 173
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 47c80458eb9591144bbe439b6741bcaf
-    - name: Toxic Trap Preview_Frame_174
+    - name: Frame_174
       frameIndex: 174
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c165fdbf8fe8b2f41974738d4d1d1bfb
-    - name: Toxic Trap Preview_Frame_175
+    - name: Frame_175
       frameIndex: 175
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bd12f97ad5e3bcc4eb7907eb27eed1f9
-    - name: Toxic Trap Preview_Frame_176
+    - name: Frame_176
       frameIndex: 176
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: f6d58a84616c2954a9b95467b3201e0b
-    - name: Toxic Trap Preview_Frame_177
+    - name: Frame_177
       frameIndex: 177
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 27b13b11f47c89a4fafc693b25591b35
-    - name: Toxic Trap Preview_Frame_178
+    - name: Frame_178
       frameIndex: 178
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 929be868e998a8047b955ea8296b53fc
-    - name: Toxic Trap Preview_Frame_179
+    - name: Frame_179
       frameIndex: 179
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d72df70d74eba6249aeb7735478a093b
-    - name: Toxic Trap Preview_Frame_180
+    - name: Frame_180
       frameIndex: 180
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: be1a089cd52b32d4c82aa324a4063c77
-    - name: Toxic Trap Preview_Frame_181
+    - name: Frame_181
       frameIndex: 181
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: cb92ce364fcf0524f88f18805c7125e2
-    - name: Toxic Trap Preview_Frame_182
+    - name: Frame_182
       frameIndex: 182
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: af77335dfb3c493419844628bb436f26
-    - name: Toxic Trap Preview_Frame_183
+    - name: Frame_183
       frameIndex: 183
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 40d293c6db1115c4e861887cded3c0e7
-    - name: Toxic Trap Preview_Frame_184
+    - name: Frame_184
       frameIndex: 184
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 99e870d49b26ba44ab7df4c316561e0f
-    - name: Toxic Trap Preview_Frame_185
+    - name: Frame_185
       frameIndex: 185
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d0be9e6fe37b24d4c8bd903a3daa0d37
-    - name: Toxic Trap Preview_Frame_186
+    - name: Frame_186
       frameIndex: 186
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 6e1857cf9c84fbd478764a4734b2b8dd
-    - name: Toxic Trap Preview_Frame_187
+    - name: Frame_187
       frameIndex: 187
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0516a5ac8fa911f4890eea17a02c2275
-    - name: Toxic Trap Preview_Frame_188
+    - name: Frame_188
       frameIndex: 188
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c50a91f6ce9e89b499e253a311a3a170
-    - name: Toxic Trap Preview_Frame_189
+    - name: Frame_189
       frameIndex: 189
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1d35c1ec36910e44db2f11edd741b08d
-    - name: Toxic Trap Preview_Frame_190
+    - name: Frame_190
       frameIndex: 190
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 78df7f562045676478800f3675dd9e4a
-    - name: Toxic Trap Preview_Frame_191
+    - name: Frame_191
       frameIndex: 191
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0ce65041414ac3943bf4107bc2c225ba
-    - name: Toxic Trap Preview_Frame_192
+    - name: Frame_192
       frameIndex: 192
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 236cbe6d31d4bf4489d12ad0eab2732c
-    - name: Toxic Trap Preview_Frame_193
+    - name: Frame_193
       frameIndex: 193
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 33c83efebf29d67409707f665c891213
-    - name: Toxic Trap Preview_Frame_194
+    - name: Frame_194
       frameIndex: 194
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d1c1a87fd906dde49aa701f578f0691e
-    - name: Toxic Trap Preview_Frame_195
+    - name: Frame_195
       frameIndex: 195
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d2181bbbc041c3d44835ce9031a4a14a
-    - name: Toxic Trap Preview_Frame_196
+    - name: Frame_196
       frameIndex: 196
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c72670b589740b647aaf13e0f8fe21ae
-    - name: Toxic Trap Preview_Frame_197
+    - name: Frame_197
       frameIndex: 197
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1d6569484980b5f45887e2d72444e30b
-    - name: Toxic Trap Preview_Frame_198
+    - name: Frame_198
       frameIndex: 198
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5f9deb742b74ef649b37c2a3125276ff
-    - name: Toxic Trap Preview_Frame_199
+    - name: Frame_199
       frameIndex: 199
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ae601df150ef00347825f299430584d7
-    - name: Toxic Trap Preview_Frame_200
+    - name: Frame_200
       frameIndex: 200
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 095f9dfda11c9104e827b42f89b8260e
-    - name: Toxic Trap Preview_Frame_201
+    - name: Frame_201
       frameIndex: 201
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 36b9d5aa475f51248b55f45dc9f3b7b3
-    - name: Toxic Trap Preview_Frame_202
+    - name: Frame_202
       frameIndex: 202
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3f02cd71971e1a74ea6d782cfc184017
-    - name: Toxic Trap Preview_Frame_203
+    - name: Frame_203
       frameIndex: 203
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a8373881d3816754cb52cad4b4d67292
-    - name: Toxic Trap Preview_Frame_204
+    - name: Frame_204
       frameIndex: 204
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 32a70ef03d75c2f4d89d1f71f581108f
-    - name: Toxic Trap Preview_Frame_205
+    - name: Frame_205
       frameIndex: 205
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: bd3360f6d261aa143a86af53e0118bf3
-    - name: Toxic Trap Preview_Frame_206
+    - name: Frame_206
       frameIndex: 206
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5f9b0e7ab212b0649b5a273fb41f969a
-    - name: Toxic Trap Preview_Frame_207
+    - name: Frame_207
       frameIndex: 207
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8d430c3a18bda554c91a259bc9abebd9
-    - name: Toxic Trap Preview_Frame_208
+    - name: Frame_208
       frameIndex: 208
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8296ead25c0b7c8408eddaa6d4d79229
-    - name: Toxic Trap Preview_Frame_209
+    - name: Frame_209
       frameIndex: 209
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7a20e2067e6ecbd46aec73f344522751
-    - name: Toxic Trap Preview_Frame_210
+    - name: Frame_210
       frameIndex: 210
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ba306cf406e00f34e925ad37278afbef
-    - name: Toxic Trap Preview_Frame_211
+    - name: Frame_211
       frameIndex: 211
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: cd69de1049ed9d34db657f8aabff5acf
-    - name: Toxic Trap Preview_Frame_212
+    - name: Frame_212
       frameIndex: 212
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 701ea84c16dd8484dba7e02a2ba8ae07
-    - name: Toxic Trap Preview_Frame_213
+    - name: Frame_213
       frameIndex: 213
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9231324fd0b450b469e6d9973d732bb2
-    - name: Toxic Trap Preview_Frame_214
+    - name: Frame_214
       frameIndex: 214
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 77c57b16c13374b48bdd9faba2363eb2
-    - name: Toxic Trap Preview_Frame_215
+    - name: Frame_215
       frameIndex: 215
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a4521a801c3895149a0fa3fb18fa44a6
-    - name: Toxic Trap Preview_Frame_216
+    - name: Frame_216
       frameIndex: 216
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c23231da86c972647a9c021e71ea2cd4
-    - name: Toxic Trap Preview_Frame_217
+    - name: Frame_217
       frameIndex: 217
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2f07bc43c4388ef4e837aa478f0cdcbe
-    - name: Toxic Trap Preview_Frame_218
+    - name: Frame_218
       frameIndex: 218
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8851e9b772190e642a026bc8590172c3
-    - name: Toxic Trap Preview_Frame_219
+    - name: Frame_219
       frameIndex: 219
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 25212c8fd40019a409cb8fcf86dd7ac7
-    - name: Toxic Trap Preview_Frame_220
+    - name: Frame_220
       frameIndex: 220
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 022dc09678bc1164dbfe0811fddca15f
-    - name: Toxic Trap Preview_Frame_221
+    - name: Frame_221
       frameIndex: 221
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0b82a1b8498136140a75d48b1a424432
-    - name: Toxic Trap Preview_Frame_222
+    - name: Frame_222
       frameIndex: 222
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e36a9fba2e7d6244ca82a6fd4275b316
-    - name: Toxic Trap Preview_Frame_223
+    - name: Frame_223
       frameIndex: 223
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9a48bef4ba74f1c418264cbc07925e5a
-    - name: Toxic Trap Preview_Frame_224
+    - name: Frame_224
       frameIndex: 224
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 233a717057697aa4897072c8825138de
-    - name: Toxic Trap Preview_Frame_225
+    - name: Frame_225
       frameIndex: 225
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8676f0a5b51361b42911a4e3d32614a5
-    - name: Toxic Trap Preview_Frame_226
+    - name: Frame_226
       frameIndex: 226
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d5018075272878140ab721f3d84e3b22
-    - name: Toxic Trap Preview_Frame_227
+    - name: Frame_227
       frameIndex: 227
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 67431e5dfa7aad145b2e3f24703c7dae
-    - name: Toxic Trap Preview_Frame_228
+    - name: Frame_228
       frameIndex: 228
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c74783b923068b64ba84aa3896df2451
-    - name: Toxic Trap Preview_Frame_229
+    - name: Frame_229
       frameIndex: 229
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 733263cd10da71d44980c7c6accaddf5
-    - name: Toxic Trap Preview_Frame_230
+    - name: Frame_230
       frameIndex: 230
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3587634c721a9f441891c9e5f801dfbf
-    - name: Toxic Trap Preview_Frame_231
+    - name: Frame_231
       frameIndex: 231
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 5a0e6bd0f5b95bf46bacc8bfaa4ca301
-    - name: Toxic Trap Preview_Frame_232
+    - name: Frame_232
       frameIndex: 232
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 284d2ba2e4ed47b429eaf5d50b5e268b
-    - name: Toxic Trap Preview_Frame_233
+    - name: Frame_233
       frameIndex: 233
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1630c55310a20a84fa0ee700791bf9a3
-    - name: Toxic Trap Preview_Frame_234
+    - name: Frame_234
       frameIndex: 234
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ae70dfecb443fbb4490671b65529d2d1
-    - name: Toxic Trap Preview_Frame_235
+    - name: Frame_235
       frameIndex: 235
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 485c7b56ce2b2bd478ab722819d3e22c
-    - name: Toxic Trap Preview_Frame_236
+    - name: Frame_236
       frameIndex: 236
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 6a97835640256944a8e49567b874e106
-    - name: Toxic Trap Preview_Frame_237
+    - name: Frame_237
       frameIndex: 237
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 52033b5ade665c642b830a654dcba342
-    - name: Toxic Trap Preview_Frame_238
+    - name: Frame_238
       frameIndex: 238
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 50874de8b0a64514289412b4442087bc
-    - name: Toxic Trap Preview_Frame_239
+    - name: Frame_239
       frameIndex: 239
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1f676b5dbb46bf54b9e20d554fef8337
-    - name: Toxic Trap Preview_Frame_240
+    - name: Frame_240
       frameIndex: 240
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: f255c6e0fca54de4f83e74f7fff109e6
-    - name: Toxic Trap Preview_Frame_241
+    - name: Frame_241
       frameIndex: 241
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 72fb4546e765e874cbae6d1b2281335e
-    - name: Toxic Trap Preview_Frame_242
+    - name: Frame_242
       frameIndex: 242
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 309424f85390e7849a3b62ceaa6dd19a
-    - name: Toxic Trap Preview_Frame_243
+    - name: Frame_243
       frameIndex: 243
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: eeff21a839f267d4182e3afddccff6c3
-    - name: Toxic Trap Preview_Frame_244
+    - name: Frame_244
       frameIndex: 244
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: d491a509e7eff2d4586607f6c52d6286
-    - name: Toxic Trap Preview_Frame_245
+    - name: Frame_245
       frameIndex: 245
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -7019,6 +7267,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 64}

@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -348,88 +350,99 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Fire Trap - Level 2 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 64
       spriteId: 5b0690018c3911d4eafcf92bfea62c0c
-    - name: Fire Trap - Level 2 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 64
       spriteId: a6a5613cfd02b664fb848b56463c98a8
-    - name: Fire Trap - Level 2 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 64
       spriteId: 91bbf24249c15cf458195b1a4c47d5f5
-    - name: Fire Trap - Level 2 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 64
       spriteId: 43046c5e40318a64fadec2926b0a8bb0
-    - name: Fire Trap - Level 2 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -8
         width: 32
         height: 72
       spriteId: 980222331daab3741ae4787da94fa5a9
-    - name: Fire Trap - Level 2 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -6
         width: 32
         height: 70
       spriteId: b444874b841d50340a838fac19d21313
-    - name: Fire Trap - Level 2 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -4
         width: 32
         height: 68
       spriteId: f84446ea58b986444b89cf8792f87091
-    - name: Fire Trap - Level 2 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 32
         height: 66
       spriteId: 7b529f457576c2b449f80fd2e72472a8
-    - name: Fire Trap - Level 2 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 64
       spriteId: cb957aa2f0b4cca48ac61340231b5811
-    - name: Fire Trap - Level 2 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 32
         height: 64
       spriteId: 46000dad7a0470c4e984ca434b4325e6
-    - name: Fire Trap - Level 2 - Transition_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -439,6 +452,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 32, y: 64}

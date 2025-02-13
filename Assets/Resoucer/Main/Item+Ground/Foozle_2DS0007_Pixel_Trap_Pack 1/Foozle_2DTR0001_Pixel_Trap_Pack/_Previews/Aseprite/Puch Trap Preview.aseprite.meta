@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -3548,1368 +3550,1539 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Puch Trap Preview_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: cbdb72be9e245174fbf73ffe54d946e3
-    - name: Puch Trap Preview_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 73a622f5b0fd16b4790a4c091762f465
-    - name: Puch Trap Preview_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 562d13bd9900aaa4f86dfef5f5676760
-    - name: Puch Trap Preview_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a25e7ba1af4330f46a97d7f67fc7dbc0
-    - name: Puch Trap Preview_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 041a0f7a74399da4eb8f295a6248fe14
-    - name: Puch Trap Preview_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f51c94c5b8d0b924484025289a69f4b5
-    - name: Puch Trap Preview_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 9bab9e88d0a775047bfd8aba340d8ba6
-    - name: Puch Trap Preview_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 31c14d09039ebdf4f85e922bffe91d86
-    - name: Puch Trap Preview_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 8aaaef7e22dc67f42a903599696125a6
-    - name: Puch Trap Preview_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4fbf4bd14811ef34186607f69d6ba641
-    - name: Puch Trap Preview_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: c3a5fbec3d2887f4489f56f54956a9c7
-    - name: Puch Trap Preview_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 93d784c4a33a35045812fee1eb0e78ad
-    - name: Puch Trap Preview_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 78667d37d704f8a4589934bf1b778fa4
-    - name: Puch Trap Preview_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 072f3bf113f450449a29dc4620b31659
-    - name: Puch Trap Preview_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4490bc893df991543bd3b34d60a88fc8
-    - name: Puch Trap Preview_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a6b8448eb3f7c8b47a49e67925ca17d0
-    - name: Puch Trap Preview_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: b9092a9caa3fe3346aafd1697a5304cc
-    - name: Puch Trap Preview_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3498c041d7e35d44698f64011cbc45e2
-    - name: Puch Trap Preview_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: d94589bfab723da4a98bac3e2f3f6cdb
-    - name: Puch Trap Preview_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3bdcd4dbd5b18194a954a9cbdd60e0fa
-    - name: Puch Trap Preview_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: cc22685db112a00429ba2a19512a28b6
-    - name: Puch Trap Preview_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 46223608a9509da4caec3ca118d63cf9
-    - name: Puch Trap Preview_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 88d20e4a5181c984d8ee962cce364600
-    - name: Puch Trap Preview_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 8a22ac471a34d4441ab95b585dc38651
-    - name: Puch Trap Preview_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 8bad63e01f3800949aae00d54cd51a50
-    - name: Puch Trap Preview_Frame_25
+    - name: Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 77ff0dead0799d24692e05e5274936ae
-    - name: Puch Trap Preview_Frame_26
+    - name: Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 9b0c9e7e6e1599d43b1790392e954a11
-    - name: Puch Trap Preview_Frame_27
+    - name: Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: d25ce702af7671d47b3a947d33b91818
-    - name: Puch Trap Preview_Frame_28
+    - name: Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 2b975aac3a006704396b377eb9570d79
-    - name: Puch Trap Preview_Frame_29
+    - name: Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 5a660387e22b14246be3329822552652
-    - name: Puch Trap Preview_Frame_30
+    - name: Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 7120dc0c718b2854bb0c8327861baf14
-    - name: Puch Trap Preview_Frame_31
+    - name: Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 716214e6b4bf00d409943692f04a707a
-    - name: Puch Trap Preview_Frame_32
+    - name: Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 77409ec7da69f4940b9a996847c89dea
-    - name: Puch Trap Preview_Frame_33
+    - name: Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: c8b19fa527615fd4fa5fd796e2e7c174
-    - name: Puch Trap Preview_Frame_34
+    - name: Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3e613b20493182b41a229db8f97dbe13
-    - name: Puch Trap Preview_Frame_35
+    - name: Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: acd9d7d260a4e9743861ae672875a0b4
-    - name: Puch Trap Preview_Frame_36
+    - name: Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: aaf16e2ea7964164184eb6998f7eb69b
-    - name: Puch Trap Preview_Frame_37
+    - name: Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 147a123de521eb843a8d5d771d490c32
-    - name: Puch Trap Preview_Frame_38
+    - name: Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: b9ec103635578524c88c26c5ae44ffe7
-    - name: Puch Trap Preview_Frame_39
+    - name: Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f3c2d970d7d25f047a87ca6aa8e9b98f
-    - name: Puch Trap Preview_Frame_40
+    - name: Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 99da3680f96d4d34694edad6e3d47c7d
-    - name: Puch Trap Preview_Frame_41
+    - name: Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 564d3f7a0a8fe434693276880c691b41
-    - name: Puch Trap Preview_Frame_42
+    - name: Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 671d9f28910a661479032b24a31a5324
-    - name: Puch Trap Preview_Frame_43
+    - name: Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: d2edca95ced35dc4683bb448fc182e1c
-    - name: Puch Trap Preview_Frame_44
+    - name: Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f4882cd481e70ab47b4193c293cece94
-    - name: Puch Trap Preview_Frame_45
+    - name: Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 64132b6b1ee855f48a9d8d4234c25425
-    - name: Puch Trap Preview_Frame_46
+    - name: Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: fae52a068bc96534cade612d11432050
-    - name: Puch Trap Preview_Frame_47
+    - name: Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: dbdb4b796158cca4d865497a4d34ea8f
-    - name: Puch Trap Preview_Frame_48
+    - name: Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e5593ea1e3248d544bb65506c564693e
-    - name: Puch Trap Preview_Frame_49
+    - name: Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 7ceae41f275c04a468e8ecd0522dfdb8
-    - name: Puch Trap Preview_Frame_50
+    - name: Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 80c1cd50eb5f57347a646d099229f456
-    - name: Puch Trap Preview_Frame_51
+    - name: Frame_51
       frameIndex: 51
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a30c51d9e9350d44fac3ed4a115cb85f
-    - name: Puch Trap Preview_Frame_52
+    - name: Frame_52
       frameIndex: 52
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 638ac8326040fb0438b12215fe4e00f2
-    - name: Puch Trap Preview_Frame_53
+    - name: Frame_53
       frameIndex: 53
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 9e59107f33a88d74086095adaba413b0
-    - name: Puch Trap Preview_Frame_54
+    - name: Frame_54
       frameIndex: 54
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 6e3bc38034c2d4d498232e19453ef864
-    - name: Puch Trap Preview_Frame_55
+    - name: Frame_55
       frameIndex: 55
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4726f82a13bca6544ae95e601a687e53
-    - name: Puch Trap Preview_Frame_56
+    - name: Frame_56
       frameIndex: 56
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 41d76355237f53342b783e342204614a
-    - name: Puch Trap Preview_Frame_57
+    - name: Frame_57
       frameIndex: 57
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: ead24342ddce91f4c904613c8c0d9178
-    - name: Puch Trap Preview_Frame_58
+    - name: Frame_58
       frameIndex: 58
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 476a78993822fb0419e4a530f4452cb6
-    - name: Puch Trap Preview_Frame_59
+    - name: Frame_59
       frameIndex: 59
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: deff51a42423d5c4ebcdc15b6ed1a1ed
-    - name: Puch Trap Preview_Frame_60
+    - name: Frame_60
       frameIndex: 60
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: ce7acefc8e7a3b14e9e22a893ef50912
-    - name: Puch Trap Preview_Frame_61
+    - name: Frame_61
       frameIndex: 61
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: fe1520e50cdee55428f409cbc782d7ae
-    - name: Puch Trap Preview_Frame_62
+    - name: Frame_62
       frameIndex: 62
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: c9ac213b85db6534cb98a2e30130d4b1
-    - name: Puch Trap Preview_Frame_63
+    - name: Frame_63
       frameIndex: 63
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3cab111f5ae2e44488c7b208fcd5f8df
-    - name: Puch Trap Preview_Frame_64
+    - name: Frame_64
       frameIndex: 64
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a0f94fb66c3909944b0af5f239ad96f8
-    - name: Puch Trap Preview_Frame_65
+    - name: Frame_65
       frameIndex: 65
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 26a29304320664e4aa4ab97d7df65d51
-    - name: Puch Trap Preview_Frame_66
+    - name: Frame_66
       frameIndex: 66
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 10c1f641ef8802941a24e72c24cf4e02
-    - name: Puch Trap Preview_Frame_67
+    - name: Frame_67
       frameIndex: 67
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 20f0a5e597473334cbfdede9ccd6686a
-    - name: Puch Trap Preview_Frame_68
+    - name: Frame_68
       frameIndex: 68
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 9052f441f9aee1a4eb02ecd732d03e4f
-    - name: Puch Trap Preview_Frame_69
+    - name: Frame_69
       frameIndex: 69
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 585daf5f1095a4e45aa8d182c8541329
-    - name: Puch Trap Preview_Frame_70
+    - name: Frame_70
       frameIndex: 70
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: ad83303636d4b8a40a0aeee37a6d004c
-    - name: Puch Trap Preview_Frame_71
+    - name: Frame_71
       frameIndex: 71
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3c0c5a8b9b51e094ea42395be98ed867
-    - name: Puch Trap Preview_Frame_72
+    - name: Frame_72
       frameIndex: 72
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: bffc9f5a1230da64d920985fcb0847a9
-    - name: Puch Trap Preview_Frame_73
+    - name: Frame_73
       frameIndex: 73
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: d6b21ee3321e58c4e8a495c963a850a2
-    - name: Puch Trap Preview_Frame_74
+    - name: Frame_74
       frameIndex: 74
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3f3c34190f843f74a8e63d6a0c6e7af8
-    - name: Puch Trap Preview_Frame_75
+    - name: Frame_75
       frameIndex: 75
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 63ba1b3bc01027342aa112fc729ed729
-    - name: Puch Trap Preview_Frame_76
+    - name: Frame_76
       frameIndex: 76
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 2c12ace43aba58b409ea28e7a0606d09
-    - name: Puch Trap Preview_Frame_77
+    - name: Frame_77
       frameIndex: 77
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 0180f6260bc95544794effe9499490c7
-    - name: Puch Trap Preview_Frame_78
+    - name: Frame_78
       frameIndex: 78
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 7563ae39a57fe044f85c8b8175b96154
-    - name: Puch Trap Preview_Frame_79
+    - name: Frame_79
       frameIndex: 79
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f652f1aa7680956438f41a041f33fd8a
-    - name: Puch Trap Preview_Frame_80
+    - name: Frame_80
       frameIndex: 80
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 7d1a910cff70ee644a802e8c67ce6a8b
-    - name: Puch Trap Preview_Frame_81
+    - name: Frame_81
       frameIndex: 81
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 1b4b72f1c64595a4db32617af0b40a4f
-    - name: Puch Trap Preview_Frame_82
+    - name: Frame_82
       frameIndex: 82
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 6d7c96394d1058b45b530a6f8eb0c4dc
-    - name: Puch Trap Preview_Frame_83
+    - name: Frame_83
       frameIndex: 83
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 98b6975bf05274040a07e93346e791f8
-    - name: Puch Trap Preview_Frame_84
+    - name: Frame_84
       frameIndex: 84
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: cab5e2c9a7232f349adf83761b4bb5fd
-    - name: Puch Trap Preview_Frame_85
+    - name: Frame_85
       frameIndex: 85
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 414a1e95db4f17a4fa4b639c1badb292
-    - name: Puch Trap Preview_Frame_86
+    - name: Frame_86
       frameIndex: 86
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4ce6a63a930de584a92db86691e7fdd7
-    - name: Puch Trap Preview_Frame_87
+    - name: Frame_87
       frameIndex: 87
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 6098d07540e9575469130b7ea343980a
-    - name: Puch Trap Preview_Frame_88
+    - name: Frame_88
       frameIndex: 88
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: b8db2ffb819d9cc41897013be3b03fcd
-    - name: Puch Trap Preview_Frame_89
+    - name: Frame_89
       frameIndex: 89
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 9cc28e1325d762d4dbcbb020a793c65b
-    - name: Puch Trap Preview_Frame_90
+    - name: Frame_90
       frameIndex: 90
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 31cc917ad1279e34aa620c41d9ee0db4
-    - name: Puch Trap Preview_Frame_91
+    - name: Frame_91
       frameIndex: 91
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e94cbf42e2cc5fa45a39516998f451cd
-    - name: Puch Trap Preview_Frame_92
+    - name: Frame_92
       frameIndex: 92
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: bebb244fa237ba04baae7175f11f7455
-    - name: Puch Trap Preview_Frame_93
+    - name: Frame_93
       frameIndex: 93
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e59bd7cacda9b7b44a4eba44295bffc1
-    - name: Puch Trap Preview_Frame_94
+    - name: Frame_94
       frameIndex: 94
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 70b8cfdcec61e7f4bad203b2975c2202
-    - name: Puch Trap Preview_Frame_95
+    - name: Frame_95
       frameIndex: 95
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 7ea11fe9d54adfa48bfdd80e5f71e90b
-    - name: Puch Trap Preview_Frame_96
+    - name: Frame_96
       frameIndex: 96
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 8824c3dd48b8f2347af1e469f7ab737b
-    - name: Puch Trap Preview_Frame_97
+    - name: Frame_97
       frameIndex: 97
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 0b5564f84b54e9849aea49f556298747
-    - name: Puch Trap Preview_Frame_98
+    - name: Frame_98
       frameIndex: 98
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: b7979d9e5fe043c4db0b856d15e02bbb
-    - name: Puch Trap Preview_Frame_99
+    - name: Frame_99
       frameIndex: 99
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 43ad82acd62ba5645b75ce6807dcd42e
-    - name: Puch Trap Preview_Frame_100
+    - name: Frame_100
       frameIndex: 100
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 2bee9d2fb621064478a5cf7253037536
-    - name: Puch Trap Preview_Frame_101
+    - name: Frame_101
       frameIndex: 101
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e6ff743b6513f704dac210bc96cbb83a
-    - name: Puch Trap Preview_Frame_102
+    - name: Frame_102
       frameIndex: 102
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 2d43c6c6f9a2a5b438fc0f476c314212
-    - name: Puch Trap Preview_Frame_103
+    - name: Frame_103
       frameIndex: 103
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 5af9d23c939440d4dbba46dc5151ab94
-    - name: Puch Trap Preview_Frame_104
+    - name: Frame_104
       frameIndex: 104
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 668d5bb9b4e186640a181f0d167d58c6
-    - name: Puch Trap Preview_Frame_105
+    - name: Frame_105
       frameIndex: 105
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 20c21e9b717d0574a8b5b7a8eacb895e
-    - name: Puch Trap Preview_Frame_106
+    - name: Frame_106
       frameIndex: 106
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: ed65610a7e79a2f40b17fd6e208c7304
-    - name: Puch Trap Preview_Frame_107
+    - name: Frame_107
       frameIndex: 107
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 031539ce6a86e784f8bc2eea249b02b5
-    - name: Puch Trap Preview_Frame_108
+    - name: Frame_108
       frameIndex: 108
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: babc2b1ce18f4ba4ab57eeeeeb0344f3
-    - name: Puch Trap Preview_Frame_109
+    - name: Frame_109
       frameIndex: 109
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3e34344bad8e02746aa904db08d64f61
-    - name: Puch Trap Preview_Frame_110
+    - name: Frame_110
       frameIndex: 110
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 5e71863e17994ec4ab17ce456ca66136
-    - name: Puch Trap Preview_Frame_111
+    - name: Frame_111
       frameIndex: 111
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4f65ead35d2ea4441b1871a29ee13ff2
-    - name: Puch Trap Preview_Frame_112
+    - name: Frame_112
       frameIndex: 112
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 0b7293d63ab43a64cabcc9e2d3416ba5
-    - name: Puch Trap Preview_Frame_113
+    - name: Frame_113
       frameIndex: 113
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a01a3fad32d350641a1323a5e2e25549
-    - name: Puch Trap Preview_Frame_114
+    - name: Frame_114
       frameIndex: 114
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e64278828487ad44fb97d22c596bde09
-    - name: Puch Trap Preview_Frame_115
+    - name: Frame_115
       frameIndex: 115
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a56f422b1fc94cc4ca29bd1235e50891
-    - name: Puch Trap Preview_Frame_116
+    - name: Frame_116
       frameIndex: 116
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 6b69dc04556ce794d8e327d068779be2
-    - name: Puch Trap Preview_Frame_117
+    - name: Frame_117
       frameIndex: 117
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 554cd116f41d13745b45e151ec03eeed
-    - name: Puch Trap Preview_Frame_118
+    - name: Frame_118
       frameIndex: 118
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f3d2e1233816c15418724f7f5e7907bb
-    - name: Puch Trap Preview_Frame_119
+    - name: Frame_119
       frameIndex: 119
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 47a1a8a30edf0a348ba38c19298d20df
-    - name: Puch Trap Preview_Frame_120
+    - name: Frame_120
       frameIndex: 120
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: fe4ae580b50e1c24586ffc87c4a86975
-    - name: Puch Trap Preview_Frame_121
+    - name: Frame_121
       frameIndex: 121
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4877564e19ce3224687c72d57b709ba5
-    - name: Puch Trap Preview_Frame_122
+    - name: Frame_122
       frameIndex: 122
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 340f9fafc478ede47bcc419ec137b462
-    - name: Puch Trap Preview_Frame_123
+    - name: Frame_123
       frameIndex: 123
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 05998f42bdd467b419244230690a0bb8
-    - name: Puch Trap Preview_Frame_124
+    - name: Frame_124
       frameIndex: 124
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 0cb87881bfbfc704eb0d9793be83ef6e
-    - name: Puch Trap Preview_Frame_125
+    - name: Frame_125
       frameIndex: 125
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 97f2f84f85658ad439faa227e466c139
-    - name: Puch Trap Preview_Frame_126
+    - name: Frame_126
       frameIndex: 126
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 07b1a4580dc3c9043a2a5abcf89e1322
-    - name: Puch Trap Preview_Frame_127
+    - name: Frame_127
       frameIndex: 127
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 0399609cedea27e439bac4dd4d16ba0d
-    - name: Puch Trap Preview_Frame_128
+    - name: Frame_128
       frameIndex: 128
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 246558916bef2904d89e5e11551298f7
-    - name: Puch Trap Preview_Frame_129
+    - name: Frame_129
       frameIndex: 129
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4c66c25069ca10549a711a74a0c78444
-    - name: Puch Trap Preview_Frame_130
+    - name: Frame_130
       frameIndex: 130
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 51943e6a040bf4144aabeada4acfd0e5
-    - name: Puch Trap Preview_Frame_131
+    - name: Frame_131
       frameIndex: 131
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 1cd8356b26e33f547964671dd375e693
-    - name: Puch Trap Preview_Frame_132
+    - name: Frame_132
       frameIndex: 132
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: dc310bafbb062d047908c9ccbae99f7d
-    - name: Puch Trap Preview_Frame_133
+    - name: Frame_133
       frameIndex: 133
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e5ef5004911d4224591995fbd2d24d9a
-    - name: Puch Trap Preview_Frame_134
+    - name: Frame_134
       frameIndex: 134
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3f1bce34c5110704c97ad1cef74c71e1
-    - name: Puch Trap Preview_Frame_135
+    - name: Frame_135
       frameIndex: 135
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 2b94e1f1dff1ca443ae75802b02b9eea
-    - name: Puch Trap Preview_Frame_136
+    - name: Frame_136
       frameIndex: 136
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 3adbb0c97f4f6f84a84b20d647b48041
-    - name: Puch Trap Preview_Frame_137
+    - name: Frame_137
       frameIndex: 137
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 512e13d0400e4da43bde0f3132fd0c11
-    - name: Puch Trap Preview_Frame_138
+    - name: Frame_138
       frameIndex: 138
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 5563de072345f824493dde71b7cfa81e
-    - name: Puch Trap Preview_Frame_139
+    - name: Frame_139
       frameIndex: 139
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 80a600c3a398e8f4285fb7fa1a69e005
-    - name: Puch Trap Preview_Frame_140
+    - name: Frame_140
       frameIndex: 140
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e86b97770ae3c5a47b841badf296cb28
-    - name: Puch Trap Preview_Frame_141
+    - name: Frame_141
       frameIndex: 141
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 952dab7f5712bc249bd778980c0c4f60
-    - name: Puch Trap Preview_Frame_142
+    - name: Frame_142
       frameIndex: 142
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 8e578734d098ce54494cd47c84e3f8ac
-    - name: Puch Trap Preview_Frame_143
+    - name: Frame_143
       frameIndex: 143
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 24c8ba0b251496946810b095efa091a4
-    - name: Puch Trap Preview_Frame_144
+    - name: Frame_144
       frameIndex: 144
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 84e63f537c3d54f4580dcdc8cca1d257
-    - name: Puch Trap Preview_Frame_145
+    - name: Frame_145
       frameIndex: 145
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a685119f6ff07f940a49b4fe4136d4ce
-    - name: Puch Trap Preview_Frame_146
+    - name: Frame_146
       frameIndex: 146
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e5ee53ce995841b40bcc77e0a0b4834f
-    - name: Puch Trap Preview_Frame_147
+    - name: Frame_147
       frameIndex: 147
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 08ae85d86f9e91e4ebe154bb6c567cea
-    - name: Puch Trap Preview_Frame_148
+    - name: Frame_148
       frameIndex: 148
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: b797951b0ba0e1d4f9a40972cc26376d
-    - name: Puch Trap Preview_Frame_149
+    - name: Frame_149
       frameIndex: 149
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: c8f6d44d798cc664da2cb70f7768ca7a
-    - name: Puch Trap Preview_Frame_150
+    - name: Frame_150
       frameIndex: 150
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: cbc856264b382584dbcf7040272de7d2
-    - name: Puch Trap Preview_Frame_151
+    - name: Frame_151
       frameIndex: 151
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 45b54edb023b400409dc0749b8ae7792
-    - name: Puch Trap Preview_Frame_152
+    - name: Frame_152
       frameIndex: 152
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 2482717ef72bebc4398d61f8d29b5ab3
-    - name: Puch Trap Preview_Frame_153
+    - name: Frame_153
       frameIndex: 153
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 7298b76983655b14fad89b20a10cbacb
-    - name: Puch Trap Preview_Frame_154
+    - name: Frame_154
       frameIndex: 154
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f37f26a1c58133b49858edd1bae0d9c9
-    - name: Puch Trap Preview_Frame_155
+    - name: Frame_155
       frameIndex: 155
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f7146233e3184e642a4c84693bc82024
-    - name: Puch Trap Preview_Frame_156
+    - name: Frame_156
       frameIndex: 156
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f999f9c5a928de444a9335c80df8b99d
-    - name: Puch Trap Preview_Frame_157
+    - name: Frame_157
       frameIndex: 157
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: d6e96ddab635e1f41a80c6f60a598c39
-    - name: Puch Trap Preview_Frame_158
+    - name: Frame_158
       frameIndex: 158
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 5156e310452ed704eb6a7384045e0eaa
-    - name: Puch Trap Preview_Frame_159
+    - name: Frame_159
       frameIndex: 159
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: f284aa31f236be34b92f2cefb390ab67
-    - name: Puch Trap Preview_Frame_160
+    - name: Frame_160
       frameIndex: 160
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: a2d4303dbb5bbe1419ad06e847c2561d
-    - name: Puch Trap Preview_Frame_161
+    - name: Frame_161
       frameIndex: 161
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: fa4ffac5602d8a340ad750b928830aa8
-    - name: Puch Trap Preview_Frame_162
+    - name: Frame_162
       frameIndex: 162
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: b6ecc986622bcfd4793044b72d73a10b
-    - name: Puch Trap Preview_Frame_163
+    - name: Frame_163
       frameIndex: 163
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 6eb2a65273513d34db5b91db996c3b15
-    - name: Puch Trap Preview_Frame_164
+    - name: Frame_164
       frameIndex: 164
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: e3036fadd7e024247a395c2807ebb2ae
-    - name: Puch Trap Preview_Frame_165
+    - name: Frame_165
       frameIndex: 165
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 04f0630bcb56c3849950378ed5df3336
-    - name: Puch Trap Preview_Frame_166
+    - name: Frame_166
       frameIndex: 166
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: fa203832afac5e3498fd76d212c14b51
-    - name: Puch Trap Preview_Frame_167
+    - name: Frame_167
       frameIndex: 167
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: bd48486c05de741488a34d1f9bdf4c86
-    - name: Puch Trap Preview_Frame_168
+    - name: Frame_168
       frameIndex: 168
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: 4eee2cc647f623747b2e4315a9bf9529
-    - name: Puch Trap Preview_Frame_169
+    - name: Frame_169
       frameIndex: 169
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 48
         height: 32
       spriteId: dfbb85961ba23c94a98628b36ea3bc32
-    - name: Puch Trap Preview_Frame_170
+    - name: Frame_170
       frameIndex: 170
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -4919,6 +5092,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 32}

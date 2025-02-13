@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -328,80 +330,90 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Lightning Trap - Level 1 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
       spriteId: d99cfaa6d2147f34da839119e892df52
-    - name: Lightning Trap - Level 1 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
       spriteId: e242fdb898998ef44b94cd1cec23e1a5
-    - name: Lightning Trap - Level 1 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -9
         width: 96
         height: 105
       spriteId: 30a1c704df2479543abf7e24baa85e64
-    - name: Lightning Trap - Level 1 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -6
         width: 96
         height: 102
       spriteId: 7f8c4c36544ecba49ab981e556e2837b
-    - name: Lightning Trap - Level 1 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -3
         width: 96
         height: 99
       spriteId: 7b9d427b801c86542b37000afec65dad
-    - name: Lightning Trap - Level 1 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 97
       spriteId: f5d8ffeaed6ee0848bdbee29aa95da11
-    - name: Lightning Trap - Level 1 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
       spriteId: d195c82c5e65e9f46ade7ea0cccfb075
-    - name: Lightning Trap - Level 1 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
       spriteId: 78199018114432b44932cd517d4f1cf6
-    - name: Lightning Trap - Level 1 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 96
       spriteId: 6e0c28de12b18d44f851e5befac2bdc1
-    - name: Lightning Trap - Level 1 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -411,6 +423,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 96}

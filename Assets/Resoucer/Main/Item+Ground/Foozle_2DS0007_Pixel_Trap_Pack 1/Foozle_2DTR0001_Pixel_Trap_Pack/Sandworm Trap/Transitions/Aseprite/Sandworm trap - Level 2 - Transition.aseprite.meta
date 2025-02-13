@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -328,80 +330,90 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sandworm trap - Level 2 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 4d38e899a24705444bfa548d672f4483
-    - name: Sandworm trap - Level 2 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 292fcaa7b2cf38546b5a85c3ad65cdf4
-    - name: Sandworm trap - Level 2 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 96
         height: 66
       spriteId: 653b66807664ffd4eb6b3513e604c380
-    - name: Sandworm trap - Level 2 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 65
       spriteId: 196036efce4aa3e45952619f7bd79e2c
-    - name: Sandworm trap - Level 2 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ebc054896d1e10a45a2f7711a8bbb5a4
-    - name: Sandworm trap - Level 2 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c14668b5fbdc35d43bc536d03961811e
-    - name: Sandworm trap - Level 2 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c2f0d47967d49bf4a9465fb8268dca7a
-    - name: Sandworm trap - Level 2 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e0eb40d7d5caff641a0bd0234b1f6c85
-    - name: Sandworm trap - Level 2 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2647d6149d3de3041afb28bb613b9ffe
-    - name: Sandworm trap - Level 2 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -411,6 +423,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 64}

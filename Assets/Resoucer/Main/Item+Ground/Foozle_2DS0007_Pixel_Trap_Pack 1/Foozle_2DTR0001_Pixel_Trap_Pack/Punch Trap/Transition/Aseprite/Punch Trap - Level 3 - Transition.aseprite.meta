@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -468,136 +470,153 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Punch Trap - Level 3 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: bf3c5f4d3ff0fb74d90502e83cea5f8c
-    - name: Punch Trap - Level 3 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: e2991771b195e8c409dd633027b56ab5
-    - name: Punch Trap - Level 3 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 3f63bd207f79c7c4fba966b7cb923bfe
-    - name: Punch Trap - Level 3 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 143642b62ec2a7a41a8c9b9d0ade6539
-    - name: Punch Trap - Level 3 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 8ccc55f925375074fa6b680b46daf546
-    - name: Punch Trap - Level 3 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 4258c186bb87f8145a1ac7be0ca3f1b5
-    - name: Punch Trap - Level 3 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 2522b0c2cb9b04740ba0a00c93faf5e9
-    - name: Punch Trap - Level 3 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 89758f8d6d03ed74ba4d8e641b8fd6d4
-    - name: Punch Trap - Level 3 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: d793be82fa8de6943b67b62bdb7526b8
-    - name: Punch Trap - Level 3 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: fa30f73a1ab86a34a86ccc6d63117b8f
-    - name: Punch Trap - Level 3 - Transition_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 685dd20507d613640bdd1ab7de557d72
-    - name: Punch Trap - Level 3 - Transition_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: eaf97255c9ca74342a1fbd569d1c0022
-    - name: Punch Trap - Level 3 - Transition_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 14150619445f6904b925246c65f90ae1
-    - name: Punch Trap - Level 3 - Transition_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 5c5d1746a5dfa8b499b95609a7b17997
-    - name: Punch Trap - Level 3 - Transition_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: 78689956febe27649ab10ecd9be8eb13
-    - name: Punch Trap - Level 3 - Transition_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
         width: 64
         height: 32
       spriteId: d9a59e8223a9d944686d3a5f72535261
-    - name: Punch Trap - Level 3 - Transition_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 16
         y: 0
@@ -607,6 +626,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 32}

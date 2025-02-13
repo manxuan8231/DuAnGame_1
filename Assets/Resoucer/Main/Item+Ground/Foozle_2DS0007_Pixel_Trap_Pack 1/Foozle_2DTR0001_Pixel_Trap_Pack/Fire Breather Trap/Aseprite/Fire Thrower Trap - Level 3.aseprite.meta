@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -628,200 +630,225 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Fire Thrower Trap - Level 3_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4c04ca169eb10dc44bc71d9234cdb7c7
-    - name: Fire Thrower Trap - Level 3_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: e3e28a823732a454c973d91c76c51e81
-    - name: Fire Thrower Trap - Level 3_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 444c20f7cd607e64fb472557ca3817c0
-    - name: Fire Thrower Trap - Level 3_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 144e5b2f7c1718445bd765fa5448cd91
-    - name: Fire Thrower Trap - Level 3_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: da86e91dc58d4b6428b368f3b943e54e
-    - name: Fire Thrower Trap - Level 3_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 20f51146bb0e29f47a725fc3e4fc05ca
-    - name: Fire Thrower Trap - Level 3_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 00ba1961ead20aa46bed4597cca50475
-    - name: Fire Thrower Trap - Level 3_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4ec1bcac67166dc4ebbfd0b7b1f886e5
-    - name: Fire Thrower Trap - Level 3_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: c421649c128b5ab49abbb5a2174122ea
-    - name: Fire Thrower Trap - Level 3_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 3e0c24ffe01e02d46a83a3b13b24894f
-    - name: Fire Thrower Trap - Level 3_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 986d31df17a89314e8d4445126bd0bc6
-    - name: Fire Thrower Trap - Level 3_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 24f48cf6ad5dca7478e492e9c9ac0cd6
-    - name: Fire Thrower Trap - Level 3_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: b6198ef63c4cada47b5638d37a1edb85
-    - name: Fire Thrower Trap - Level 3_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 991902383f259d64aa560de7d1d95a43
-    - name: Fire Thrower Trap - Level 3_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 96a8dd9cfee3b20428ca01a60042f9dc
-    - name: Fire Thrower Trap - Level 3_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: fc386162786625a4bb71318c7e6f4310
-    - name: Fire Thrower Trap - Level 3_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 5763ba39af4801c4789ce18afe8506fd
-    - name: Fire Thrower Trap - Level 3_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 0b06dd331c8f1f34993541a8f56846cd
-    - name: Fire Thrower Trap - Level 3_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 31efed24cb63ceb41b517b30f1a44b62
-    - name: Fire Thrower Trap - Level 3_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 648e857551ca3e149ad0c422504bbcb4
-    - name: Fire Thrower Trap - Level 3_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 8f30a0c1f825aef4191a3f12a53afa61
-    - name: Fire Thrower Trap - Level 3_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: a46cf5847d3a7aa429158e5fc5ffb37e
-    - name: Fire Thrower Trap - Level 3_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4a2304869d3a2c7408d0dd9b05a7789b
-    - name: Fire Thrower Trap - Level 3_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 160
         height: 96
       spriteId: 4f6fe0e0bb90a75458432603cb7c1f72
-    - name: Fire Thrower Trap - Level 3_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -831,6 +858,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 192, y: 96}

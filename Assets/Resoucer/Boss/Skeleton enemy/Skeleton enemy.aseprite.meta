@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -1028,360 +1030,405 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Skeleton enemy_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 33
         height: 33
       spriteId: 4d28b4cb5002aee40abeed841a30430c
-    - name: Skeleton enemy_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 34
         height: 32
       spriteId: ddbb52278879668429b658b5265a4427
-    - name: Skeleton enemy_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 35
         height: 32
       spriteId: a9279ae8dccb9c94cb78f45182c993ac
-    - name: Skeleton enemy_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 34
         height: 33
       spriteId: f3d52ce10120a1b44af16276319c9749
-    - name: Skeleton enemy_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 8
         y: 16
         width: 34
         height: 32
       spriteId: 3521add7e4512884e95ef2f79c7ca10a
-    - name: Skeleton enemy_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 16
         width: 37
         height: 32
       spriteId: 497f23ea8ead96f42a86e63cd453acc2
-    - name: Skeleton enemy_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
         width: 41
         height: 32
       spriteId: 08b2f4bd8d8ba9f4f97ab19b56260951
-    - name: Skeleton enemy_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 16
         width: 38
         height: 32
       spriteId: 75f3d746dee471447a9b39e71023bddb
-    - name: Skeleton enemy_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 13
         y: 16
         width: 51
         height: 40
       spriteId: 53bb48d870113c0409141df1004b5700
-    - name: Skeleton enemy_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 15
         y: 16
         width: 31
         height: 39
       spriteId: ae5e55d1ad68b4b4dbfec76f2882e1b2
-    - name: Skeleton enemy_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 17
         y: 16
         width: 26
         height: 33
       spriteId: 1f43399910078a748837a4c8abfd51b7
-    - name: Skeleton enemy_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 18
         y: 16
         width: 25
         height: 33
       spriteId: ff9f81310266cec46b467452eb1084e4
-    - name: Skeleton enemy_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 16
         width: 62
         height: 32
       spriteId: 63dd01298b06a1e498906b962ff3264c
-    - name: Skeleton enemy_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 16
         width: 39
         height: 33
       spriteId: d412b747cf7a65440aa027ba72529190
-    - name: Skeleton enemy_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 16
         width: 36
         height: 36
       spriteId: 249df308be0e57045b56b070d1654b3c
-    - name: Skeleton enemy_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 16
         width: 40
         height: 32
       spriteId: 109a099658c1545458e884b46fefd855
-    - name: Skeleton enemy_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 8
         y: 16
         width: 34
         height: 32
       spriteId: 64a8758862343494d98f9215a38282e6
-    - name: Skeleton enemy_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 32
         height: 34
       spriteId: c1bcf1ed6438c46419d7c6770b7a0177
-    - name: Skeleton enemy_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 32
         height: 33
       spriteId: b8850dc121d49f645aafce3e4bf01909
-    - name: Skeleton enemy_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 32
         height: 33
       spriteId: 2700b7427fa71334aaafffd4923560fa
-    - name: Skeleton enemy_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 15
         width: 36
         height: 32
       spriteId: 1b1fb7cf48f55424eaf58d92a0fb719b
-    - name: Skeleton enemy_Frame_21
+    - name: Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 15
         width: 35
         height: 33
       spriteId: a7d2e174c23e07f458a71f9429d306f0
-    - name: Skeleton enemy_Frame_22
+    - name: Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 15
         width: 35
         height: 33
       spriteId: 5d5a4915b05056146bd8955a65a6e825
-    - name: Skeleton enemy_Frame_23
+    - name: Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 15
         width: 35
         height: 33
       spriteId: 7d5b18615b3dc2b40b9975879064dccc
-    - name: Skeleton enemy_Frame_24
+    - name: Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 15
         width: 36
         height: 32
       spriteId: 52872b682946e3243b2cfb2f4f1c9707
-    - name: Skeleton enemy_Frame_25
+    - name: Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 15
         width: 36
         height: 31
       spriteId: 6b054d0eab35cee46a32b993c702e2bc
-    - name: Skeleton enemy_Frame_26
+    - name: Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 15
         width: 36
         height: 32
       spriteId: 71de7bc1abcdd3d43a47242f13c93476
-    - name: Skeleton enemy_Frame_27
+    - name: Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 15
         width: 38
         height: 33
       spriteId: e03134c51fa79e8409852891b4fff551
-    - name: Skeleton enemy_Frame_28
+    - name: Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 15
         width: 38
         height: 33
       spriteId: 40221d31b6cee3a499a09a28864c99d8
-    - name: Skeleton enemy_Frame_29
+    - name: Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 15
         width: 38
         height: 33
       spriteId: afbf8bfa1e3c5484ca107b126061ff35
-    - name: Skeleton enemy_Frame_30
+    - name: Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 15
         width: 37
         height: 32
       spriteId: d6ab4a723b3405c499391328cccbdfce
-    - name: Skeleton enemy_Frame_31
+    - name: Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 15
         width: 37
         height: 31
       spriteId: 1ff0e4a1e1bfbd14db87ebde5bdd24b3
-    - name: Skeleton enemy_Frame_32
+    - name: Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 32
         height: 34
       spriteId: f6a81f7d2383513479c8aaa5d6e71b07
-    - name: Skeleton enemy_Frame_33
+    - name: Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 32
         height: 33
       spriteId: 3a19d29393e8a35498848000b6d25890
-    - name: Skeleton enemy_Frame_34
+    - name: Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 31
         height: 32
       spriteId: 2cddbaae4d90f0e4d91e00354720ff9a
-    - name: Skeleton enemy_Frame_35
+    - name: Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 35
         height: 29
       spriteId: 82134b3a9f688fc4a882b5cec3d7ddec
-    - name: Skeleton enemy_Frame_36
+    - name: Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 37
         height: 30
       spriteId: 720e9edc3a2db1444bab30efc357032d
-    - name: Skeleton enemy_Frame_37
+    - name: Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 38
         height: 31
       spriteId: 5c20a19d69d1a7b479293e43d86955e8
-    - name: Skeleton enemy_Frame_38
+    - name: Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 42
         height: 33
       spriteId: ba9d9ef7557bb454b8a15bf429414671
-    - name: Skeleton enemy_Frame_39
+    - name: Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 42
         height: 34
       spriteId: 684de9410300f77468f7c934acf497c4
-    - name: Skeleton enemy_Frame_40
+    - name: Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 42
         height: 34
       spriteId: 8d4ed323a416df14eb3823fda72d9367
-    - name: Skeleton enemy_Frame_41
+    - name: Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 42
         height: 34
       spriteId: 71a36ae101230434e8f09064d5b5a5d0
-    - name: Skeleton enemy_Frame_42
+    - name: Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 42
         height: 33
       spriteId: b205fcb0467567f44a0c075c06086cf3
-    - name: Skeleton enemy_Frame_43
+    - name: Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
         width: 42
         height: 31
       spriteId: 6dc84a4d905de91409dab6905be14695
-    - name: Skeleton enemy_Frame_44
+    - name: Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 15
@@ -1391,6 +1438,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}

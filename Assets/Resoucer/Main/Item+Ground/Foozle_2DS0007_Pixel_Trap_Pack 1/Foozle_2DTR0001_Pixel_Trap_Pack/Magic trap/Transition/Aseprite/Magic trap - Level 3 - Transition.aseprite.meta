@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -548,168 +550,189 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Magic trap - Level 3 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 7e9685049e4fbbf47bb8fabdcebc1c18
-    - name: Magic trap - Level 3 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 6d1723abc1cf687438a621dc3c7939c5
-    - name: Magic trap - Level 3 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 65
       spriteId: 929bd55b37bd1bd42a2e64bd789095d2
-    - name: Magic trap - Level 3 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 65
       spriteId: 85af0b6b90ffef043a580ab847b5321d
-    - name: Magic trap - Level 3 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 65
       spriteId: 18a1d97530d74ae489f54212cd967430
-    - name: Magic trap - Level 3 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 981899a987fdc734e94a5e9107b44286
-    - name: Magic trap - Level 3 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: ec62b3236cea43444819d67bb6eb70fc
-    - name: Magic trap - Level 3 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -2
         width: 96
         height: 66
       spriteId: 416ccdebf69e6a64a911d87f0c699b55
-    - name: Magic trap - Level 3 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 65
       spriteId: 20f7aacf28fe9ae4caaea131057d1804
-    - name: Magic trap - Level 3 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -1
         width: 96
         height: 65
       spriteId: ae338a8b1d94f8c41afe9fe4f3c58581
-    - name: Magic trap - Level 3 - Transition_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 033652763c661f84b8b1b68cf6b0a0b2
-    - name: Magic trap - Level 3 - Transition_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b1ea85613f548ba43a7831fe5e216a36
-    - name: Magic trap - Level 3 - Transition_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 9b7107a32efa2a7478801bcf37324c0a
-    - name: Magic trap - Level 3 - Transition_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 33742bc0926d1ea4181921f53a8303c0
-    - name: Magic trap - Level 3 - Transition_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 8a162b30b53291248b536fbdf552b534
-    - name: Magic trap - Level 3 - Transition_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: df1f60ddc2be2a040bcc88ebc6ba49f6
-    - name: Magic trap - Level 3 - Transition_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1562639e8155ebf4fa1489da42c2b82e
-    - name: Magic trap - Level 3 - Transition_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: a62483b7d595a57439545a410301b137
-    - name: Magic trap - Level 3 - Transition_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 2a55fa799815d3246ab2b03c05e866ac
-    - name: Magic trap - Level 3 - Transition_Frame_19
+    - name: Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: faf9d75683271074193de3214bf57f1a
-    - name: Magic trap - Level 3 - Transition_Frame_20
+    - name: Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -719,6 +742,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 64}

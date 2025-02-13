@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -508,152 +510,171 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: Toxic Trap - Level 1 - Transition_Frame_0
+    - name: Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c72fbd2e9dbd45040bd0e1fb4d9c0b67
-    - name: Toxic Trap - Level 1 - Transition_Frame_1
+    - name: Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -12
         width: 96
         height: 76
       spriteId: 7c79453ce84078949b0a63061160923d
-    - name: Toxic Trap - Level 1 - Transition_Frame_2
+    - name: Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -12
         width: 96
         height: 76
       spriteId: 15fa64d83d6ac6945aa24dc76afc3a8f
-    - name: Toxic Trap - Level 1 - Transition_Frame_3
+    - name: Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -12
         width: 96
         height: 76
       spriteId: 91c8b55f12a31e64c828398f0ea02704
-    - name: Toxic Trap - Level 1 - Transition_Frame_4
+    - name: Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -25
         width: 96
         height: 89
       spriteId: f93ea6b1fd762104a9d175222982c7dd
-    - name: Toxic Trap - Level 1 - Transition_Frame_5
+    - name: Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -22
         width: 96
         height: 86
       spriteId: 7c11cd9fabe972e4e8fb0f70faa41391
-    - name: Toxic Trap - Level 1 - Transition_Frame_6
+    - name: Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -18
         width: 96
         height: 82
       spriteId: ec653aabf824bb64c94a90a85bcb87c0
-    - name: Toxic Trap - Level 1 - Transition_Frame_7
+    - name: Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -15
         width: 96
         height: 79
       spriteId: d818850d05c929244b0956af02e1515b
-    - name: Toxic Trap - Level 1 - Transition_Frame_8
+    - name: Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -12
         width: 96
         height: 76
       spriteId: 8b5d9f5991cc05544b283ae1b07d824c
-    - name: Toxic Trap - Level 1 - Transition_Frame_9
+    - name: Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -12
         width: 96
         height: 76
       spriteId: ae3de5b0f0a6b2c4c8fd7e389b55b2c0
-    - name: Toxic Trap - Level 1 - Transition_Frame_10
+    - name: Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: -12
         width: 96
         height: 76
       spriteId: e78d23aa07f367d45be6d7397b87dc8e
-    - name: Toxic Trap - Level 1 - Transition_Frame_11
+    - name: Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c6f223719e0704347aaab8eb346f28df
-    - name: Toxic Trap - Level 1 - Transition_Frame_12
+    - name: Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 3ce00c53c13cdef4190cc55e62ac4ff7
-    - name: Toxic Trap - Level 1 - Transition_Frame_13
+    - name: Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 1182881be7f44a14a8e6fd54321b0bdb
-    - name: Toxic Trap - Level 1 - Transition_Frame_14
+    - name: Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: c30b84add201c02408839aa629e79276
-    - name: Toxic Trap - Level 1 - Transition_Frame_15
+    - name: Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: e9fb21dbe8aadf34595db5a082cff33b
-    - name: Toxic Trap - Level 1 - Transition_Frame_16
+    - name: Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: b22a162ae1148ec4b9b4a23600e1970d
-    - name: Toxic Trap - Level 1 - Transition_Frame_17
+    - name: Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
         width: 96
         height: 64
       spriteId: 0f4b99a7b5630a047a3a2de678533972
-    - name: Toxic Trap - Level 1 - Transition_Frame_18
+    - name: Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -663,6 +684,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 64}
